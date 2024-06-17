@@ -1,11 +1,9 @@
 #include "encryption.hpp"
+#include "openssl_utils.hpp"
 #include <openssl/err.h>
 #include <openssl/aes.h>
 
-void handleErrors() {
-    ERR_print_errors_fp(stderr);
-    abort();
-}
+
 
 void encrypt(const unsigned char *plaintext, int plaintext_len, const unsigned char *key,
              const unsigned char *iv, unsigned char *ciphertext) {
