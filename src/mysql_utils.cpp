@@ -74,3 +74,7 @@ void logFileOperation(const std::string& filename, const std::string& operation)
         std::cerr << "Error al registrar la operación en la base de datos: " << e.what() << std::endl;
     }
 }
+
+void logFileDeletion(const std::string& filename) {
+    logFileOperation(filename, "Eliminar");
+}
