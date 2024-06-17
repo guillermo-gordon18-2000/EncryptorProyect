@@ -12,56 +12,59 @@
 #include <unistd.h>
 #include "mysql_utils.hpp"
 #include <algorithm> // Para std::sort y std::reverse
-                     
-// Funciones para manejo de colores en la consola
-const std::string reset = "\033[0m";
-const std::string red = "\033[31m";
-const std::string green = "\033[32m";
-const std::string yellow = "\033[33m";
-const std::string blue = "\033[34m";
-const std::string magenta = "\033[35m";
-const std::string cyan = "\033[36m";
-const std::string bold = "\033[1m";
+#include <string>    // Agrega esta línea para usar std::string
 
-void displayMenu(const std::vector<std::string>& recentEncryptedFiles, const std::vector<std::string>& recentDecryptedFiles) {
-    std::cout << cyan << "+----------------------------+" << reset << std::endl;
-    std::cout << cyan << "| " << bold << " Bienvenido al programa de cifrado y descifrado " << reset << cyan << " |" << reset << std::endl;
-    std::cout << cyan << "+----------------------------+" << reset << std::endl;
-    std::cout << yellow << " 1. Cifrar archivo" << reset << std::endl;
+using namespace std;
+
+// Funciones para manejo de colores en la consola
+const string reset = "\033[0m";
+const string red = "\033[31m";
+const string green = "\033[32m";
+const string yellow = "\033[33m";
+const string blue = "\033[34m";
+const string magenta = "\033[35m";
+const string cyan = "\033[36m";
+const string bold = "\033[1m";
+
+void displayMenu(const vector<string>& recentEncryptedFiles, const vector<string>& recentDecryptedFiles) {
+    cout << cyan << "+----------------------------+" << reset << endl;
+    cout << cyan << "| " << bold << " Bienvenido al programa de cifrado y descifrado " << reset << cyan << " |" << reset << endl;
+    cout << cyan << "+----------------------------+" << reset << endl;
+    cout << yellow << " 1. Cifrar archivo" << reset << endl;
     if (!recentEncryptedFiles.empty()) {
-        std::cout << magenta << "    Archivos cifrados recientes: " << reset << std::endl;
+        cout << magenta << "    Archivos cifrados recientes: " << reset << endl;
         for (const auto& file : recentEncryptedFiles) {
-            std::cout << "       - " << blue << file << reset << std::endl;
+            cout << "       - " << blue << file << reset << endl;
         }
     }
-    std::cout << yellow << " 2. Descifrar archivo" << reset << std::endl;
+    cout << yellow << " 2. Descifrar archivo" << reset << endl;
     if (!recentDecryptedFiles.empty()) {
-        std::cout << magenta << "    Archivos descifrados recientes: " << reset << std::endl;
+        cout << magenta << "    Archivos descifrados recientes: " << reset << endl;
         for (const auto& file : recentDecryptedFiles) {
-            std::cout << "       - " << green << file << reset << std::endl;
+            cout << "       - " << green << file << reset << endl;
         }
     }
-    std::cout << yellow << " 3. Salir" << reset << std::endl;
-    std::cout << cyan << "+----------------------------+" << reset << std::endl;
+    cout << yellow << " 3. Salir" << reset << endl;
+    cout << cyan << "+----------------------------+" << reset << endl;
 }
 
-std::string promptForFilename(const std::string& prompt) {
-    std::string filename;
-    std::cout << green << prompt << ": " << reset;
-    std::cin >> filename;
+string promptForFilename(const string& prompt) {
+    string filename;
+    cout << green << prompt << ": " << reset;
+    cin >> filename;
     return filename;
 }
 
-std::string selectFileFromList(const std::vector<std::string>& files) {
-    std::cout << blue << "Archivos disponibles:" << reset << std::endl;
+string selectFileFromList(const vector<string>& files) {
+    cout << blue << "Archivos disponibles:" << reset << endl;
     for (size_t i = 0; i < files.size(); ++i) {
-        std::cout << magenta << " " << i + 1 << ". " << files[i] << reset << std::endl;
+        cout << magenta << " " << i + 1 << ". " << files[i] << reset << endl;
     }
-    std::cout << green << "Seleccione el número del archivo: " << reset;
+    cout << green << "Seleccione el número del archivo: " << reset;
     size_t choice;
-    std::cin >> choice;
+    cin >> choice;
     if (choice < 1 || choice > files.size()) {
-        throw std::runtime_error("Opción inválida.");
+        throw runtime_error("Opción inválida.");
     }
     return files[choice - 1];
 }
@@ -73,23 +76,23 @@ void hidePasswordInput(unsigned char* key, unsigned char* iv) {
     tty.c_lflag &= ~ECHO;
     tcsetattr(STDIN_FILENO, TCSANOW, &tty);
 
-    std::string password;
+    string password;
     char ch;
-    std::cout << green << "Introduce la contraseña: " << reset;
+    cout << green << "Introduce la contraseña: " << reset;
 
     while (true) {
         ch = getchar();
         if (ch == '\n' || ch == '\r') {
-            std::cout << std::endl;
+            cout << endl;
             break;
         } else if (ch == 127 || ch == '\b') {  // Handle backspace
             if (!password.empty()) {
-                std::cout << "\b \b";
+                cout << "\b \b";
                 password.pop_back();
             }
         } else {
             password.push_back(ch);
-            std::cout << '*';
+            cout << '*';
         }
     }
 
@@ -98,50 +101,94 @@ void hidePasswordInput(unsigned char* key, unsigned char* iv) {
     deriveKeyAndIV(password, key, iv);
 }
 
-void printError(const std::string& message) {
-    std::cout << std::endl;
-    std::cout << red << "+----------------------------+" << reset << std::endl;
-    std::cerr << red << message << reset << std::endl;
-    std::cout << red << "+----------------------------+" << reset << std::endl;
-    std::cout << std::endl;
+void printError(const string& message) {
+    cout << endl;
+    cout << red << "+----------------------------+" << reset << endl;
+    cerr << red << message << reset << endl;
+    cout << red << "+----------------------------+" << reset << endl;
+    cout << endl;
 }
 
-int main() {
+void moveFileToData(const std::string& filename) {
+    std::string sourcePath = "./" + filename;
+    std::string destinationPath = "./data/" + filename;
+
+    if (std::rename(sourcePath.c_str(), destinationPath.c_str()) != 0) {
+        throw std::runtime_error("Error al mover el archivo a la carpeta data.");
+    }
+}
+
+  int main(int argc, char* argv[]) {
     unsigned char key[32];  // 256 bits
     unsigned char iv[16];   // 128 bits
 
-    hidePasswordInput(key, iv);
+
+      hidePasswordInput(key, iv);
 
 
-  // Obtener los archivos más recientes desde la base de datos
-    std::vector<std::string> recentEncryptedFiles = getRecentEncryptedFiles(4);
-    std::vector<std::string> recentDecryptedFiles = getRecentDecryptedFiles(4);
+  if (argc == 2) {
+        // Si se proporciona un archivo como argumento, cifrarlo y salir
+        std::string plaintextFilename = argv[1];
+        std::vector<unsigned char> plaintext = readFile(plaintextFilename);
+
+        size_t ciphertextSize = ((plaintext.size() + AES_BLOCK_SIZE) / AES_BLOCK_SIZE) * AES_BLOCK_SIZE;
+        std::vector<unsigned char> ciphertext(ciphertextSize);
+
+        encrypt(plaintext.data(), plaintext.size(), key, iv, ciphertext.data());
+
+        std::string ciphertextFilename = promptForFilename("Introduzca el nombre del archivo cifrado de salida");
+        writeFile(ciphertextFilename, ciphertext);
+
+        try {
+            moveFileToData(ciphertextFilename);
+            logFileOperation(ciphertextFilename, "Cifrar");
+            std::cout << blue << "Archivo cifrado correctamente y movido a la carpeta data." << reset << std::endl;
+        } catch (const std::runtime_error& e) {
+            printError("Error al mover el archivo cifrado: " + std::string(e.what()));
+        }
+
+        return 0;
+    }
+
+    // Obtener los archivos más recientes desde la base de datos
+    vector<string> recentEncryptedFiles = getRecentEncryptedFiles(4);
+    vector<string> recentDecryptedFiles = getRecentDecryptedFiles(4);
 
     int choice = 0;
     while (choice != 3) {
         displayMenu(recentEncryptedFiles, recentDecryptedFiles);
-        std::cout << green << "Seleccione una opción: " << reset;
-        std::cin >> choice;
+        cout << green << "Seleccione una opción: " << reset;
+        cin >> choice;
 
         switch (choice) {
-           case 1: {
+            case 1: {
                 try {
                     auto files = listFiles("data");
-                    std::string plaintextFilename = selectFileFromList(files);
+                    string plaintextFilename = selectFileFromList(files);
 
-                    std::vector<unsigned char> plaintext = readFile("data/" + plaintextFilename);
+                   std::vector<unsigned char> plaintext = readFile("data/" + plaintextFilename);
+
 
                     size_t ciphertextSize = ((plaintext.size() + AES_BLOCK_SIZE) / AES_BLOCK_SIZE) * AES_BLOCK_SIZE;
+
                     std::vector<unsigned char> ciphertext(ciphertextSize);
 
+                   // hidePasswordInput(key, iv);
                     encrypt(plaintext.data(), plaintext.size(), key, iv, ciphertext.data());
 
                     std::string ciphertextFilename = promptForFilename("Introduzca el nombre del archivo cifrado de salida");
+
                     writeFile("data/" + ciphertextFilename, ciphertext);
 
-                    logFileOperation(ciphertextFilename, "Cifrar");
+    
+                   logFileOperation(ciphertextFilename, "Cifrar");
 
                     std::cout << blue << "Archivo cifrado correctamente." << reset << std::endl;
+
+
+                    // Eliminar archivo original
+                    remove(("data/" + plaintextFilename).c_str());
+                    logFileDeletion(plaintextFilename);
 
                     // Actualizar archivos cifrados recientes
                     if (recentEncryptedFiles.size() >= 4) {
@@ -149,29 +196,37 @@ int main() {
                     }
                     recentEncryptedFiles.push_back(ciphertextFilename);
 
-                } catch (const std::runtime_error& e) {
-                    printError("Error al cifrar: " + std::string(e.what()));
+                } catch (const runtime_error& e) {
+                    printError("Error al cifrar: " + string(e.what()));
                 }
                 break;
             }
-          case 2: {
+            case 2: {
                 try {
                     auto files = listFiles("data");
-                    std::string ciphertextFilename = selectFileFromList(files);
+                    string ciphertextFilename = selectFileFromList(files);
 
                     std::vector<unsigned char> encrypted_data = readFile("data/" + ciphertextFilename);
 
                     size_t decryptedSize = ((encrypted_data.size() + AES_BLOCK_SIZE - 1) / AES_BLOCK_SIZE) * AES_BLOCK_SIZE;
+                  
                     std::vector<unsigned char> decryptedtext(decryptedSize);
 
+                  //  hidePasswordInput(key, iv);
                     decrypt(encrypted_data.data(), encrypted_data.size(), key, iv, decryptedtext.data());
 
+                   
                     std::string decryptedFilename = promptForFilename("Introduzca el nombre del archivo descifrado de salida");
                     writeFile("data/" + decryptedFilename, decryptedtext);
 
                     logFileOperation(decryptedFilename, "Descifrar");
 
-                    std::cout << green << "Archivo descifrado correctamente." << reset << std::endl;
+                    cout << green << "Archivo descifrado correctamente." << reset << endl;
+
+
+                    // Eliminar archivo original
+                  //  remove(("data/" + plaintextFilename).c_str());
+                   // logFileDeletion(plaintextFilename);
 
                     // Actualizar archivos descifrados recientes
                     if (recentDecryptedFiles.size() >= 4) {
@@ -179,13 +234,13 @@ int main() {
                     }
                     recentDecryptedFiles.push_back(decryptedFilename);
 
-                } catch (const std::runtime_error& e) {
-                    printError("Error al descifrar: " + std::string(e.what()));
+                } catch (const runtime_error& e) {
+                    printError("Error al descifrar: " + string(e.what()));
                 }
                 break;
             }
             case 3:
-                std::cout << green << "Saliendo del programa." << reset << std::endl;
+                cout << green << "Saliendo del programa." << reset << endl;
                 break;
             default:
                 printError("Opción inválida. Por favor, seleccione nuevamente.");
