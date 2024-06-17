@@ -5,6 +5,8 @@
 #include "file_utils.hpp"
 #include "key_derivation.hpp"
 #include <openssl/aes.h>  // Incluir la cabecera de OpenSSL que define AES_BLOCK_SIZE
+                          //
+                          //
 int main() {
     std::string password;
     std::cout << "Introduce la contraseña: ";
