@@ -9,6 +9,7 @@ add_executable(encryptor
     src/encryption.cpp
     src/file_utils.cpp
     src/key_derivation.cpp
+    src/openssl_utils.cpp  # Añade el nuevo archivo aquí
 )
 
 target_link_libraries(encryptor ssl crypto)
