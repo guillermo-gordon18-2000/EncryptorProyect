@@ -1,9 +1,10 @@
+#include <iostream>
+#include <vector>
+#include <cstring>       // Para strlen
 #include "encryption.hpp"
 #include "file_utils.hpp"
 #include "key_derivation.hpp"
-#include <iostream>
-#include <vector>
-
+#include <openssl/aes.h>  // Incluir la cabecera de OpenSSL que define AES_BLOCK_SIZE
 int main() {
     std::string password;
     std::cout << "Introduce la contraseña: ";
@@ -28,7 +29,6 @@ int main() {
 
     // Descifrar el archivo
     decrypt(encrypted_data.data(), encrypted_data.size(), key, iv, decryptedtext.data());
-    decryptedtext.resize(strlen(reinterpret_cast<const char *>(decryptedtext.data())));
 
     // Escribir archivo descifrado
     writeFile("decrypted.txt", decryptedtext);
