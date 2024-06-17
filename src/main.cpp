@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <vector>
 #include <cstring>       // Para strlen
@@ -38,44 +39,52 @@ int main() {
         std::cin >> choice;
 
         switch (choice) {
-            case 1: {
-                try {
-                    std::string plaintextFilename = promptForFilename("Introduzca el nombre del archivo de texto a cifrar");
-                    // Leer archivo de texto
-                    std::vector<unsigned char> plaintext = readFile(plaintextFilename);
-                    std::vector<unsigned char> ciphertext(plaintext.size() + AES_BLOCK_SIZE);
+          case 1: {
+    try {
+        std::string plaintextFilename = promptForFilename("Introduzca el nombre del archivo de texto a cifrar");
+        // Leer archivo de texto
+        std::vector<unsigned char> plaintext = readFile(plaintextFilename);
 
-                    // Cifrar el archivo
-                    encrypt(plaintext.data(), plaintext.size(), key, iv, ciphertext.data());
-                    
-                    std::string ciphertextFilename = promptForFilename("Introduzca el nombre del archivo cifrado de salida");
-                    writeFile(ciphertextFilename, ciphertext);
+        // Calcular el tamaño del búfer de cifrado
+        size_t ciphertextSize = ((plaintext.size() + AES_BLOCK_SIZE - 1) / AES_BLOCK_SIZE) * AES_BLOCK_SIZE;
+        std::vector<unsigned char> ciphertext(ciphertextSize);
 
-                    std::cout << "Archivo cifrado correctamente." << std::endl;
-                } catch (const std::runtime_error& e) {
-                    std::cerr << "Error al cifrar: " << e.what() << std::endl;
-                }
-                break;
-            }
-            case 2: {
-                try {
-                    std::string ciphertextFilename = promptForFilename("Introduzca el nombre del archivo cifrado a descifrar");
-                    // Leer archivo cifrado
-                    std::vector<unsigned char> encrypted_data = readFile(ciphertextFilename);
-                    std::vector<unsigned char> decryptedtext(encrypted_data.size());
+        // Cifrar el archivo
+        encrypt(plaintext.data(), plaintext.size(), key, iv, ciphertext.data());
 
-                    // Descifrar el archivo
-                    decrypt(encrypted_data.data(), encrypted_data.size(), key, iv, decryptedtext.data());
+        std::string ciphertextFilename = promptForFilename("Introduzca el nombre del archivo cifrado de salida");
+        // Escribir archivo cifrado
+        writeFile(ciphertextFilename, ciphertext);
 
-                    std::string decryptedFilename = promptForFilename("Introduzca el nombre del archivo descifrado de salida");
-                    writeFile(decryptedFilename, decryptedtext);
+        std::cout << "Archivo cifrado correctamente." << std::endl;
+    } catch (const std::runtime_error& e) {
+        std::cerr << "Error al cifrar: " << e.what() << std::endl;
+    }
+    break;
+}
+          case 2: {
+    try {
+        std::string ciphertextFilename = promptForFilename("Introduzca el nombre del archivo cifrado a descifrar");
+        // Leer archivo cifrado
+        std::vector<unsigned char> encrypted_data = readFile(ciphertextFilename);
 
-                    std::cout << "Archivo descifrado correctamente." << std::endl;
-                } catch (const std::runtime_error& e) {
-                    std::cerr << "Error al descifrar: " << e.what() << std::endl;
-                }
-                break;
-            }
+        // Calcular el tamaño del búfer de descifrado
+        size_t decryptedSize = ((encrypted_data.size() + AES_BLOCK_SIZE - 1) / AES_BLOCK_SIZE) * AES_BLOCK_SIZE;
+        std::vector<unsigned char> decryptedtext(decryptedSize);
+
+        // Descifrar el archivo
+        decrypt(encrypted_data.data(), encrypted_data.size(), key, iv, decryptedtext.data());
+
+        std::string decryptedFilename = promptForFilename("Introduzca el nombre del archivo descifrado de salida");
+        // Escribir archivo descifrado
+        writeFile(decryptedFilename, decryptedtext);
+
+        std::cout << "Archivo descifrado correctamente." << std::endl;
+    } catch (const std::runtime_error& e) {
+        std::cerr << "Error al descifrar: " << e.what() << std::endl;
+    }
+    break;
+}
             case 3:
                 std::cout << "Saliendo del programa." << std::endl;
                 break;
@@ -87,3 +96,4 @@ int main() {
 
     return 0;
 }
+

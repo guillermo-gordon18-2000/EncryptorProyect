@@ -1,6 +1,6 @@
+// file_utils.cpp
 #include "file_utils.hpp"
 #include <fstream>
-#include <iterator>
 
 std::vector<unsigned char> readFile(const std::string &filename) {
     std::ifstream file(filename, std::ios::binary);
