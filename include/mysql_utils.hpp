@@ -17,4 +17,8 @@ std::vector<std::string> getRecentDecryptedFiles(int limit);
 
 void logFileOperation(const std::string& filename, const std::string& operation);
 
+// Nueva función para registrar la eliminación de archivos
+void logFileDeletion(const std::string& filename);
+
+
 #endif // MYSQL_UTILS_HPP
