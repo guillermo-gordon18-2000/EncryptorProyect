@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/encryptor.dir/src/key_derivation.cpp.o.d"
   "CMakeFiles/encryptor.dir/src/main.cpp.o"
   "CMakeFiles/encryptor.dir/src/main.cpp.o.d"
+  "CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o"
+  "CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o.d"
   "CMakeFiles/encryptor.dir/src/openssl_utils.cpp.o"
   "CMakeFiles/encryptor.dir/src/openssl_utils.cpp.o.d"
   "encryptor"
