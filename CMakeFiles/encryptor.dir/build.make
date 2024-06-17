@@ -156,6 +156,9 @@ encryptor: CMakeFiles/encryptor.dir/src/file_utils.cpp.o
 encryptor: CMakeFiles/encryptor.dir/src/key_derivation.cpp.o
 encryptor: CMakeFiles/encryptor.dir/src/openssl_utils.cpp.o
 encryptor: CMakeFiles/encryptor.dir/build.make
+encryptor: /usr/lib/x86_64-linux-gnu/libssl.so
+encryptor: /usr/lib/x86_64-linux-gnu/libcrypto.so
+encryptor: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.74.0
 encryptor: CMakeFiles/encryptor.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maverick/Documents/Proyecto/C++/EncryptorProyect/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable encryptor"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/encryptor.dir/link.txt --verbose=$(VERBOSE)
