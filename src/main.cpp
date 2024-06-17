@@ -10,7 +10,9 @@
 #include "key_derivation.hpp"
 #include <termios.h>
 #include <unistd.h>
-
+#include "mysql_utils.hpp"
+#include <algorithm> // Para std::sort y std::reverse
+                     
 // Funciones para manejo de colores en la consola
 const std::string reset = "\033[0m";
 const std::string red = "\033[31m";
@@ -21,12 +23,24 @@ const std::string magenta = "\033[35m";
 const std::string cyan = "\033[36m";
 const std::string bold = "\033[1m";
 
-void displayMenu() {
+void displayMenu(const std::vector<std::string>& recentEncryptedFiles, const std::vector<std::string>& recentDecryptedFiles) {
     std::cout << cyan << "+----------------------------+" << reset << std::endl;
     std::cout << cyan << "| " << bold << " Bienvenido al programa de cifrado y descifrado " << reset << cyan << " |" << reset << std::endl;
     std::cout << cyan << "+----------------------------+" << reset << std::endl;
     std::cout << yellow << " 1. Cifrar archivo" << reset << std::endl;
+    if (!recentEncryptedFiles.empty()) {
+        std::cout << magenta << "    Archivos cifrados recientes: " << reset << std::endl;
+        for (const auto& file : recentEncryptedFiles) {
+            std::cout << "       - " << blue << file << reset << std::endl;
+        }
+    }
     std::cout << yellow << " 2. Descifrar archivo" << reset << std::endl;
+    if (!recentDecryptedFiles.empty()) {
+        std::cout << magenta << "    Archivos descifrados recientes: " << reset << std::endl;
+        for (const auto& file : recentDecryptedFiles) {
+            std::cout << "       - " << green << file << reset << std::endl;
+        }
+    }
     std::cout << yellow << " 3. Salir" << reset << std::endl;
     std::cout << cyan << "+----------------------------+" << reset << std::endl;
 }
@@ -98,58 +112,73 @@ int main() {
 
     hidePasswordInput(key, iv);
 
+
+  // Obtener los archivos más recientes desde la base de datos
+    std::vector<std::string> recentEncryptedFiles = getRecentEncryptedFiles(4);
+    std::vector<std::string> recentDecryptedFiles = getRecentDecryptedFiles(4);
+
     int choice = 0;
     while (choice != 3) {
-        displayMenu();
+        displayMenu(recentEncryptedFiles, recentDecryptedFiles);
         std::cout << green << "Seleccione una opción: " << reset;
         std::cin >> choice;
 
         switch (choice) {
-            case 1: {
+           case 1: {
                 try {
-                    // Listar archivos disponibles para cifrado
                     auto files = listFiles("data");
                     std::string plaintextFilename = selectFileFromList(files);
 
-                    // Leer archivo de texto
                     std::vector<unsigned char> plaintext = readFile("data/" + plaintextFilename);
 
-                    // Calcular el tamaño del búfer de cifrado
                     size_t ciphertextSize = ((plaintext.size() + AES_BLOCK_SIZE) / AES_BLOCK_SIZE) * AES_BLOCK_SIZE;
                     std::vector<unsigned char> ciphertext(ciphertextSize);
 
-                    // Cifrar el archivo
                     encrypt(plaintext.data(), plaintext.size(), key, iv, ciphertext.data());
 
                     std::string ciphertextFilename = promptForFilename("Introduzca el nombre del archivo cifrado de salida");
                     writeFile("data/" + ciphertextFilename, ciphertext);
 
+                    logFileOperation(ciphertextFilename, "Cifrar");
+
                     std::cout << blue << "Archivo cifrado correctamente." << reset << std::endl;
+
+                    // Actualizar archivos cifrados recientes
+                    if (recentEncryptedFiles.size() >= 4) {
+                        recentEncryptedFiles.erase(recentEncryptedFiles.begin()); // Elimina el más antiguo
+                    }
+                    recentEncryptedFiles.push_back(ciphertextFilename);
+
                 } catch (const std::runtime_error& e) {
                     printError("Error al cifrar: " + std::string(e.what()));
                 }
                 break;
             }
-            case 2: {
+          case 2: {
                 try {
-                    // Listar archivos disponibles para descifrado
                     auto files = listFiles("data");
                     std::string ciphertextFilename = selectFileFromList(files);
 
-                    // Leer archivo cifrado
                     std::vector<unsigned char> encrypted_data = readFile("data/" + ciphertextFilename);
 
-                    // Calcular el tamaño del búfer de descifrado
                     size_t decryptedSize = ((encrypted_data.size() + AES_BLOCK_SIZE - 1) / AES_BLOCK_SIZE) * AES_BLOCK_SIZE;
                     std::vector<unsigned char> decryptedtext(decryptedSize);
 
-                    // Descifrar el archivo
                     decrypt(encrypted_data.data(), encrypted_data.size(), key, iv, decryptedtext.data());
 
                     std::string decryptedFilename = promptForFilename("Introduzca el nombre del archivo descifrado de salida");
                     writeFile("data/" + decryptedFilename, decryptedtext);
 
-                    std::cout << blue << "Archivo descifrado correctamente." << reset << std::endl;
+                    logFileOperation(decryptedFilename, "Descifrar");
+
+                    std::cout << green << "Archivo descifrado correctamente." << reset << std::endl;
+
+                    // Actualizar archivos descifrados recientes
+                    if (recentDecryptedFiles.size() >= 4) {
+                        recentDecryptedFiles.erase(recentDecryptedFiles.begin()); // Elimina el más antiguo
+                    }
+                    recentDecryptedFiles.push_back(decryptedFilename);
+
                 } catch (const std::runtime_error& e) {
                     printError("Error al descifrar: " + std::string(e.what()));
                 }
@@ -166,4 +195,3 @@ int main() {
 
     return 0;
 }
-
