@@ -116,7 +116,10 @@ string selectFileFromList(WINDOW *menu_win, const vector<string>& files) {
            wattron(menu_win, COLOR_PAIR(4)); // Color verde
 
     }
+     wattron(menu_win, COLOR_PAIR(5)); // Color verde
+
     mvwprintw(menu_win, line++, 2, "Seleccione el número del archivo: ");
+ wattron(menu_win, COLOR_PAIR(5)); // Color verde
 
     wrefresh(menu_win);
 
@@ -257,7 +260,9 @@ int main(int argc, char* argv[]) {
 
                     writeFile("data/" + ciphertextFilename, ciphertext);
 
-                    logFileOperation(menu_win,ciphertextFilename, "Cifrar");
+                 
+                    // Actualizar operación de archivo en la base de datos
+                    logFileOperation(menu_win, ciphertextFilename, "Cifrar", "data/" + plaintextFilename, "data/" + ciphertextFilename, std::vector<unsigned char>(key, key + sizeof(key)), "AES");
 
                
 
@@ -278,57 +283,81 @@ int main(int argc, char* argv[]) {
                     recentEncryptedFiles.push_back(ciphertextFilename);
 
                 } catch (const runtime_error& e) {
-                    printError(menu_win, "Error al cifrar: " + string(e.what()));
-                }
-                break;
-            }
-            case 2: {
-                werase(menu_win);  // Limpiar toda la ventana
-                box(menu_win, 0, 0);  // Volver a dibujar el borde
-
-                try {
-                    auto files = listFiles("data");
-                    string ciphertextFilename = selectFileFromList(menu_win, files);
-
-                    vector<unsigned char> encrypted_data = readFile("data/" + ciphertextFilename);
-
-                    size_t decryptedSize = ((encrypted_data.size() + AES_BLOCK_SIZE - 1) / AES_BLOCK_SIZE) * AES_BLOCK_SIZE;
-                    vector<unsigned char> decryptedtext(decryptedSize);
-
-                       // Solicitar contraseña y descifrar
-                  hidePasswordInput(menu_win,key, iv);  // Solicitar contraseña
- 
-                    decrypt(encrypted_data.data(), encrypted_data.size(), key, iv, decryptedtext.data());
-
-                    string decryptedFilename = promptForFilename(menu_win, "Introduzca el nombre del archivo descifrado de salida");
-                    writeFile("data/" + decryptedFilename, decryptedtext);
-                    
-                    logFileOperation(menu_win,decryptedFilename, "Descifrar");
+                      werase(menu_win);  // Limpiar toda la ventana
+                     box(menu_win, 0, 0);  // Volver a dibujar el borde
 
 
-
-                    wattron(menu_win, COLOR_PAIR(6)); // Color azul
-                    mvwprintw(menu_win, 14, 9, "Archivo descifrado correctamente.");
-                    wattroff(menu_win, COLOR_PAIR(6));
-                     // Dibujar el marco
-                    mvwhline(menu_win, 16, 1, '-', width - 2); // Línea horizontal en la fila 9 (0-indexed)
-                    // Actualizar archivos descifrados recientes
-                    if (recentDecryptedFiles.size() >= 4) {
-                        recentDecryptedFiles.erase(recentDecryptedFiles.begin()); // Elimina el más antiguo
-                    }
-                    recentDecryptedFiles.push_back(decryptedFilename);
-
-                } catch (const runtime_error& e) {
                     // Manejar el error al descifrar (contraseña incorrecta, etc.)
                       wattron(menu_win, COLOR_PAIR(1)); // Color rojo
-                     mvwprintw(menu_win, 10, 2, "Error al descifrar: %s", e.what());
+                     mvwprintw(menu_win, 10, 2, "Error al cifrar: %s", e.what());
                      wattroff(menu_win, COLOR_PAIR(2));
                      wrefresh(menu_win);  // Actualizar la ventana de ncurses si es necesario
 
 
+                    //printError(menu_win, "Error al cifrar: " + string(e.what()));
                 }
                 break;
             }
+          case 2: {
+    werase(menu_win);  // Limpiar toda la ventana
+    box(menu_win, 0, 0);  // Volver a dibujar el borde
+
+    try {
+        auto files = listFiles("data");
+        string ciphertextFilename = selectFileFromList(menu_win, files);
+
+        vector<unsigned char> encrypted_data = readFile("data/" + ciphertextFilename);
+
+        size_t decryptedSize = ((encrypted_data.size() + AES_BLOCK_SIZE - 1) / AES_BLOCK_SIZE) * AES_BLOCK_SIZE;
+        vector<unsigned char> decryptedtext(decryptedSize);
+
+        // Solicitar contraseña y descifrar
+        hidePasswordInput(menu_win, key, iv);  // Solicitar contraseña
+
+        try {
+            decrypt(encrypted_data.data(), encrypted_data.size(), key, iv, decryptedtext.data());
+        } catch (const std::runtime_error &e) {
+            // Manejar el error de descifrado aquí
+            werase(menu_win);  // Limpiar toda la ventana
+            box(menu_win, 0, 0);  // Volver a dibujar el borde
+
+            wattron(menu_win, COLOR_PAIR(1)); // Color rojo
+            mvwprintw(menu_win, 10, 2, "Contraseña incorrecta o archivo corrupto.");
+            mvwprintw(menu_win, 11, 2, "No se pudo descifrar el archivo.");
+            wattroff(menu_win, COLOR_PAIR(1));
+            wrefresh(menu_win);  // Actualizar la ventana de ncurses si es necesario
+            break;  // Salir del caso 2 ya que el descifrado falló
+        }
+
+        string decryptedFilename = promptForFilename(menu_win, "Introduzca el nombre del archivo descifrado de salida");
+        writeFile("data/" + decryptedFilename, decryptedtext);
+
+        // Actualizar operación de archivo en la base de datos
+        logFileOperation(menu_win, decryptedFilename, "Descifrar", "data/" + ciphertextFilename, "data/" + decryptedFilename, std::vector<unsigned char>(key, key + sizeof(key)), "AES");
+
+        wattron(menu_win, COLOR_PAIR(6)); // Color azul
+        mvwprintw(menu_win, 14, 9, "Archivo descifrado correctamente.");
+        wattroff(menu_win, COLOR_PAIR(6));
+        // Dibujar el marco
+        mvwhline(menu_win, 16, 1, '-', width - 2); // Línea horizontal en la fila 9 (0-indexed)
+        // Actualizar archivos descifrados recientes
+        if (recentDecryptedFiles.size() >= 4) {
+            recentDecryptedFiles.erase(recentDecryptedFiles.begin()); // Elimina el más antiguo
+        }
+        recentDecryptedFiles.push_back(decryptedFilename);
+
+    } catch (const runtime_error &e) {
+        werase(menu_win);  // Limpiar toda la ventana
+        box(menu_win, 0, 0);  // Volver a dibujar el borde
+
+        // Manejar el error al descifrar (contraseña incorrecta, etc.)
+        wattron(menu_win, COLOR_PAIR(1)); // Color rojo
+        mvwprintw(menu_win, 10, 2, "Error al descifrar: %s", e.what());
+        wattroff(menu_win, COLOR_PAIR(1));
+        wrefresh(menu_win);  // Actualizar la ventana de ncurses si es necesario
+    }
+    break;
+}
             case 3:
                 mvwprintw(menu_win, 20, 1, "Saliendo del programa...");
                 break;
