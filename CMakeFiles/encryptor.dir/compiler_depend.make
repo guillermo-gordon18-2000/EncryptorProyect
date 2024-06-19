@@ -1219,7 +1219,11 @@ CMakeFiles/encryptor.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/cppconn/resultset_metadata.h \
   /usr/include/cppconn/datatype.h \
   /usr/include/cppconn/prepared_statement.h \
-  /usr/include/cppconn/statement.h
+  /usr/include/cppconn/statement.h \
+  /usr/include/curses.h \
+  /usr/include/ncurses_dll.h \
+  /usr/include/unctrl.h \
+  /usr/include/curses.h
 
 CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o: src/mysql_utils.cpp \
   /usr/include/stdc-predef.h \
@@ -1517,6 +1521,10 @@ CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o: src/mysql_utils.cpp \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/curses.h \
+  /usr/include/ncurses_dll.h \
+  /usr/include/unctrl.h \
+  /usr/include/curses.h \
   /usr/include/cppconn/resultset.h
 
 CMakeFiles/encryptor.dir/src/openssl_utils.cpp.o: src/openssl_utils.cpp \
@@ -1638,6 +1646,10 @@ CMakeFiles/encryptor.dir/src/openssl_utils.cpp.o: src/openssl_utils.cpp \
 src/openssl_utils.cpp:
 
 src/mysql_utils.cpp:
+
+/usr/include/unctrl.h:
+
+/usr/include/curses.h:
 
 /usr/include/cppconn/datatype.h:
 
@@ -2818,6 +2830,8 @@ include/key_derivation.hpp:
 /usr/include/boost/mpl/apply_fwd.hpp:
 
 /usr/include/boost/mpl/apply_wrap.hpp:
+
+/usr/include/ncurses_dll.h:
 
 /usr/include/c++/11/list:
 

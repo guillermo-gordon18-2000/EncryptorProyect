@@ -1224,6 +1224,10 @@ CMakeFiles/encryptor.dir/src/main.cpp.o
  /usr/include/cppconn/datatype.h
  /usr/include/cppconn/prepared_statement.h
  /usr/include/cppconn/statement.h
+ /usr/include/curses.h
+ /usr/include/ncurses_dll.h
+ /usr/include/unctrl.h
+ /usr/include/curses.h
 
 CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o
  /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/mysql_utils.cpp
@@ -1522,6 +1526,10 @@ CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o
  /usr/include/c++/11/bits/stl_vector.h
  /usr/include/c++/11/bits/stl_bvector.h
  /usr/include/c++/11/bits/vector.tcc
+ /usr/include/curses.h
+ /usr/include/ncurses_dll.h
+ /usr/include/unctrl.h
+ /usr/include/curses.h
  /usr/include/cppconn/resultset.h
 
 CMakeFiles/encryptor.dir/src/openssl_utils.cpp.o

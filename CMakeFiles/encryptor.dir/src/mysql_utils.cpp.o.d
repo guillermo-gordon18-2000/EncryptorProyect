@@ -240,4 +240,6 @@ CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o: \
  /usr/include/cppconn/statement.h /usr/include/c++/11/vector \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc /usr/include/cppconn/resultset.h
+ /usr/include/c++/11/bits/vector.tcc /usr/include/curses.h \
+ /usr/include/ncurses_dll.h /usr/include/unctrl.h /usr/include/curses.h \
+ /usr/include/cppconn/resultset.h

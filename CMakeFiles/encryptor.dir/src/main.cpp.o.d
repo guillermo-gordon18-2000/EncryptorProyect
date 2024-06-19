@@ -281,4 +281,5 @@ CMakeFiles/encryptor.dir/src/main.cpp.o: \
  /usr/include/cppconn/resultset_metadata.h \
  /usr/include/cppconn/datatype.h \
  /usr/include/cppconn/prepared_statement.h \
- /usr/include/cppconn/statement.h
+ /usr/include/cppconn/statement.h /usr/include/curses.h \
+ /usr/include/ncurses_dll.h /usr/include/unctrl.h /usr/include/curses.h
