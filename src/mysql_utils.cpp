@@ -5,6 +5,7 @@
 #include <cppconn/resultset.h>
 #include <cppconn/statement.h>
 #include <iostream>
+#include <sstream>  // Incluir sstream para usar stringstream
 #include <vector>
 #include <ncurses.h>
 
@@ -60,19 +61,30 @@ std::vector<std::string> getRecentDecryptedFiles(int limit) {
     return files;
 }
 
-void logFileOperation(WINDOW *menu_win,const std::string& filename, const std::string& operation) {
+
+void logFileOperation(WINDOW *menu_win, const std::string& filename, const std::string& operation, const std::string& original_path, const std::string& encrypted_path, const std::vector<unsigned char>& encryption_key, const std::string& algorithm) {
     try {
         sql::mysql::MySQL_Driver *driver = sql::mysql::get_mysql_driver_instance();
         std::unique_ptr<sql::Connection> con(driver->connect("tcp://127.0.0.1:3306", "ggordon", "Gordon@18"));
         con->setSchema("encryptor_db");
 
-        std::unique_ptr<sql::PreparedStatement> pstmt(con->prepareStatement("INSERT INTO file_logs (filename, operation) VALUES (?, ?)"));
+        std::unique_ptr<sql::PreparedStatement> pstmt(con->prepareStatement("INSERT INTO file_logs (filename, operation, original_path, encrypted_path, encryption_key, algorithm) VALUES (?, ?, ?, ?, ?, ?)"));
         pstmt->setString(1, filename);
         pstmt->setString(2, operation);
+        pstmt->setString(3, original_path);
+        pstmt->setString(4, encrypted_path);
+
+        // Convertir el vector de bytes a un flujo de entrada
+        std::stringstream keyStream;
+        keyStream.write(reinterpret_cast<const char*>(&encryption_key[0]), encryption_key.size());
+        pstmt->setBlob(5, &keyStream);
+
+        pstmt->setString(6, algorithm);
         pstmt->executeUpdate();
+
         werase(menu_win);  // Limpiar toda la ventana
         box(menu_win, 0, 0);  // Volver a dibujar el borde
- int height, width;
+        int height, width;
         getmaxyx(menu_win, height, width);
 
         // Dibujar el marco
@@ -96,6 +108,6 @@ void logFileOperation(WINDOW *menu_win,const std::string& filename, const std::s
     }
 }
 
-void logFileDeletion(WINDOW *menu_win,const std::string& filename) {
-    logFileOperation(menu_win, filename, "Eliminar");
+void logFileDeletion(WINDOW *menu_win, const std::string& filename) {
+    logFileOperation(menu_win, filename, "Eliminar", "", "", std::vector<unsigned char>(), "");
 }
