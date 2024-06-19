@@ -1,6 +1,11 @@
 
+<div id="header" align="center">
+
 # Cifrado y descifrado seguro de archivos
 
+
+</div>
+#
 Este proyecto tiene como objetivo desarrollar un sistema robusto para cifrar y descifrar archivos .txt utilizando C++, H++ y CMake.
 
 El objetivo principal de este proyecto fue mejorar la seguridad de archivos .txt confidenciales mediante la implementación de técnicas de cifrado avanzadas. 
@@ -40,23 +45,21 @@ En resumen, este proyecto combinó el poder de C++, H++ y CMake para crear una s
         <img src="https://img.shields.io/badge/Git-2.31.1-orange?style=for-the-badge&logo=git&logoColor=white" alt="Git">
       </a>
     </td>
-  </tr>
-  <tr>
-    <td align="center">
+ 
+  
+   <td align="center">
       <a href="https://www.mysql.com/">
         <img src="https://img.shields.io/badge/MySQL-8.0.23-blue?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
       </a>
     </td>
-  </tr>
-<tr>
-    <td align="center">
+  
+  <td align="center">
       <a href="https://invisible-island.net/ncurses/">
         <img src="https://img.shields.io/badge/Ncurses-6.2-blue?style=for-the-badge&logo=terminal&logoColor=white" alt="Ncurses">
       </a>
     </td>
-  </tr>
- 
-
+  
+ </tr>
 
 </table>
 
@@ -136,14 +139,14 @@ Al combinar el poder de C++, H++ y CMake, junto con las capacidades de registro 
 
 ### Librerías y Dependencias Necesarias
 
-- ![libmysqlcppconn-dev](https://img.shields.io/badge/libmysqlcppconn--dev-8.0-orange?style=for-the-badge&logo=mysql&logoColor=white): Conector MySQL para C++.
-- ![libboost-all-dev](https://img.shields.io/badge/libboost--all--dev-1.75.0-blue?style=for-the-badge&logo=boost&logoColor=white): Conjunto de bibliotecas C++ para tareas como procesamiento de señales, sistemas de archivos, y más.
+- ![libmysqlcppconn-dev](https://img.shields.io/badge/libmysqlcppconn--dev-8.0-orange?style=for-the-badge&logo=mysql&logoColor=white) Conector MySQL para C++.
+- ![libboost-all-dev](https://img.shields.io/badge/libboost--all--dev-1.75.0-blue?style=for-the-badge&logo=boost&logoColor=white) Conjunto de bibliotecas C++ para tareas como procesamiento de señales, sistemas de archivos, y más.
 
 ### Herramientas Necesarias
 
-- ![CMake](https://img.shields.io/badge/CMake-3.20-blue?style=for-the-badge&logo=cmake&logoColor=white): Sistema de construcción y administración de proyectos multiplataforma.
-- ![Git](https://img.shields.io/badge/Git-2.32.0-red?style=for-the-badge&logo=git&logoColor=white): Sistema de control de versiones distribuido para seguimiento de cambios en el código fuente.
-- ![MySQL](https://img.shields.io/badge/MySQL-8.0-orange?style=for-the-badge&logo=mysql&logoColor=white): Sistema de gestión de bases de datos relacional para almacenamiento y recuperación de datos.
+- ![CMake](https://img.shields.io/badge/CMake-3.20-blue?style=for-the-badge&logo=cmake&logoColor=white) Sistema de construcción y administración de proyectos multiplataforma.
+- ![Git](https://img.shields.io/badge/Git-2.32.0-red?style=for-the-badge&logo=git&logoColor=white) Sistema de control de versiones distribuido para seguimiento de cambios en el código fuente.
+- ![MySQL](https://img.shields.io/badge/MySQL-8.0-orange?style=for-the-badge&logo=mysql&logoColor=white) Sistema de gestión de bases de datos relacional para almacenamiento y recuperación de datos.
 ## Ejecutar Local
 
 ### Clonar el proyecto desde GitHub:
