@@ -16,8 +16,10 @@ std::vector<std::string> getRecentEncryptedFiles(int limit);
 // Función para obtener los archivos descifrados más recientes desde la base de datos
 std::vector<std::string> getRecentDecryptedFiles(int limit);
 
+
 // Función para registrar la operación de archivo en la base de datos y mostrar en ncurses
-void logFileOperation(WINDOW *menu_win, const std::string& filename, const std::string& operation);
+
+void logFileOperation(WINDOW *menu_win, const std::string& filename, const std::string& operation, const std::string& original_path, const std::string& encrypted_path, const std::vector<unsigned char>& encryption_key, const std::string& algorithm);
 
 // Nueva función para registrar la eliminación de archivos
 void logFileDeletion(WINDOW *menu_win,const std::string& filename);
