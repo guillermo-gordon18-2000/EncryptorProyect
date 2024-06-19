@@ -1,4 +1,3 @@
-
 #include "encryption.hpp"
 #include "openssl_utils.hpp"
 #include <openssl/err.h>
@@ -11,8 +10,9 @@
 #include <termios.h>
 #include <unistd.h>
 #include "mysql_utils.hpp"
-#include <algorithm> // Para std::sort y std::reverse
-#include <string>    // Agrega esta línea para usar std::string
+#include <algorithm>
+#include <string>
+#include <ncurses.h>
 
 using namespace std;
 
@@ -26,51 +26,116 @@ const string magenta = "\033[35m";
 const string cyan = "\033[36m";
 const string bold = "\033[1m";
 
-void displayMenu(const vector<string>& recentEncryptedFiles, const vector<string>& recentDecryptedFiles) {
-    cout << cyan << "+----------------------------+" << reset << endl;
-    cout << cyan << "| " << bold << " Bienvenido al programa de cifrado y descifrado " << reset << cyan << " |" << reset << endl;
-    cout << cyan << "+----------------------------+" << reset << endl;
-    cout << yellow << " 1. Cifrar archivo" << reset << endl;
+void displayMenu(WINDOW *menu_win, const vector<string>& recentEncryptedFiles, const vector<string>& recentDecryptedFiles) {
+    werase(menu_win);  // Limpiar toda la ventana
+    box(menu_win, 0, 0);  // Volver a dibujar el borde
+
+    // Imprimir título del menú en color verde
+    wattron(menu_win, COLOR_PAIR(4)); // Color verde
+                                      // 
+    attron(A_BOLD);  // Activar negrita
+    mvwprintw(menu_win, 1, 2, "Bienvenido al programa de cifrado y descifrado");
+    wattroff(menu_win, COLOR_PAIR(4));
+
+    // Imprimir opciones del menú en color amarillo
+    wattron(menu_win, COLOR_PAIR(5)); // Color amarillo
+    mvwprintw(menu_win, 3, 2, "1. Cifrar archivo");
+    wattroff(menu_win, COLOR_PAIR(5));
+
     if (!recentEncryptedFiles.empty()) {
-        cout << magenta << "    Archivos cifrados recientes: " << reset << endl;
+        wattron(menu_win, COLOR_PAIR(4)); // Color para archivos cifrados recientes
+        mvwprintw(menu_win, 4, 3, "Archivos cifrados recientes:");
+        wattroff(menu_win, COLOR_PAIR(4));
+        
+        int line = 5;
         for (const auto& file : recentEncryptedFiles) {
-            cout << "       - " << blue << file << reset << endl;
+            wattron(menu_win, COLOR_PAIR(2)); // Color para archivos cifrados recientes
+            mvwprintw(menu_win, line++, 5, "- %s", file.c_str());
+            wattroff(menu_win, COLOR_PAIR(2));
         }
     }
-    cout << yellow << " 2. Descifrar archivo" << reset << endl;
+
+    wattron(menu_win, COLOR_PAIR(5)); // Color amarillo
+    mvwprintw(menu_win, 9, 2, "2. Descifrar archivo");
+    wattroff(menu_win, COLOR_PAIR(5));
+
     if (!recentDecryptedFiles.empty()) {
-        cout << magenta << "    Archivos descifrados recientes: " << reset << endl;
+        wattron(menu_win, COLOR_PAIR(4)); // Color para archivos descifrados recientes
+        mvwprintw(menu_win, 10, 3, "Archivos descifrados recientes:");
+        wattroff(menu_win, COLOR_PAIR(4));
+        
+        int line = 11;
         for (const auto& file : recentDecryptedFiles) {
-            cout << "       - " << green << file << reset << endl;
+            wattron(menu_win, COLOR_PAIR(7)); // Color para archivos descifrados recientes
+            mvwprintw(menu_win, line++, 5, "- %s", file.c_str());
+            wattroff(menu_win, COLOR_PAIR(7));
         }
     }
-    cout << yellow << " 3. Salir" << reset << endl;
-    cout << cyan << "+----------------------------+" << reset << endl;
+
+    wattron(menu_win, COLOR_PAIR(5)); // Color amarillo
+    mvwprintw(menu_win, 16, 2, "3. Salir");
+    mvwprintw(menu_win, 17, 2, "Seleccione una opción:");
+    wattroff(menu_win, COLOR_PAIR(5));
+
+    wrefresh(menu_win);  // Refrescar la ventana para mostrar el nuevo contenido
 }
 
-string promptForFilename(const string& prompt) {
-    string filename;
-    cout << green << prompt << ": " << reset;
-    cin >> filename;
-    return filename;
+string promptForFilename(WINDOW *menu_win, const string& prompt) {
+    werase(menu_win);  // Limpiar toda la ventana
+    box(menu_win, 0, 0);  // Volver a dibujar el borde
+
+    char filename[256];
+     // mvwprintw(menu_win, 12, 1, "Nombre del archivo:  ");
+    // Imprimir el prompt en la posición correcta
+   mvwprintw(menu_win, 14, 2, "%s: ", prompt.c_str());
+   mvwprintw(menu_win, 15, 2, ":");
+
+    echo();
+    wgetnstr(menu_win, filename, sizeof(filename) - 1);
+    noecho();
+
+    // Imprimir el nombre del archivo un renglón abajo del prompt
+    mvwprintw(menu_win, 16, 1, "Nombre del archivo: %s", filename);
+
+    wrefresh(menu_win);  // Actualizar la ventana de ncurses si es necesario
+
+    return string(filename);
 }
 
-string selectFileFromList(const vector<string>& files) {
-    cout << blue << "Archivos disponibles:" << reset << endl;
+string selectFileFromList(WINDOW *menu_win, const vector<string>& files) {
+      wattron(menu_win, COLOR_PAIR(5)); // Color verde
+ 
+  mvwprintw(menu_win, 1, 2, "Archivos disponibles:");
+    wattron(menu_win, COLOR_PAIR(5)); // Color verde
+ 
+  int line = 2;
     for (size_t i = 0; i < files.size(); ++i) {
-        cout << magenta << " " << i + 1 << ". " << files[i] << reset << endl;
+         wattron(menu_win, COLOR_PAIR(4)); // Color verde
+
+        mvwprintw(menu_win, line++, 3, "%zu. %s", i + 1, files[i].c_str());
+           wattron(menu_win, COLOR_PAIR(4)); // Color verde
+
     }
-    cout << green << "Seleccione el número del archivo: " << reset;
-    size_t choice;
-    cin >> choice;
+    mvwprintw(menu_win, line++, 2, "Seleccione el número del archivo: ");
+
+    wrefresh(menu_win);
+
+    int choice;
+    echo(); 
+    wscanw(menu_win, "%d", &choice);
+    noecho();
+
     if (choice < 1 || choice > files.size()) {
         throw runtime_error("Opción inválida.");
     }
     return files[choice - 1];
 }
 
-void hidePasswordInput(unsigned char* key, unsigned char* iv) {
-    termios tty;
+void hidePasswordInput(WINDOW *menu_win, unsigned char* key, unsigned char* iv) {
+      werase(menu_win);  // Limpiar toda la ventana
+      box(menu_win, 0, 0);  // Volver a dibujar el borde
+
+  termios tty;
     tcgetattr(STDIN_FILENO, &tty);
     termios tty_old = tty;
     tty.c_lflag &= ~ECHO;
@@ -78,21 +143,27 @@ void hidePasswordInput(unsigned char* key, unsigned char* iv) {
 
     string password;
     char ch;
-    cout << green << "Introduce la contraseña: " << reset;
+    int x = 2; // Posición de inicio para la contraseña en la ventana
+    int y = 13; // Línea en la ventana para la entrada de la contraseña
+    
+    mvwprintw(menu_win, y, x, "Introduce la contraseña: "); // Verde
+    wrefresh(menu_win);
 
     while (true) {
-        ch = getchar();
+        ch = wgetch(menu_win);
         if (ch == '\n' || ch == '\r') {
-            cout << endl;
             break;
         } else if (ch == 127 || ch == '\b') {  // Handle backspace
             if (!password.empty()) {
-                cout << "\b \b";
                 password.pop_back();
+                mvwprintw(menu_win, y, x + password.size() + 27, " "); // Borrar el último asterisco
+                mvwprintw(menu_win, y, x + password.size() + 27, "\b \b"); // Mover el cursor hacia atrás
+                wrefresh(menu_win);
             }
         } else {
             password.push_back(ch);
-            cout << '*';
+            mvwprintw(menu_win, y, x + password.size() + 26, "*"); // Mostrar asterisco
+            wrefresh(menu_win);
         }
     }
 
@@ -101,15 +172,21 @@ void hidePasswordInput(unsigned char* key, unsigned char* iv) {
     deriveKeyAndIV(password, key, iv);
 }
 
-void printError(const string& message) {
-    cout << endl;
-    cout << red << "+----------------------------+" << reset << endl;
-    cerr << red << message << reset << endl;
-    cout << red << "+----------------------------+" << reset << endl;
-    cout << endl;
+
+
+
+void printError(WINDOW *menu_win, const string& message) {
+    werase(menu_win);  // Limpiar toda la ventana
+    box(menu_win, 0, 0);  // Volver a dibujar el borde
+
+    wattron(menu_win, COLOR_PAIR(1)); // Color rojo
+    mvwprintw(menu_win, 13, 1, "Error: %s", message.c_str());
+    wattroff(menu_win, COLOR_PAIR(1));
+    wrefresh(menu_win);
 }
 
 void moveFileToData(const std::string& filename) {
+
     std::string sourcePath = "./" + filename;
     std::string destinationPath = "./data/" + filename;
 
@@ -118,77 +195,81 @@ void moveFileToData(const std::string& filename) {
     }
 }
 
-  int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) {
     unsigned char key[32];  // 256 bits
     unsigned char iv[16];   // 128 bits
 
+    // Inicializar ncurses
+    initscr();
+    start_color(); // Inicializar colores
+    cbreak();
+    noecho();
+    keypad(stdscr, TRUE);
 
-      hidePasswordInput(key, iv);
+    // Crear una ventana para el menú
+    int height = 25;
+    int width = 60;
+    int starty = (LINES - height) / 2;
+    int startx = (COLS - width) / 2;
+    WINDOW *menu_win = newwin(height, width, starty, startx);
+    box(menu_win, 0, 0);
+    refresh();
 
-
-  if (argc == 2) {
-        // Si se proporciona un archivo como argumento, cifrarlo y salir
-        std::string plaintextFilename = argv[1];
-        std::vector<unsigned char> plaintext = readFile(plaintextFilename);
-
-        size_t ciphertextSize = ((plaintext.size() + AES_BLOCK_SIZE) / AES_BLOCK_SIZE) * AES_BLOCK_SIZE;
-        std::vector<unsigned char> ciphertext(ciphertextSize);
-
-        encrypt(plaintext.data(), plaintext.size(), key, iv, ciphertext.data());
-
-        std::string ciphertextFilename = promptForFilename("Introduzca el nombre del archivo cifrado de salida");
-        writeFile(ciphertextFilename, ciphertext);
-
-        try {
-            moveFileToData(ciphertextFilename);
-            logFileOperation(ciphertextFilename, "Cifrar");
-            std::cout << blue << "Archivo cifrado correctamente y movido a la carpeta data." << reset << std::endl;
-        } catch (const std::runtime_error& e) {
-            printError("Error al mover el archivo cifrado: " + std::string(e.what()));
-        }
-
-        return 0;
-    }
+    // Definir pares de colores
+    init_pair(1, COLOR_RED, COLOR_BLACK);     // Color rojo para errores
+    init_pair(2, COLOR_CYAN, COLOR_BLACK);    // Color cian para archivos cifrados recientes
+    init_pair(3, COLOR_WHITE, COLOR_BLACK);   // Color blanco para archivos descifrados recientes
+    init_pair(4, COLOR_GREEN, COLOR_BLACK);   // Color verde para el mensaje de bienvenida
+    init_pair(5, COLOR_YELLOW, COLOR_BLACK);  // Color amarillo para las opciones del menú
+    init_pair(6, COLOR_BLUE, COLOR_BLACK);    // Color azul para los nombres de archivos cifrados
+    init_pair(7, COLOR_MAGENTA, COLOR_BLACK); // Color magenta para los nombres de archivos descifrados
 
     // Obtener los archivos más recientes desde la base de datos
     vector<string> recentEncryptedFiles = getRecentEncryptedFiles(4);
     vector<string> recentDecryptedFiles = getRecentDecryptedFiles(4);
-
+    
     int choice = 0;
     while (choice != 3) {
-        displayMenu(recentEncryptedFiles, recentDecryptedFiles);
-        cout << green << "Seleccione una opción: " << reset;
-        cin >> choice;
+        displayMenu(menu_win, recentEncryptedFiles, recentDecryptedFiles);
+        wrefresh(menu_win);
+
+        choice = wgetch(menu_win) - '0';  // Convertir carácter a número
 
         switch (choice) {
             case 1: {
+                werase(menu_win);  // Limpiar toda la ventana
+                box(menu_win, 0, 0);  // Volver a dibujar el borde
+
                 try {
                     auto files = listFiles("data");
-                    string plaintextFilename = selectFileFromList(files);
+                    string plaintextFilename = selectFileFromList(menu_win, files);
 
-                   std::vector<unsigned char> plaintext = readFile("data/" + plaintextFilename);
-
+                    std::vector<unsigned char> plaintext = readFile("data/" + plaintextFilename);
 
                     size_t ciphertextSize = ((plaintext.size() + AES_BLOCK_SIZE) / AES_BLOCK_SIZE) * AES_BLOCK_SIZE;
-
                     std::vector<unsigned char> ciphertext(ciphertextSize);
 
-                   // hidePasswordInput(key, iv);
+                    hidePasswordInput(menu_win,key, iv);  // Solicitar contraseña
+
                     encrypt(plaintext.data(), plaintext.size(), key, iv, ciphertext.data());
 
-                    std::string ciphertextFilename = promptForFilename("Introduzca el nombre del archivo cifrado de salida");
+                    std::string ciphertextFilename = promptForFilename(menu_win, "Introduzca el nombre del archivo cifrado de salida");
 
                     writeFile("data/" + ciphertextFilename, ciphertext);
 
-    
-                   logFileOperation(ciphertextFilename, "Cifrar");
+                    logFileOperation(menu_win,ciphertextFilename, "Cifrar");
 
-                    std::cout << blue << "Archivo cifrado correctamente." << reset << std::endl;
-
+               
 
                     // Eliminar archivo original
                     remove(("data/" + plaintextFilename).c_str());
-                    logFileDeletion(plaintextFilename);
+                    logFileDeletion(menu_win,plaintextFilename);
+
+                    wattron(menu_win, COLOR_PAIR(6)); // Color azul
+                    mvwprintw(menu_win, 14, 9, "Archivo cifrado correctamente.");
+                    wattroff(menu_win, COLOR_PAIR(6));
+                    mvwhline(menu_win, 16, 1, '-', width - 2); // Línea horizontal en la fila 9 (0-indexed)
+
 
                     // Actualizar archivos cifrados recientes
                     if (recentEncryptedFiles.size() >= 4) {
@@ -197,37 +278,40 @@ void moveFileToData(const std::string& filename) {
                     recentEncryptedFiles.push_back(ciphertextFilename);
 
                 } catch (const runtime_error& e) {
-                    printError("Error al cifrar: " + string(e.what()));
+                    printError(menu_win, "Error al cifrar: " + string(e.what()));
                 }
                 break;
             }
             case 2: {
+                werase(menu_win);  // Limpiar toda la ventana
+                box(menu_win, 0, 0);  // Volver a dibujar el borde
+
                 try {
                     auto files = listFiles("data");
-                    string ciphertextFilename = selectFileFromList(files);
+                    string ciphertextFilename = selectFileFromList(menu_win, files);
 
-                    std::vector<unsigned char> encrypted_data = readFile("data/" + ciphertextFilename);
+                    vector<unsigned char> encrypted_data = readFile("data/" + ciphertextFilename);
 
                     size_t decryptedSize = ((encrypted_data.size() + AES_BLOCK_SIZE - 1) / AES_BLOCK_SIZE) * AES_BLOCK_SIZE;
-                  
-                    std::vector<unsigned char> decryptedtext(decryptedSize);
+                    vector<unsigned char> decryptedtext(decryptedSize);
 
-                  //  hidePasswordInput(key, iv);
+                       // Solicitar contraseña y descifrar
+                  hidePasswordInput(menu_win,key, iv);  // Solicitar contraseña
+ 
                     decrypt(encrypted_data.data(), encrypted_data.size(), key, iv, decryptedtext.data());
 
-                   
-                    std::string decryptedFilename = promptForFilename("Introduzca el nombre del archivo descifrado de salida");
+                    string decryptedFilename = promptForFilename(menu_win, "Introduzca el nombre del archivo descifrado de salida");
                     writeFile("data/" + decryptedFilename, decryptedtext);
-
-                    logFileOperation(decryptedFilename, "Descifrar");
-
-                    cout << green << "Archivo descifrado correctamente." << reset << endl;
+                    
+                    logFileOperation(menu_win,decryptedFilename, "Descifrar");
 
 
-                    // Eliminar archivo original
-                  //  remove(("data/" + plaintextFilename).c_str());
-                   // logFileDeletion(plaintextFilename);
 
+                    wattron(menu_win, COLOR_PAIR(6)); // Color azul
+                    mvwprintw(menu_win, 14, 9, "Archivo descifrado correctamente.");
+                    wattroff(menu_win, COLOR_PAIR(6));
+                     // Dibujar el marco
+                    mvwhline(menu_win, 16, 1, '-', width - 2); // Línea horizontal en la fila 9 (0-indexed)
                     // Actualizar archivos descifrados recientes
                     if (recentDecryptedFiles.size() >= 4) {
                         recentDecryptedFiles.erase(recentDecryptedFiles.begin()); // Elimina el más antiguo
@@ -235,18 +319,31 @@ void moveFileToData(const std::string& filename) {
                     recentDecryptedFiles.push_back(decryptedFilename);
 
                 } catch (const runtime_error& e) {
-                    printError("Error al descifrar: " + string(e.what()));
+                    // Manejar el error al descifrar (contraseña incorrecta, etc.)
+                      wattron(menu_win, COLOR_PAIR(1)); // Color rojo
+                     mvwprintw(menu_win, 10, 2, "Error al descifrar: %s", e.what());
+                     wattroff(menu_win, COLOR_PAIR(2));
+                     wrefresh(menu_win);  // Actualizar la ventana de ncurses si es necesario
+
+
                 }
                 break;
             }
             case 3:
-                cout << green << "Saliendo del programa." << reset << endl;
+                mvwprintw(menu_win, 20, 1, "Saliendo del programa...");
                 break;
             default:
-                printError("Opción inválida. Por favor, seleccione nuevamente.");
+                mvwprintw(menu_win, 20, 1, "Opción no válida. Intente de nuevo.");
                 break;
         }
+        wrefresh(menu_win);
+        wgetch(menu_win);  // Esperar a una entrada para continuar
     }
+
+    // Limpiar y cerrar ncurses
+    delwin(menu_win);
+    endwin();
+    refresh();
 
     return 0;
 }
