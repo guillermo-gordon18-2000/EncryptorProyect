@@ -48,6 +48,16 @@ En resumen, este proyecto combinó el poder de C++, H++ y CMake para crear una s
       </a>
     </td>
   </tr>
+
+ 
+<tr>
+  <td align="center">
+    <a href="https://invisible-island.net/ncurses/">
+      <img src="https://img.shields.io/badge/Ncurses-6.2-blue?style=for-the-badge&logo=terminal&logoColor=white" alt="Ncurses">
+    </a>
+  </td>
+</tr>
+
 </table>
 
 </div>
@@ -56,8 +66,8 @@ En resumen, este proyecto combinó el poder de C++, H++ y CMake para crear una s
 
 <div id="header" align="center">
   
-![captura](https://github.com/guillermo-gordon18-2000/EncryptorProyect/assets/83618044/f1b85074-1129-4882-a9f6-8b3fa9d96245)
-  
+
+ ![Screenshot from 2024-06-18 20-44-25](https://github.com/guillermo-gordon18-2000/EncryptorProyect/assets/83618044/5f9f470c-246a-4df5-840f-80ae55b13ae0) 
 </div>
   
 ## Autor
@@ -76,6 +86,7 @@ En resumen, este proyecto combinó el poder de C++, H++ y CMake para crear una s
 
 - Registro de MySQL: el proyecto incorporó una base de datos MySQL para fines de registro, registrando información detallada sobre cada operación de cifrado y descifrado realizada en los archivos .txt. Este mecanismo de registro mejoró la trazabilidad y la responsabilidad en las actividades de gestión de archivos.
 
+- Ncurses: Ncurses es una biblioteca de software libre que proporciona funciones para crear interfaces de usuario basadas en texto en terminales de sistemas Unix-like. 
 
 ## Objetivos del proyecto:
 
@@ -114,6 +125,12 @@ Al combinar el poder de C++, H++ y CMake, junto con las capacidades de registro 
         <img src="https://img.shields.io/badge/Git-2.32.0-red?style=for-the-badge&logo=git&logoColor=white" alt="Git">
       </a>
     </td>
+
+   <td align="center">
+  <a href="https://invisible-island.net/ncurses/">
+    <img src="https://img.shields.io/badge/Ncurses-6.2-blue?style=for-the-badge&logo=terminal&logoColor=white" alt="Ncurses">
+  </a>
+</td>
   </tr>
 </table>
 
