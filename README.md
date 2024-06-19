@@ -48,15 +48,15 @@ En resumen, este proyecto combinó el poder de C++, H++ y CMake para crear una s
       </a>
     </td>
   </tr>
-
- 
 <tr>
-  <td align="center">
-    <a href="https://invisible-island.net/ncurses/">
-      <img src="https://img.shields.io/badge/Ncurses-6.2-blue?style=for-the-badge&logo=terminal&logoColor=white" alt="Ncurses">
-    </a>
-  </td>
-</tr>
+    <td align="center">
+      <a href="https://invisible-island.net/ncurses/">
+        <img src="https://img.shields.io/badge/Ncurses-6.2-blue?style=for-the-badge&logo=terminal&logoColor=white" alt="Ncurses">
+      </a>
+    </td>
+  </tr>
+ 
+
 
 </table>
 
