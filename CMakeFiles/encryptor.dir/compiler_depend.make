@@ -1525,7 +1525,9 @@ CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o: src/mysql_utils.cpp \
   /usr/include/ncurses_dll.h \
   /usr/include/unctrl.h \
   /usr/include/curses.h \
-  /usr/include/cppconn/resultset.h
+  /usr/include/cppconn/resultset.h \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc
 
 CMakeFiles/encryptor.dir/src/openssl_utils.cpp.o: src/openssl_utils.cpp \
   /usr/include/stdc-predef.h \
@@ -1644,6 +1646,8 @@ CMakeFiles/encryptor.dir/src/openssl_utils.cpp.o: src/openssl_utils.cpp \
 
 
 src/openssl_utils.cpp:
+
+/usr/include/c++/11/sstream:
 
 src/mysql_utils.cpp:
 
@@ -1848,6 +1852,8 @@ include/openssl_utils.hpp:
 /usr/include/c++/11/bits/stl_function.h:
 
 /usr/include/c++/11/bits/memoryfwd.h:
+
+/usr/include/c++/11/bits/sstream.tcc:
 
 /usr/include/boost/mpl/aux_/value_wknd.hpp:
 
