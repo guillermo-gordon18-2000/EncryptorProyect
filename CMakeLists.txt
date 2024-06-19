@@ -1,4 +1,3 @@
-
 cmake_minimum_required(VERSION 3.10)
 project(EncryptorProject)
 
@@ -19,6 +18,10 @@ include_directories(${Boost_INCLUDE_DIRS})
 set(MySQL_INCLUDE_DIRS "/usr/include/mysql-cppconn")  # Ajusta según tu instalación
 include_directories(${MySQL_INCLUDE_DIRS})
 
+# Encuentra la biblioteca ncurses
+find_package(Curses REQUIRED)
+include_directories(${CURSES_INCLUDE_DIR})
+
 # Vincula las bibliotecas necesarias
 set(MySQL_LIBRARIES "/usr/lib/mysql")  # Ajusta según tu instalación
 set(EXTRA_LIBS "-lmysqlcppconn")
@@ -30,9 +33,8 @@ add_executable(encryptor
     src/file_utils.cpp
     src/key_derivation.cpp
     src/openssl_utils.cpp
-      src/mysql_utils.cpp
+    src/mysql_utils.cpp
 )
 
-# Vincula con OpenSSL y Boost
-target_link_libraries(encryptor ${OPENSSL_LIBRARIES} ${Boost_LIBRARIES} ${EXTRA_LIBS})
-
+# Vincula con OpenSSL, Boost, MySQL y ncurses
+target_link_libraries(encryptor ${OPENSSL_LIBRARIES} ${Boost_LIBRARIES} ${EXTRA_LIBS} ${CURSES_LIBRARIES})
