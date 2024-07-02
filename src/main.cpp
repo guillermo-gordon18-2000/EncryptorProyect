@@ -47,11 +47,14 @@ void displayMenu(WINDOW *menu_win, const vector<string>& recentEncryptedFiles, c
         mvwprintw(menu_win, 4, 3, "Archivos cifrados recientes:");
         wattroff(menu_win, COLOR_PAIR(4));
         
-        int line = 5;
-        for (const auto& file : recentEncryptedFiles) {
+        int line = 5;  // Línea vertical en donde iniciará
+        int count = 0; // Contador para limitar el número de archivos mostrados  
+     for (const auto& file : recentEncryptedFiles) {
+        if (count >= 4) break; // Salir del bucle si ya se han mostrado 4 archivos
             wattron(menu_win, COLOR_PAIR(2)); // Color para archivos cifrados recientes
             mvwprintw(menu_win, line++, 5, "- %s", file.c_str());
             wattroff(menu_win, COLOR_PAIR(2));
+            ++count; // Incrementar el contador
         }
     }
 
@@ -65,10 +68,14 @@ void displayMenu(WINDOW *menu_win, const vector<string>& recentEncryptedFiles, c
         wattroff(menu_win, COLOR_PAIR(4));
         
         int line = 11;
+        int count = 0; // Contador para limitar el número de archivos mostrados  
+
         for (const auto& file : recentDecryptedFiles) {
+       if (count >= 4) break; // Salir del bucle si ya se han mostrado 4 archivos
             wattron(menu_win, COLOR_PAIR(7)); // Color para archivos descifrados recientes
             mvwprintw(menu_win, line++, 5, "- %s", file.c_str());
             wattroff(menu_win, COLOR_PAIR(7));
+            ++count; // Incrementar el contador
         }
     }
 
@@ -102,24 +109,34 @@ string promptForFilename(WINDOW *menu_win, const string& prompt) {
     return string(filename);
 }
 
-string selectFileFromList(WINDOW *menu_win, const vector<string>& files) {
-      wattron(menu_win, COLOR_PAIR(5)); // Color verde
- 
-  mvwprintw(menu_win, 1, 2, "Archivos disponibles:");
+string selectFileFromList(WINDOW *menu_win, const vector<string>& files, const vector<string>& recentDecryptedFiles) {
     wattron(menu_win, COLOR_PAIR(5)); // Color verde
- 
-  int line = 2;
+    mvwprintw(menu_win, 1, 2, "Archivos disponibles:");
+    wattroff(menu_win, COLOR_PAIR(5)); // Quitar color verde
+
+    int line = 2;
     for (size_t i = 0; i < files.size(); ++i) {
-         wattron(menu_win, COLOR_PAIR(4)); // Color verde
+        // Verificar si el archivo está en la lista de archivos descifrados recientes
+        bool isRecentlyDecrypted = std::find(recentDecryptedFiles.begin(), recentDecryptedFiles.end(), files[i]) != recentDecryptedFiles.end();
+
+        if (isRecentlyDecrypted) {
+            wattron(menu_win, COLOR_PAIR(6)); // Color azul para archivos descifrados recientemente
+        } else {
+            wattron(menu_win, COLOR_PAIR(4)); // Otro color para archivos normales
+        }
 
         mvwprintw(menu_win, line++, 3, "%zu. %s", i + 1, files[i].c_str());
-           wattron(menu_win, COLOR_PAIR(4)); // Color verde
 
+        if (isRecentlyDecrypted) {
+            wattroff(menu_win, COLOR_PAIR(6)); // Quitar color azul
+        } else {
+            wattroff(menu_win, COLOR_PAIR(4)); // Quitar otro color
+        }
     }
-     wattron(menu_win, COLOR_PAIR(5)); // Color verde
 
+    wattron(menu_win, COLOR_PAIR(5)); // Color verde
     mvwprintw(menu_win, line++, 2, "Seleccione el número del archivo: ");
- wattron(menu_win, COLOR_PAIR(5)); // Color verde
+    wattroff(menu_win, COLOR_PAIR(5)); // Quitar color verde
 
     wrefresh(menu_win);
 
@@ -228,8 +245,8 @@ int main(int argc, char* argv[]) {
     init_pair(7, COLOR_MAGENTA, COLOR_BLACK); // Color magenta para los nombres de archivos descifrados
 
     // Obtener los archivos más recientes desde la base de datos
-    vector<string> recentEncryptedFiles = getRecentEncryptedFiles(4);
-    vector<string> recentDecryptedFiles = getRecentDecryptedFiles(4);
+    vector<string> recentEncryptedFiles = getRecentEncryptedFiles(7);
+    vector<string> recentDecryptedFiles = getRecentDecryptedFiles(7);
     
     int choice = 0;
     while (choice != 3) {
@@ -245,7 +262,7 @@ int main(int argc, char* argv[]) {
 
                 try {
                     auto files = listFiles("data");
-                    string plaintextFilename = selectFileFromList(menu_win, files);
+                    string plaintextFilename = selectFileFromList(menu_win, files, recentEncryptedFiles);
 
                     std::vector<unsigned char> plaintext = readFile("data/" + plaintextFilename);
 
@@ -304,7 +321,7 @@ int main(int argc, char* argv[]) {
 
     try {
         auto files = listFiles("data");
-        string ciphertextFilename = selectFileFromList(menu_win, files);
+          string ciphertextFilename = selectFileFromList(menu_win, files, recentEncryptedFiles);
 
         vector<unsigned char> encrypted_data = readFile("data/" + ciphertextFilename);
 
