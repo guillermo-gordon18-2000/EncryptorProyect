@@ -1228,6 +1228,7 @@ CMakeFiles/encryptor.dir/src/main.cpp.o
  /usr/include/ncurses_dll.h
  /usr/include/unctrl.h
  /usr/include/curses.h
+ /usr/include/c++/11/ctime
 
 CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o
  /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/mysql_utils.cpp

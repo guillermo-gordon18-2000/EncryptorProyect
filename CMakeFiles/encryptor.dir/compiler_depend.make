@@ -1223,7 +1223,8 @@ CMakeFiles/encryptor.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/curses.h \
   /usr/include/ncurses_dll.h \
   /usr/include/unctrl.h \
-  /usr/include/curses.h
+  /usr/include/curses.h \
+  /usr/include/c++/11/ctime
 
 CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o: src/mysql_utils.cpp \
   /usr/include/stdc-predef.h \
