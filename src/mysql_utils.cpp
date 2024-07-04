@@ -108,6 +108,7 @@ void logFileOperation(WINDOW *menu_win, const std::string& filename, const std::
     }
 }
 
-void logFileDeletion(WINDOW *menu_win, const std::string& filename) {
-    logFileOperation(menu_win, filename, "Eliminar", "", "", std::vector<unsigned char>(), "");
+// Definición de la función para registrar la eliminación de archivos
+void logFileDeletion(WINDOW *menu_win, const std::string& filename, const std::string& operation, const std::string& original_path, const std::string& encrypted_path, const std::vector<unsigned char>& encryption_key, const std::string& algorithm) {
+    logFileOperation(menu_win, filename, operation, original_path, encrypted_path, encryption_key, algorithm);
 }

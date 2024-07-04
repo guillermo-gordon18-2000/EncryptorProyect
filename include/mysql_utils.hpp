@@ -13,6 +13,7 @@
 // Función para obtener los archivos cifrados más recientes desde la base de datos
 std::vector<std::string> getRecentEncryptedFiles(int limit);
 
+
 // Función para obtener los archivos descifrados más recientes desde la base de datos
 std::vector<std::string> getRecentDecryptedFiles(int limit);
 
@@ -21,8 +22,8 @@ std::vector<std::string> getRecentDecryptedFiles(int limit);
 
 void logFileOperation(WINDOW *menu_win, const std::string& filename, const std::string& operation, const std::string& original_path, const std::string& encrypted_path, const std::vector<unsigned char>& encryption_key, const std::string& algorithm);
 
-// Nueva función para registrar la eliminación de archivos
-void logFileDeletion(WINDOW *menu_win,const std::string& filename);
 
+// Nueva función para registrar la eliminación de archivos
+void logFileDeletion(WINDOW *menu_win, const std::string& filename, const std::string& operation, const std::string& original_path, const std::string& encrypted_path, const std::vector<unsigned char>& encryption_key, const std::string& algorithm);
 
 #endif // MYSQL_UTILS_HPP
