@@ -34,6 +34,13 @@ add_executable(encryptor
     src/key_derivation.cpp
     src/openssl_utils.cpp
     src/mysql_utils.cpp
+    src/colors.cpp
+    src/directories.cpp
+    src/password_prompt.cpp
+    src/time_utils.cpp
+    src/menu.cpp
+
+
 )
 
 # Vincula con OpenSSL, Boost, MySQL y ncurses
