@@ -23,8 +23,37 @@
 #include <iomanip>
 #include <sstream>
 
+#include <signal.h>
+#include <stdlib.h>
+#include <locale.h>
+
 using namespace std;
 
+WINDOW *menu_win; // Hacer la ventana global para acceso desde el manejador de señales
+
+//INDOW *menu_win; // Hacer la ventana global para acceso desde el manejador de señales
+
+void resizeHandler(int sig) {
+    int height = 25;
+    int width = 60;
+    int starty, startx;
+    getmaxyx(stdscr, starty, startx);
+    starty = (starty - height) / 2;
+    startx = (startx - width) / 2;
+
+    // Reubicar y redimensionar la ventana del menú
+    wresize(menu_win, height, width);
+    mvwin(menu_win, starty, startx);
+    box(menu_win, 0, 0);
+    refresh();
+
+    // Obtener los archivos más recientes desde la base de datos
+    vector<string> recentEncryptedFiles; // = getRecentEncryptedFiles(30);
+    vector<string> recentDecryptedFiles; // = getRecentDecryptedFiles(30);
+
+    // Mostrar el menú
+    displayEncrypFile(menu_win, recentEncryptedFiles, recentDecryptedFiles);
+}
 
 string promptForFilename(WINDOW *menu_win, const string &prompt, const string &originalFilename, const string &method) {
     string suggestedFilename = originalFilename + "_" + method + "_" + getCurrentDate() + ".txt";
@@ -129,18 +158,12 @@ string promptForFilename(WINDOW *menu_win, const string &prompt, const string &o
     return filename;
 }
 
-
-
-
-
-
-
 void printError(WINDOW *menu_win, const string& message) {
     werase(menu_win);  // Limpiar toda la ventana
     box(menu_win, 0, 0);  // Volver a dibujar el borde
 
     wattron(menu_win, COLOR_PAIR(1)); // Color rojo
-    mvwprintw(menu_win, 13, 1, "Error: %s", message.c_str());
+    mvwprintw(menu_win, 13, 4, "Error: %s", message.c_str());
     wattroff(menu_win, COLOR_PAIR(1));
     wrefresh(menu_win);
 }
@@ -148,7 +171,10 @@ void printError(WINDOW *menu_win, const string& message) {
 
 
 int main(int argc, char* argv[]) {
-    unsigned char key[32];  // 256 bits
+    setlocale(LC_ALL, "");  // Configurar para usar la localización actual y soportar UTF-8
+    
+
+  unsigned char key[32];  // 256 bits
     unsigned char iv[16];   // 128 bits
 
 
@@ -178,6 +204,18 @@ int main(int argc, char* argv[]) {
     init_pair(5, COLOR_YELLOW, COLOR_BLACK);  // Color amarillo para las opciones del menú
     init_pair(6, COLOR_BLUE, COLOR_BLACK);    // Color azul para los nombres de archivos cifrados
     init_pair(7, COLOR_MAGENTA, COLOR_BLACK); // Color magenta para los nombres de archivos descifrados
+
+
+
+
+
+
+   // Configurar el manejador de señales para SIGWINCH
+    struct sigaction sa;
+    sa.sa_handler = resizeHandler;
+    sa.sa_flags = 0;
+    sigemptyset(&sa.sa_mask);
+    sigaction(SIGWINCH, &sa, NULL);
 
     // Obtener los archivos más recientes desde la base de datos
     vector<string> recentEncryptedFiles = getRecentEncryptedFiles(30);
@@ -217,17 +255,17 @@ int main(int argc, char* argv[]) {
             std::string ciphertextFilename = promptForFilename(menu_win, "Introduzca el nombre del archivo cifrado de salida", filename, "Cifrado");
 
             writeFile("data/encrypted/" + ciphertextFilename, ciphertext);
-
             // Actualizar operación de archivo en la base de datos
-            logFileOperation(menu_win, ciphertextFilename, "Cifrar", "data/encrypted/" + filename, "data/encrypted/" + ciphertextFilename, std::vector<unsigned char>(key, key + sizeof(key)), "AES");
-
+            logFileOperation(menu_win, ciphertextFilename, "Cifrar", "data/encrypted/" + filename, "data/decrypted/" + ciphertextFilename, std::vector<unsigned char>(key, key + sizeof(key)), "AES");
             // Eliminar archivo original
          // Eliminar archivo original
     if (remove(filename.c_str()) != 0) {
         // Si ocurre un error al eliminar el archivo, lo manejamos aquí
         perror("Error eliminando el archivo original");
+
     } else {
-        logFileDeletion(menu_win, filename, "Cifrar", "data/encrypted/" + filename, "data/encrypted" + ciphertextFilename, std::vector<unsigned char>(key, key + sizeof(key)), "AES");
+
+        logFileDeletion(menu_win, filename, "Cifrar", "data/encrypted/" + filename, "data/decrypted" + ciphertextFilename, std::vector<unsigned char>(key, key + sizeof(key)), "AES");
 
     }
 
@@ -291,10 +329,10 @@ int main(int argc, char* argv[]) {
         // Si ocurre un error al eliminar el archivo, lo manejamos aquí
         perror("Error eliminando el archivo original");
     } else {
-        logFileDeletion(menu_win, filename,"Descifrar", "data/decrypted" + filename, "data/decrypted" + decryptedFilename, std::vector<unsigned char>(key, key + sizeof(key)), "AES");
+        logFileDeletion(menu_win, filename,"Descifrar", "data/decrypted" + filename, "data/encrypted" + decryptedFilename, std::vector<unsigned char>(key, key + sizeof(key)), "AES");
     } 
           // Actualizar operación de archivo en la base de datos
-            logFileOperation(menu_win, decryptedFilename, "Descifrar", "data/decrypted" + filename, "data/decrypted" + decryptedFilename, std::vector<unsigned char>(key, key + sizeof(key)), "AES");
+            logFileOperation(menu_win, decryptedFilename, "Descifrar", "data/decrypted" + filename, "data/encrypted" + decryptedFilename, std::vector<unsigned char>(key, key + sizeof(key)), "AES");
 
             wattron(menu_win, COLOR_PAIR(6)); // Color azul
             mvwprintw(menu_win, 14, 9, "Archivo descifrado correctamente.");
@@ -331,8 +369,27 @@ int main(int argc, char* argv[]) {
     int choice = 0;
 
     while (choice != 3) {
-        displayMenu(menu_win, recentEncryptedFiles, recentDecryptedFiles);
-        wrefresh(menu_win);
+         if (!recentDecryptedFiles.empty()) {
+        wattron(menu_win, COLOR_PAIR(4)); // Color para archivos descifrados recientes
+        mvwprintw(menu_win, 14, 3, "Archivos descifrados recientes:");
+        wattroff(menu_win, COLOR_PAIR(4));
+        
+        int line = 15;
+        int count = 0; // Contador para limitar el número de archivos mostrados  
+
+        for (const auto& file : recentDecryptedFiles) {
+            if (count >= 4) break; // Salir del bucle si ya se han mostrado 4 archivos
+            wattron(menu_win, COLOR_PAIR(7)); // Color para archivos descifrados recientes
+            mvwprintw(menu_win, line++, 5, "- %s", file.c_str());
+            wattroff(menu_win, COLOR_PAIR(7));
+            ++count; // Incrementar el contador
+        }
+    }
+
+      //displayEncurypFile(menu_win, recentEncryptedFiles, recentDecryptedFiles);
+        displayEncrypFile(menu_win, recentEncryptedFiles, recentDecryptedFiles);
+   
+      wrefresh(menu_win);
 
         choice = wgetch(menu_win) - '0';  // Convertir carácter a número
 
