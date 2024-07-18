@@ -12,6 +12,7 @@ extern const std::string magenta;
 extern const std::string cyan;
 extern const std::string bold;
 
-//void initColors();
+
+void initializeColors();
 
 #endif // COLORS_HPP
