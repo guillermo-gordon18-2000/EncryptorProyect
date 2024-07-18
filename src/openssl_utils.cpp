@@ -68,3 +68,17 @@ void handleErrors() {
     // Abortamos el programa después de imprimir los errores
     abort();
 }
+
+
+
+void printError(WINDOW *menu_win, const string& message) {
+    werase(menu_win);  // Limpiar toda la ventana
+    box(menu_win, 0, 0);  // Volver a dibujar el borde
+
+    wattron(menu_win, COLOR_PAIR(1)); // Color rojo
+    mvwprintw(menu_win, 13, 4, "Error: %s", message.c_str());
+    wattroff(menu_win, COLOR_PAIR(1));
+    wrefresh(menu_win);
+}
+
+
