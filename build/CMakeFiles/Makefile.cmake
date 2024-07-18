@@ -60,4 +60,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/encryptor.dir/DependInfo.cmake"
+  "CMakeFiles/format.dir/DependInfo.cmake"
   )

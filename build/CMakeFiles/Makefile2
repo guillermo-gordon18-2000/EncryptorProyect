@@ -72,6 +72,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/encryptor.dir/clean
+clean: CMakeFiles/format.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -81,12 +82,12 @@ clean: CMakeFiles/encryptor.dir/clean
 CMakeFiles/encryptor.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target encryptor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target encryptor"
 .PHONY : CMakeFiles/encryptor.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/encryptor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/encryptor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles 0
 .PHONY : CMakeFiles/encryptor.dir/rule
@@ -99,6 +100,32 @@ encryptor: CMakeFiles/encryptor.dir/rule
 CMakeFiles/encryptor.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/clean
 .PHONY : CMakeFiles/encryptor.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/format.dir
+
+# All Build rule for target.
+CMakeFiles/format.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/format.dir/build.make CMakeFiles/format.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/format.dir/build.make CMakeFiles/format.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles --progress-num=13 "Built target format"
+.PHONY : CMakeFiles/format.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/format.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/format.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles 0
+.PHONY : CMakeFiles/format.dir/rule
+
+# Convenience name for target.
+format: CMakeFiles/format.dir/rule
+.PHONY : format
+
+# clean rule for target.
+CMakeFiles/format.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/format.dir/build.make CMakeFiles/format.dir/clean
+.PHONY : CMakeFiles/format.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

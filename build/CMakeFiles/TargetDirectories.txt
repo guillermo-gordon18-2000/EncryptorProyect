@@ -1,3 +1,4 @@
 /home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles/encryptor.dir
+/home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles/format.dir
 /home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles/edit_cache.dir
 /home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles/rebuild_cache.dir

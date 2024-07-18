@@ -139,34 +139,73 @@ CMakeFiles/encryptor.dir/src/file_utils.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
- /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /usr/include/c++/11/fstream /usr/include/c++/11/istream \
- /usr/include/c++/11/ios /usr/include/c++/11/exception \
- /usr/include/c++/11/bits/exception_ptr.h \
- /usr/include/c++/11/bits/cxxabi_init_exception.h \
- /usr/include/c++/11/typeinfo /usr/include/c++/11/bits/nested_exception.h \
- /usr/include/c++/11/bits/ios_base.h \
+ /usr/include/x86_64-linux-gnu/bits/iscanonical.h /usr/include/curses.h \
+ /usr/include/ncurses_dll.h /usr/include/unctrl.h /usr/include/curses.h \
+ /home/maverick/Documents/Proyecto/C++/EncryptorProyect/include/key_derivation.hpp \
+ /home/maverick/Documents/Proyecto/C++/EncryptorProyect/include/openssl_utils.hpp \
+ /usr/include/openssl/err.h /usr/include/openssl/macros.h \
+ /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
+ /usr/include/x86_64-linux-gnu/openssl/configuration.h \
+ /usr/include/openssl/opensslv.h /usr/include/openssl/e_os2.h \
+ /usr/include/c++/11/stdlib.h /usr/include/openssl/types.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+ /usr/include/openssl/safestack.h /usr/include/openssl/stack.h \
+ /usr/include/openssl/bio.h /usr/include/openssl/crypto.h \
+ /usr/include/openssl/cryptoerr.h /usr/include/openssl/symhacks.h \
+ /usr/include/openssl/cryptoerr_legacy.h /usr/include/openssl/core.h \
+ /usr/include/openssl/bioerr.h /usr/include/openssl/lhash.h \
+ /home/maverick/Documents/Proyecto/C++/EncryptorProyect/include/time_utils.hpp \
+ /usr/include/c++/11/iomanip /usr/include/c++/11/bits/ios_base.h \
  /usr/include/c++/11/bits/locale_classes.h \
  /usr/include/c++/11/bits/locale_classes.tcc \
  /usr/include/c++/11/system_error \
  /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
- /usr/include/c++/11/stdexcept /usr/include/c++/11/streambuf \
- /usr/include/c++/11/bits/streambuf.tcc \
- /usr/include/c++/11/bits/basic_ios.h \
- /usr/include/c++/11/bits/locale_facets.h /usr/include/c++/11/cwctype \
- /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/c++/11/stdexcept /usr/include/c++/11/exception \
+ /usr/include/c++/11/bits/exception_ptr.h \
+ /usr/include/c++/11/bits/cxxabi_init_exception.h \
+ /usr/include/c++/11/typeinfo /usr/include/c++/11/bits/nested_exception.h \
+ /usr/include/c++/11/locale /usr/include/c++/11/bits/locale_facets.h \
+ /usr/include/c++/11/cwctype /usr/include/wctype.h \
+ /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+ /usr/include/c++/11/streambuf /usr/include/c++/11/bits/streambuf.tcc \
  /usr/include/c++/11/bits/streambuf_iterator.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
  /usr/include/c++/11/bits/locale_facets.tcc \
+ /usr/include/c++/11/bits/locale_facets_nonio.h /usr/include/c++/11/ctime \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/11/bits/locale_conv.h \
+ /usr/include/c++/11/bits/unique_ptr.h /usr/include/c++/11/utility \
+ /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/tuple \
+ /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
+ /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/sstream \
+ /usr/include/c++/11/istream /usr/include/c++/11/ios \
+ /usr/include/c++/11/bits/basic_ios.h \
  /usr/include/c++/11/bits/basic_ios.tcc /usr/include/c++/11/ostream \
  /usr/include/c++/11/bits/ostream.tcc \
- /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/bits/codecvt.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
- /usr/include/c++/11/bits/fstream.tcc /usr/include/boost/filesystem.hpp \
- /usr/include/boost/filesystem/config.hpp /usr/include/boost/config.hpp \
- /usr/include/boost/config/user.hpp \
+ /usr/include/c++/11/bits/istream.tcc \
+ /usr/include/c++/11/bits/sstream.tcc \
+ /home/maverick/Documents/Proyecto/C++/EncryptorProyect/include/encryption.hpp \
+ /usr/include/openssl/evp.h /usr/include/openssl/core_dispatch.h \
+ /usr/include/openssl/evperr.h /usr/include/openssl/params.h \
+ /usr/include/openssl/bn.h /usr/include/openssl/bnerr.h \
+ /usr/include/openssl/objects.h /usr/include/openssl/obj_mac.h \
+ /usr/include/openssl/asn1.h /usr/include/openssl/asn1err.h \
+ /usr/include/openssl/objectserr.h \
+ /home/maverick/Documents/Proyecto/C++/EncryptorProyect/include/mysql_utils.hpp \
+ /usr/include/mysql_driver.h /usr/include/boost/scoped_ptr.hpp \
+ /usr/include/boost/smart_ptr/scoped_ptr.hpp \
+ /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
  /usr/include/boost/config/compiler/gcc.hpp /usr/include/c++/11/cstddef \
  /usr/include/boost/config/detail/select_stdlib_config.hpp \
@@ -184,11 +223,96 @@ CMakeFiles/encryptor.dir/src/file_utils.cpp.o: \
  /usr/include/boost/config/detail/posix_features.hpp \
  /usr/include/boost/config/detail/suffix.hpp \
  /usr/include/boost/config/helper_macros.hpp \
+ /usr/include/boost/assert.hpp /usr/include/assert.h \
+ /usr/include/boost/checked_delete.hpp \
+ /usr/include/boost/core/checked_delete.hpp \
+ /usr/include/boost/smart_ptr/detail/sp_nullptr_t.hpp \
+ /usr/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
+ /usr/include/boost/smart_ptr/detail/sp_noexcept.hpp \
+ /usr/include/boost/config/workaround.hpp /usr/include/c++/11/memory \
+ /usr/include/c++/11/bits/stl_tempbuf.h \
+ /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
+ /usr/include/c++/11/bits/shared_ptr.h \
+ /usr/include/c++/11/bits/shared_ptr_base.h \
+ /usr/include/c++/11/bits/allocated_ptr.h \
+ /usr/include/c++/11/bits/refwrap.h \
+ /usr/include/c++/11/ext/aligned_buffer.h \
+ /usr/include/c++/11/ext/concurrence.h \
+ /usr/include/c++/11/bits/shared_ptr_atomic.h \
+ /usr/include/c++/11/bits/atomic_base.h \
+ /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/11/backward/auto_ptr.h \
+ /usr/include/boost/smart_ptr/detail/operator_bool.hpp \
+ /usr/include/cppconn/driver.h /usr/include/cppconn/connection.h \
+ /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
+ /usr/include/c++/11/bits/stl_map.h \
+ /usr/include/c++/11/bits/stl_multimap.h \
+ /usr/include/c++/11/bits/erase_if.h /usr/include/cppconn/build_config.h \
+ /usr/include/cppconn/warning.h /usr/include/cppconn/sqlstring.h \
+ /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
+ /usr/include/c++/11/bits/algorithmfwd.h \
+ /usr/include/c++/11/bits/stl_heap.h \
+ /usr/include/c++/11/bits/uniform_int_dist.h /usr/include/c++/11/iostream \
+ /usr/include/cppconn/variant.h /usr/include/c++/11/list \
+ /usr/include/c++/11/bits/stl_list.h /usr/include/c++/11/bits/list.tcc \
+ /usr/include/cppconn/exception.h /usr/include/mysql_connection.h \
+ /usr/include/cppconn/connection.h /usr/include/boost/shared_ptr.hpp \
+ /usr/include/boost/smart_ptr/shared_ptr.hpp \
+ /usr/include/boost/smart_ptr/detail/shared_count.hpp \
+ /usr/include/boost/smart_ptr/bad_weak_ptr.hpp \
+ /usr/include/boost/smart_ptr/detail/sp_counted_base.hpp \
+ /usr/include/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp \
+ /usr/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp \
+ /usr/include/boost/smart_ptr/detail/sp_counted_base_gcc_atomic.hpp \
+ /usr/include/boost/smart_ptr/detail/sp_typeinfo_.hpp \
+ /usr/include/boost/cstdint.hpp \
+ /usr/include/boost/smart_ptr/detail/sp_counted_impl.hpp \
+ /usr/include/boost/core/addressof.hpp \
+ /usr/include/boost/throw_exception.hpp \
+ /usr/include/boost/assert/source_location.hpp \
+ /usr/include/boost/current_function.hpp \
+ /usr/include/boost/exception/exception.hpp \
+ /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
+ /usr/include/boost/smart_ptr/detail/sp_convertible.hpp \
+ /usr/include/boost/smart_ptr/detail/spinlock_pool.hpp \
+ /usr/include/boost/smart_ptr/detail/spinlock.hpp \
+ /usr/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp \
+ /usr/include/boost/smart_ptr/detail/yield_k.hpp \
+ /usr/include/boost/smart_ptr/detail/sp_thread_pause.hpp \
+ /usr/include/boost/smart_ptr/detail/sp_thread_sleep.hpp \
+ /usr/include/boost/config/pragma_message.hpp \
+ /usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
+ /usr/include/boost/smart_ptr/detail/local_counted_base.hpp \
+ /usr/include/cppconn/statement.h /usr/include/cppconn/config.h \
+ /usr/include/inttypes.h /usr/include/cppconn/resultset.h \
+ /usr/include/cppconn/resultset_metadata.h \
+ /usr/include/cppconn/datatype.h \
+ /usr/include/cppconn/prepared_statement.h \
+ /usr/include/cppconn/statement.h \
+ /home/maverick/Documents/Proyecto/C++/EncryptorProyect/include/menu.hpp \
+ /home/maverick/Documents/Proyecto/C++/EncryptorProyect/include/password_prompt.hpp \
+ /usr/include/termios.h /usr/include/x86_64-linux-gnu/bits/termios.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+ /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
+ /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+ /home/maverick/Documents/Proyecto/C++/EncryptorProyect/include/key_derivation.hpp \
+ /usr/include/c++/11/fstream \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+ /usr/include/c++/11/bits/fstream.tcc /usr/include/boost/filesystem.hpp \
+ /usr/include/boost/filesystem/config.hpp \
  /usr/include/boost/system/api_config.hpp \
  /usr/include/boost/detail/workaround.hpp \
- /usr/include/boost/config/workaround.hpp \
- /usr/include/boost/filesystem/path.hpp /usr/include/boost/assert.hpp \
- /usr/include/assert.h /usr/include/boost/filesystem/path_traits.hpp \
+ /usr/include/boost/filesystem/path.hpp \
+ /usr/include/boost/filesystem/path_traits.hpp \
  /usr/include/boost/type_traits/is_array.hpp \
  /usr/include/boost/type_traits/integral_constant.hpp \
  /usr/include/boost/type_traits/decay.hpp \
@@ -202,49 +326,19 @@ CMakeFiles/encryptor.dir/src/file_utils.cpp.o: \
  /usr/include/boost/type_traits/remove_reference.hpp \
  /usr/include/boost/type_traits/remove_cv.hpp \
  /usr/include/boost/system/error_code.hpp \
- /usr/include/boost/system/detail/config.hpp \
- /usr/include/boost/cstdint.hpp /usr/include/c++/11/functional \
- /usr/include/c++/11/tuple /usr/include/c++/11/utility \
- /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/array \
- /usr/include/c++/11/bits/uses_allocator.h \
- /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/refwrap.h \
- /usr/include/c++/11/bits/std_function.h /usr/include/c++/11/cstring \
+ /usr/include/boost/system/detail/config.hpp /usr/include/c++/11/cstring \
  /usr/include/string.h /usr/include/strings.h \
  /usr/include/boost/cerrno.hpp \
  /usr/include/boost/system/detail/generic_category.hpp \
  /usr/include/boost/system/detail/system_category_posix.hpp \
  /usr/include/boost/system/detail/std_interoperability.hpp \
- /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
- /usr/include/c++/11/ext/aligned_buffer.h \
- /usr/include/c++/11/bits/stl_map.h \
- /usr/include/c++/11/bits/stl_multimap.h \
- /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/memory \
- /usr/include/c++/11/bits/stl_tempbuf.h \
- /usr/include/c++/11/bits/stl_raw_storage_iter.h \
- /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
- /usr/include/c++/11/bits/unique_ptr.h \
- /usr/include/c++/11/bits/shared_ptr.h \
- /usr/include/c++/11/bits/shared_ptr_base.h \
- /usr/include/c++/11/bits/allocated_ptr.h \
- /usr/include/c++/11/ext/concurrence.h \
- /usr/include/c++/11/bits/shared_ptr_atomic.h \
- /usr/include/c++/11/bits/atomic_base.h \
- /usr/include/c++/11/bits/atomic_lockfree_defines.h \
- /usr/include/c++/11/backward/auto_ptr.h /usr/include/c++/11/mutex \
- /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
- /usr/include/c++/11/limits /usr/include/c++/11/ctime \
+ /usr/include/c++/11/mutex /usr/include/c++/11/chrono \
+ /usr/include/c++/11/ratio /usr/include/c++/11/limits \
  /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/bits/std_mutex.h \
  /usr/include/c++/11/bits/unique_lock.h \
- /usr/include/boost/core/enable_if.hpp /usr/include/c++/11/list \
- /usr/include/c++/11/bits/stl_list.h /usr/include/c++/11/bits/list.tcc \
- /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
- /usr/include/c++/11/locale \
- /usr/include/c++/11/bits/locale_facets_nonio.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/11/bits/locale_facets_nonio.tcc \
- /usr/include/c++/11/bits/locale_conv.h \
+ /usr/include/boost/core/enable_if.hpp /usr/include/c++/11/iterator \
+ /usr/include/c++/11/bits/stream_iterator.h \
  /usr/include/boost/config/abi_prefix.hpp \
  /usr/include/boost/config/abi_suffix.hpp \
  /usr/include/boost/system/system_error.hpp /usr/include/c++/11/cassert \
@@ -385,7 +479,6 @@ CMakeFiles/encryptor.dir/src/file_utils.cpp.o: \
  /usr/include/boost/type_traits/remove_pointer.hpp \
  /usr/include/boost/detail/select_type.hpp \
  /usr/include/boost/iterator/detail/enable_if.hpp \
- /usr/include/boost/core/addressof.hpp \
  /usr/include/boost/type_traits/add_const.hpp \
  /usr/include/boost/type_traits/remove_const.hpp \
  /usr/include/boost/type_traits/is_pod.hpp \
@@ -432,21 +525,11 @@ CMakeFiles/encryptor.dir/src/file_utils.cpp.o: \
  /usr/include/boost/io/ios_state.hpp /usr/include/boost/io_fwd.hpp \
  /usr/include/boost/functional/hash_fwd.hpp \
  /usr/include/boost/container_hash/hash_fwd.hpp \
- /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
- /usr/include/c++/11/bits/algorithmfwd.h \
- /usr/include/c++/11/bits/stl_heap.h \
- /usr/include/c++/11/bits/uniform_int_dist.h \
  /usr/include/boost/filesystem/exception.hpp \
  /usr/include/boost/smart_ptr/intrusive_ptr.hpp \
- /usr/include/boost/smart_ptr/detail/sp_convertible.hpp \
- /usr/include/boost/smart_ptr/detail/sp_nullptr_t.hpp \
- /usr/include/boost/smart_ptr/detail/sp_noexcept.hpp \
  /usr/include/boost/config/no_tr1/functional.hpp \
- /usr/include/boost/smart_ptr/detail/operator_bool.hpp \
  /usr/include/boost/smart_ptr/intrusive_ref_counter.hpp \
  /usr/include/boost/smart_ptr/detail/atomic_count.hpp \
- /usr/include/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp \
- /usr/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp \
  /usr/include/boost/smart_ptr/detail/atomic_count_gcc_atomic.hpp \
  /usr/include/boost/filesystem/directory.hpp \
  /usr/include/boost/filesystem/file_status.hpp \
@@ -455,4 +538,4 @@ CMakeFiles/encryptor.dir/src/file_utils.cpp.o: \
  /usr/include/boost/filesystem/operations.hpp \
  /usr/include/boost/filesystem/convenience.hpp \
  /usr/include/boost/filesystem/string_file.hpp \
- /usr/include/boost/filesystem/fstream.hpp
+ /usr/include/boost/filesystem/fstream.hpp /usr/include/openssl/aes.h

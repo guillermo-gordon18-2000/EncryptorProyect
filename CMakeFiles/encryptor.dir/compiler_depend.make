@@ -3,10 +3,11 @@
 
 CMakeFiles/encryptor.dir/src/colors.cpp.o: src/colors.cpp \
   /usr/include/stdc-predef.h \
-  include/colors.hpp \
-  /usr/include/c++/11/string \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
+  /usr/include/curses.h \
+  /usr/include/ncurses_dll.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/features.h \
   /usr/include/features-time64.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -15,6 +16,35 @@ CMakeFiles/encryptor.dir/src/colors.cpp.o: src/colors.cpp \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/stdio.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/unctrl.h \
+  /usr/include/curses.h \
+  /usr/include/c++/11/string \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/bits/memoryfwd.h \
@@ -38,28 +68,7 @@ CMakeFiles/encryptor.dir/src/colors.cpp.o: src/colors.cpp \
   /usr/include/c++/11/bits/predefined_ops.h \
   /usr/include/c++/11/bits/postypes.h \
   /usr/include/c++/11/cwchar \
-  /usr/include/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/c++/11/cstdint \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   /usr/include/c++/11/bits/allocator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
   /usr/include/c++/11/ext/new_allocator.h \
@@ -132,12 +141,6 @@ CMakeFiles/encryptor.dir/src/colors.cpp.o: src/colors.cpp \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/cstdio \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
   /usr/include/c++/11/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -469,13 +472,6 @@ CMakeFiles/encryptor.dir/src/encryption.cpp.o: src/encryption.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/unctrl.h \
   /usr/include/curses.h \
-  /usr/include/openssl/aes.h \
-  /usr/include/c++/11/stdexcept \
-  /usr/include/c++/11/exception \
-  /usr/include/c++/11/bits/exception_ptr.h \
-  /usr/include/c++/11/bits/cxxabi_init_exception.h \
-  /usr/include/c++/11/typeinfo \
-  /usr/include/c++/11/bits/nested_exception.h \
   /usr/include/c++/11/string \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/bits/char_traits.h \
@@ -504,7 +500,14 @@ CMakeFiles/encryptor.dir/src/encryption.cpp.o: src/encryption.cpp \
   /usr/include/c++/11/cstdio \
   /usr/include/c++/11/cerrno \
   /usr/include/c++/11/bits/charconv.h \
-  /usr/include/c++/11/bits/basic_string.tcc
+  /usr/include/c++/11/bits/basic_string.tcc \
+  /usr/include/openssl/aes.h \
+  /usr/include/c++/11/stdexcept \
+  /usr/include/c++/11/exception \
+  /usr/include/c++/11/bits/exception_ptr.h \
+  /usr/include/c++/11/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11/typeinfo \
+  /usr/include/c++/11/bits/nested_exception.h
 
 CMakeFiles/encryptor.dir/src/file_utils.cpp.o: src/file_utils.cpp \
   /usr/include/stdc-predef.h \
@@ -671,41 +674,103 @@ CMakeFiles/encryptor.dir/src/file_utils.cpp.o: src/file_utils.cpp \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/include/c++/11/fstream \
-  /usr/include/c++/11/istream \
-  /usr/include/c++/11/ios \
-  /usr/include/c++/11/exception \
-  /usr/include/c++/11/bits/exception_ptr.h \
-  /usr/include/c++/11/bits/cxxabi_init_exception.h \
-  /usr/include/c++/11/typeinfo \
-  /usr/include/c++/11/bits/nested_exception.h \
+  /usr/include/curses.h \
+  /usr/include/ncurses_dll.h \
+  /usr/include/unctrl.h \
+  /usr/include/curses.h \
+  include/key_derivation.hpp \
+  include/openssl_utils.hpp \
+  /usr/include/openssl/err.h \
+  /usr/include/openssl/macros.h \
+  /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
+  /usr/include/x86_64-linux-gnu/openssl/configuration.h \
+  /usr/include/openssl/opensslv.h \
+  /usr/include/openssl/e_os2.h \
+  /usr/include/c++/11/stdlib.h \
+  /usr/include/openssl/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/openssl/safestack.h \
+  /usr/include/openssl/stack.h \
+  /usr/include/openssl/bio.h \
+  /usr/include/openssl/crypto.h \
+  /usr/include/openssl/cryptoerr.h \
+  /usr/include/openssl/symhacks.h \
+  /usr/include/openssl/cryptoerr_legacy.h \
+  /usr/include/openssl/core.h \
+  /usr/include/openssl/bioerr.h \
+  /usr/include/openssl/lhash.h \
+  include/time_utils.hpp \
+  /usr/include/c++/11/iomanip \
   /usr/include/c++/11/bits/ios_base.h \
   /usr/include/c++/11/bits/locale_classes.h \
   /usr/include/c++/11/bits/locale_classes.tcc \
   /usr/include/c++/11/system_error \
   /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
   /usr/include/c++/11/stdexcept \
-  /usr/include/c++/11/streambuf \
-  /usr/include/c++/11/bits/streambuf.tcc \
-  /usr/include/c++/11/bits/basic_ios.h \
+  /usr/include/c++/11/exception \
+  /usr/include/c++/11/bits/exception_ptr.h \
+  /usr/include/c++/11/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11/typeinfo \
+  /usr/include/c++/11/bits/nested_exception.h \
+  /usr/include/c++/11/locale \
   /usr/include/c++/11/bits/locale_facets.h \
   /usr/include/c++/11/cwctype \
   /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+  /usr/include/c++/11/streambuf \
+  /usr/include/c++/11/bits/streambuf.tcc \
   /usr/include/c++/11/bits/streambuf_iterator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
   /usr/include/c++/11/bits/locale_facets.tcc \
+  /usr/include/c++/11/bits/locale_facets_nonio.h \
+  /usr/include/c++/11/ctime \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/11/bits/locale_conv.h \
+  /usr/include/c++/11/bits/unique_ptr.h \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/istream \
+  /usr/include/c++/11/ios \
+  /usr/include/c++/11/bits/basic_ios.h \
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/ostream \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/bits/istream.tcc \
-  /usr/include/c++/11/bits/codecvt.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
-  /usr/include/c++/11/bits/fstream.tcc \
-  /usr/include/boost/filesystem.hpp \
-  /usr/include/boost/filesystem/config.hpp \
+  /usr/include/c++/11/bits/sstream.tcc \
+  include/encryption.hpp \
+  /usr/include/openssl/evp.h \
+  /usr/include/openssl/core_dispatch.h \
+  /usr/include/openssl/evperr.h \
+  /usr/include/openssl/params.h \
+  /usr/include/openssl/bn.h \
+  /usr/include/openssl/bnerr.h \
+  /usr/include/openssl/objects.h \
+  /usr/include/openssl/obj_mac.h \
+  /usr/include/openssl/asn1.h \
+  /usr/include/openssl/asn1err.h \
+  /usr/include/openssl/objectserr.h \
+  include/mysql_utils.hpp \
+  /usr/include/mysql_driver.h \
+  /usr/include/boost/scoped_ptr.hpp \
+  /usr/include/boost/smart_ptr/scoped_ptr.hpp \
   /usr/include/boost/config.hpp \
   /usr/include/boost/config/user.hpp \
   /usr/include/boost/config/detail/select_compiler_config.hpp \
@@ -727,12 +792,113 @@ CMakeFiles/encryptor.dir/src/file_utils.cpp.o: src/file_utils.cpp \
   /usr/include/boost/config/detail/posix_features.hpp \
   /usr/include/boost/config/detail/suffix.hpp \
   /usr/include/boost/config/helper_macros.hpp \
-  /usr/include/boost/system/api_config.hpp \
-  /usr/include/boost/detail/workaround.hpp \
-  /usr/include/boost/config/workaround.hpp \
-  /usr/include/boost/filesystem/path.hpp \
   /usr/include/boost/assert.hpp \
   /usr/include/assert.h \
+  /usr/include/boost/checked_delete.hpp \
+  /usr/include/boost/core/checked_delete.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_nullptr_t.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_noexcept.hpp \
+  /usr/include/boost/config/workaround.hpp \
+  /usr/include/c++/11/memory \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/11/bits/align.h \
+  /usr/include/c++/11/bit \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/bits/refwrap.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/ext/concurrence.h \
+  /usr/include/c++/11/bits/shared_ptr_atomic.h \
+  /usr/include/c++/11/bits/atomic_base.h \
+  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/11/backward/auto_ptr.h \
+  /usr/include/boost/smart_ptr/detail/operator_bool.hpp \
+  /usr/include/cppconn/driver.h \
+  /usr/include/cppconn/connection.h \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/cppconn/build_config.h \
+  /usr/include/cppconn/warning.h \
+  /usr/include/cppconn/sqlstring.h \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/bits/stl_algo.h \
+  /usr/include/c++/11/bits/algorithmfwd.h \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/uniform_int_dist.h \
+  /usr/include/c++/11/iostream \
+  /usr/include/cppconn/variant.h \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/list.tcc \
+  /usr/include/cppconn/exception.h \
+  /usr/include/mysql_connection.h \
+  /usr/include/cppconn/connection.h \
+  /usr/include/boost/shared_ptr.hpp \
+  /usr/include/boost/smart_ptr/shared_ptr.hpp \
+  /usr/include/boost/smart_ptr/detail/shared_count.hpp \
+  /usr/include/boost/smart_ptr/bad_weak_ptr.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_counted_base.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_counted_base_gcc_atomic.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_typeinfo_.hpp \
+  /usr/include/boost/cstdint.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_counted_impl.hpp \
+  /usr/include/boost/core/addressof.hpp \
+  /usr/include/boost/throw_exception.hpp \
+  /usr/include/boost/assert/source_location.hpp \
+  /usr/include/boost/current_function.hpp \
+  /usr/include/boost/exception/exception.hpp \
+  /usr/include/c++/11/functional \
+  /usr/include/c++/11/bits/std_function.h \
+  /usr/include/boost/smart_ptr/detail/sp_convertible.hpp \
+  /usr/include/boost/smart_ptr/detail/spinlock_pool.hpp \
+  /usr/include/boost/smart_ptr/detail/spinlock.hpp \
+  /usr/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp \
+  /usr/include/boost/smart_ptr/detail/yield_k.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_thread_pause.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_thread_sleep.hpp \
+  /usr/include/boost/config/pragma_message.hpp \
+  /usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
+  /usr/include/boost/smart_ptr/detail/local_counted_base.hpp \
+  /usr/include/cppconn/statement.h \
+  /usr/include/cppconn/config.h \
+  /usr/include/inttypes.h \
+  /usr/include/cppconn/resultset.h \
+  /usr/include/cppconn/resultset_metadata.h \
+  /usr/include/cppconn/datatype.h \
+  /usr/include/cppconn/prepared_statement.h \
+  /usr/include/cppconn/statement.h \
+  include/menu.hpp \
+  include/password_prompt.hpp \
+  /usr/include/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-baud.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h \
+  /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
+  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
+  include/key_derivation.hpp \
+  /usr/include/c++/11/fstream \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
+  /usr/include/boost/filesystem.hpp \
+  /usr/include/boost/filesystem/config.hpp \
+  /usr/include/boost/system/api_config.hpp \
+  /usr/include/boost/detail/workaround.hpp \
+  /usr/include/boost/filesystem/path.hpp \
   /usr/include/boost/filesystem/path_traits.hpp \
   /usr/include/boost/type_traits/is_array.hpp \
   /usr/include/boost/type_traits/integral_constant.hpp \
@@ -748,16 +914,6 @@ CMakeFiles/encryptor.dir/src/file_utils.cpp.o: src/file_utils.cpp \
   /usr/include/boost/type_traits/remove_cv.hpp \
   /usr/include/boost/system/error_code.hpp \
   /usr/include/boost/system/detail/config.hpp \
-  /usr/include/boost/cstdint.hpp \
-  /usr/include/c++/11/functional \
-  /usr/include/c++/11/tuple \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
-  /usr/include/c++/11/array \
-  /usr/include/c++/11/bits/uses_allocator.h \
-  /usr/include/c++/11/bits/invoke.h \
-  /usr/include/c++/11/bits/refwrap.h \
-  /usr/include/c++/11/bits/std_function.h \
   /usr/include/c++/11/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
@@ -765,47 +921,16 @@ CMakeFiles/encryptor.dir/src/file_utils.cpp.o: src/file_utils.cpp \
   /usr/include/boost/system/detail/generic_category.hpp \
   /usr/include/boost/system/detail/system_category_posix.hpp \
   /usr/include/boost/system/detail/std_interoperability.hpp \
-  /usr/include/c++/11/map \
-  /usr/include/c++/11/bits/stl_tree.h \
-  /usr/include/c++/11/ext/aligned_buffer.h \
-  /usr/include/c++/11/bits/stl_map.h \
-  /usr/include/c++/11/bits/stl_multimap.h \
-  /usr/include/c++/11/bits/erase_if.h \
-  /usr/include/c++/11/memory \
-  /usr/include/c++/11/bits/stl_tempbuf.h \
-  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/11/bits/align.h \
-  /usr/include/c++/11/bit \
-  /usr/include/c++/11/bits/unique_ptr.h \
-  /usr/include/c++/11/bits/shared_ptr.h \
-  /usr/include/c++/11/bits/shared_ptr_base.h \
-  /usr/include/c++/11/bits/allocated_ptr.h \
-  /usr/include/c++/11/ext/concurrence.h \
-  /usr/include/c++/11/bits/shared_ptr_atomic.h \
-  /usr/include/c++/11/bits/atomic_base.h \
-  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
-  /usr/include/c++/11/backward/auto_ptr.h \
   /usr/include/c++/11/mutex \
   /usr/include/c++/11/chrono \
   /usr/include/c++/11/ratio \
   /usr/include/c++/11/limits \
-  /usr/include/c++/11/ctime \
   /usr/include/c++/11/bits/parse_numbers.h \
   /usr/include/c++/11/bits/std_mutex.h \
   /usr/include/c++/11/bits/unique_lock.h \
   /usr/include/boost/core/enable_if.hpp \
-  /usr/include/c++/11/list \
-  /usr/include/c++/11/bits/stl_list.h \
-  /usr/include/c++/11/bits/list.tcc \
   /usr/include/c++/11/iterator \
   /usr/include/c++/11/bits/stream_iterator.h \
-  /usr/include/c++/11/locale \
-  /usr/include/c++/11/bits/locale_facets_nonio.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
-  /usr/include/libintl.h \
-  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
-  /usr/include/c++/11/bits/locale_conv.h \
   /usr/include/boost/config/abi_prefix.hpp \
   /usr/include/boost/config/abi_suffix.hpp \
   /usr/include/boost/system/system_error.hpp \
@@ -954,7 +1079,6 @@ CMakeFiles/encryptor.dir/src/file_utils.cpp.o: src/file_utils.cpp \
   /usr/include/boost/type_traits/remove_pointer.hpp \
   /usr/include/boost/detail/select_type.hpp \
   /usr/include/boost/iterator/detail/enable_if.hpp \
-  /usr/include/boost/core/addressof.hpp \
   /usr/include/boost/type_traits/add_const.hpp \
   /usr/include/boost/type_traits/remove_const.hpp \
   /usr/include/boost/type_traits/is_pod.hpp \
@@ -1006,22 +1130,11 @@ CMakeFiles/encryptor.dir/src/file_utils.cpp.o: src/file_utils.cpp \
   /usr/include/boost/io_fwd.hpp \
   /usr/include/boost/functional/hash_fwd.hpp \
   /usr/include/boost/container_hash/hash_fwd.hpp \
-  /usr/include/c++/11/algorithm \
-  /usr/include/c++/11/bits/stl_algo.h \
-  /usr/include/c++/11/bits/algorithmfwd.h \
-  /usr/include/c++/11/bits/stl_heap.h \
-  /usr/include/c++/11/bits/uniform_int_dist.h \
   /usr/include/boost/filesystem/exception.hpp \
   /usr/include/boost/smart_ptr/intrusive_ptr.hpp \
-  /usr/include/boost/smart_ptr/detail/sp_convertible.hpp \
-  /usr/include/boost/smart_ptr/detail/sp_nullptr_t.hpp \
-  /usr/include/boost/smart_ptr/detail/sp_noexcept.hpp \
   /usr/include/boost/config/no_tr1/functional.hpp \
-  /usr/include/boost/smart_ptr/detail/operator_bool.hpp \
   /usr/include/boost/smart_ptr/intrusive_ref_counter.hpp \
   /usr/include/boost/smart_ptr/detail/atomic_count.hpp \
-  /usr/include/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp \
-  /usr/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp \
   /usr/include/boost/smart_ptr/detail/atomic_count_gcc_atomic.hpp \
   /usr/include/boost/filesystem/directory.hpp \
   /usr/include/boost/filesystem/file_status.hpp \
@@ -1030,7 +1143,8 @@ CMakeFiles/encryptor.dir/src/file_utils.cpp.o: src/file_utils.cpp \
   /usr/include/boost/filesystem/operations.hpp \
   /usr/include/boost/filesystem/convenience.hpp \
   /usr/include/boost/filesystem/string_file.hpp \
-  /usr/include/boost/filesystem/fstream.hpp
+  /usr/include/boost/filesystem/fstream.hpp \
+  /usr/include/openssl/aes.h
 
 CMakeFiles/encryptor.dir/src/key_derivation.cpp.o: src/key_derivation.cpp \
   /usr/include/stdc-predef.h \
@@ -1225,6 +1339,526 @@ CMakeFiles/encryptor.dir/src/key_derivation.cpp.o: src/key_derivation.cpp \
   /usr/include/openssl/asn1err.h \
   /usr/include/openssl/objectserr.h
 
+CMakeFiles/encryptor.dir/src/keys/key_encryption.cpp.o: src/keys/key_encryption.cpp \
+  /usr/include/stdc-predef.h \
+  include/keys/key_encryption.hpp \
+  /usr/include/c++/11/string \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
+  /usr/include/c++/11/bits/stringfwd.h \
+  /usr/include/c++/11/bits/memoryfwd.h \
+  /usr/include/c++/11/bits/char_traits.h \
+  /usr/include/c++/11/bits/stl_algobase.h \
+  /usr/include/c++/11/bits/functexcept.h \
+  /usr/include/c++/11/bits/exception_defines.h \
+  /usr/include/c++/11/bits/cpp_type_traits.h \
+  /usr/include/c++/11/ext/type_traits.h \
+  /usr/include/c++/11/ext/numeric_traits.h \
+  /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/move.h \
+  /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/bits/stl_iterator_base_types.h \
+  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/11/bits/concept_check.h \
+  /usr/include/c++/11/debug/assertions.h \
+  /usr/include/c++/11/bits/stl_iterator.h \
+  /usr/include/c++/11/bits/ptr_traits.h \
+  /usr/include/c++/11/debug/debug.h \
+  /usr/include/c++/11/bits/predefined_ops.h \
+  /usr/include/c++/11/bits/postypes.h \
+  /usr/include/c++/11/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/c++/11/cstdint \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/11/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+  /usr/include/c++/11/ext/new_allocator.h \
+  /usr/include/c++/11/new \
+  /usr/include/c++/11/bits/exception.h \
+  /usr/include/c++/11/bits/localefwd.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
+  /usr/include/c++/11/clocale \
+  /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/11/iosfwd \
+  /usr/include/c++/11/cctype \
+  /usr/include/ctype.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/c++/11/bits/ostream_insert.h \
+  /usr/include/c++/11/bits/cxxabi_forced.h \
+  /usr/include/c++/11/bits/stl_function.h \
+  /usr/include/c++/11/backward/binders.h \
+  /usr/include/c++/11/bits/range_access.h \
+  /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/bits/basic_string.h \
+  /usr/include/c++/11/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/c++/11/ext/alloc_traits.h \
+  /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/ext/string_conversions.h \
+  /usr/include/c++/11/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/11/bits/std_abs.h \
+  /usr/include/c++/11/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/c++/11/cerrno \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/c++/11/bits/charconv.h \
+  /usr/include/c++/11/bits/functional_hash.h \
+  /usr/include/c++/11/bits/hash_bytes.h \
+  /usr/include/c++/11/bits/basic_string.tcc \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/curses.h \
+  /usr/include/ncurses_dll.h \
+  /usr/include/unctrl.h \
+  /usr/include/curses.h \
+  /usr/include/c++/11/iostream \
+  /usr/include/c++/11/ostream \
+  /usr/include/c++/11/ios \
+  /usr/include/c++/11/exception \
+  /usr/include/c++/11/bits/exception_ptr.h \
+  /usr/include/c++/11/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11/typeinfo \
+  /usr/include/c++/11/bits/nested_exception.h \
+  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/bits/locale_classes.h \
+  /usr/include/c++/11/bits/locale_classes.tcc \
+  /usr/include/c++/11/system_error \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
+  /usr/include/c++/11/stdexcept \
+  /usr/include/c++/11/streambuf \
+  /usr/include/c++/11/bits/streambuf.tcc \
+  /usr/include/c++/11/bits/basic_ios.h \
+  /usr/include/c++/11/bits/locale_facets.h \
+  /usr/include/c++/11/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+  /usr/include/c++/11/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
+  /usr/include/c++/11/bits/locale_facets.tcc \
+  /usr/include/c++/11/bits/basic_ios.tcc \
+  /usr/include/c++/11/bits/ostream.tcc \
+  /usr/include/c++/11/istream \
+  /usr/include/c++/11/bits/istream.tcc \
+  include/mysql_utils.hpp \
+  /usr/include/mysql_driver.h \
+  /usr/include/boost/scoped_ptr.hpp \
+  /usr/include/boost/smart_ptr/scoped_ptr.hpp \
+  /usr/include/boost/config.hpp \
+  /usr/include/boost/config/user.hpp \
+  /usr/include/boost/config/detail/select_compiler_config.hpp \
+  /usr/include/boost/config/compiler/gcc.hpp \
+  /usr/include/c++/11/cstddef \
+  /usr/include/boost/config/detail/select_stdlib_config.hpp \
+  /usr/include/c++/11/version \
+  /usr/include/boost/config/stdlib/libstdcpp3.hpp \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  /usr/include/boost/config/detail/select_platform_config.hpp \
+  /usr/include/boost/config/platform/linux.hpp \
+  /usr/include/boost/config/detail/posix_features.hpp \
+  /usr/include/boost/config/detail/suffix.hpp \
+  /usr/include/boost/config/helper_macros.hpp \
+  /usr/include/boost/assert.hpp \
+  /usr/include/assert.h \
+  /usr/include/boost/checked_delete.hpp \
+  /usr/include/boost/core/checked_delete.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_nullptr_t.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_noexcept.hpp \
+  /usr/include/boost/config/workaround.hpp \
+  /usr/include/c++/11/memory \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/11/bits/align.h \
+  /usr/include/c++/11/bit \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/unique_ptr.h \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/bits/refwrap.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/ext/concurrence.h \
+  /usr/include/c++/11/bits/shared_ptr_atomic.h \
+  /usr/include/c++/11/bits/atomic_base.h \
+  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/11/backward/auto_ptr.h \
+  /usr/include/boost/smart_ptr/detail/operator_bool.hpp \
+  /usr/include/cppconn/driver.h \
+  /usr/include/cppconn/connection.h \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/cppconn/build_config.h \
+  /usr/include/cppconn/warning.h \
+  /usr/include/cppconn/sqlstring.h \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/bits/stl_algo.h \
+  /usr/include/c++/11/bits/algorithmfwd.h \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/uniform_int_dist.h \
+  /usr/include/cppconn/variant.h \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/list.tcc \
+  /usr/include/cppconn/exception.h \
+  /usr/include/mysql_connection.h \
+  /usr/include/cppconn/connection.h \
+  /usr/include/boost/shared_ptr.hpp \
+  /usr/include/boost/smart_ptr/shared_ptr.hpp \
+  /usr/include/boost/smart_ptr/detail/shared_count.hpp \
+  /usr/include/boost/smart_ptr/bad_weak_ptr.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_counted_base.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_counted_base_gcc_atomic.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_typeinfo_.hpp \
+  /usr/include/boost/cstdint.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_counted_impl.hpp \
+  /usr/include/boost/core/addressof.hpp \
+  /usr/include/boost/throw_exception.hpp \
+  /usr/include/boost/assert/source_location.hpp \
+  /usr/include/boost/current_function.hpp \
+  /usr/include/boost/exception/exception.hpp \
+  /usr/include/c++/11/functional \
+  /usr/include/c++/11/bits/std_function.h \
+  /usr/include/boost/smart_ptr/detail/sp_convertible.hpp \
+  /usr/include/boost/smart_ptr/detail/spinlock_pool.hpp \
+  /usr/include/boost/smart_ptr/detail/spinlock.hpp \
+  /usr/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp \
+  /usr/include/boost/smart_ptr/detail/yield_k.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_thread_pause.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_thread_sleep.hpp \
+  /usr/include/boost/config/pragma_message.hpp \
+  /usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
+  /usr/include/boost/smart_ptr/detail/local_counted_base.hpp \
+  /usr/include/cppconn/statement.h \
+  /usr/include/cppconn/config.h \
+  /usr/include/inttypes.h \
+  /usr/include/cppconn/resultset.h \
+  /usr/include/cppconn/resultset_metadata.h \
+  /usr/include/cppconn/datatype.h \
+  /usr/include/cppconn/prepared_statement.h \
+  /usr/include/cppconn/statement.h \
+  /usr/include/c++/11/random \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/bits/random.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h \
+  /usr/include/c++/11/bits/random.tcc \
+  /usr/include/c++/11/numeric \
+  /usr/include/c++/11/bits/stl_numeric.h \
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h
+
+CMakeFiles/encryptor.dir/src/keys/key_menu.cpp.o: src/keys/key_menu.cpp \
+  /usr/include/stdc-predef.h \
+  include/keys/key_menu.hpp \
+  /usr/include/curses.h \
+  /usr/include/ncurses_dll.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/features.h \
+  /usr/include/features-time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/stdio.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/unctrl.h \
+  /usr/include/curses.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_algobase.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
+  /usr/include/c++/11/bits/functexcept.h \
+  /usr/include/c++/11/bits/exception_defines.h \
+  /usr/include/c++/11/bits/cpp_type_traits.h \
+  /usr/include/c++/11/ext/type_traits.h \
+  /usr/include/c++/11/ext/numeric_traits.h \
+  /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/move.h \
+  /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/bits/stl_iterator_base_types.h \
+  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/11/bits/concept_check.h \
+  /usr/include/c++/11/debug/assertions.h \
+  /usr/include/c++/11/bits/stl_iterator.h \
+  /usr/include/c++/11/bits/ptr_traits.h \
+  /usr/include/c++/11/debug/debug.h \
+  /usr/include/c++/11/bits/predefined_ops.h \
+  /usr/include/c++/11/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+  /usr/include/c++/11/ext/new_allocator.h \
+  /usr/include/c++/11/new \
+  /usr/include/c++/11/bits/exception.h \
+  /usr/include/c++/11/bits/memoryfwd.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/ext/alloc_traits.h \
+  /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/functional_hash.h \
+  /usr/include/c++/11/bits/hash_bytes.h \
+  /usr/include/c++/11/bits/range_access.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/string \
+  /usr/include/c++/11/bits/stringfwd.h \
+  /usr/include/c++/11/bits/char_traits.h \
+  /usr/include/c++/11/bits/postypes.h \
+  /usr/include/c++/11/cwchar \
+  /usr/include/c++/11/cstdint \
+  /usr/include/c++/11/bits/localefwd.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
+  /usr/include/c++/11/clocale \
+  /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/11/iosfwd \
+  /usr/include/c++/11/cctype \
+  /usr/include/ctype.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/c++/11/bits/ostream_insert.h \
+  /usr/include/c++/11/bits/cxxabi_forced.h \
+  /usr/include/c++/11/bits/stl_function.h \
+  /usr/include/c++/11/backward/binders.h \
+  /usr/include/c++/11/bits/basic_string.h \
+  /usr/include/c++/11/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/c++/11/ext/string_conversions.h \
+  /usr/include/c++/11/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/11/bits/std_abs.h \
+  /usr/include/c++/11/cstdio \
+  /usr/include/c++/11/cerrno \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/c++/11/bits/charconv.h \
+  /usr/include/c++/11/bits/basic_string.tcc \
+  include/keys/key_encryption.hpp \
+  /usr/include/c++/11/locale \
+  /usr/include/c++/11/bits/locale_classes.h \
+  /usr/include/c++/11/bits/locale_classes.tcc \
+  /usr/include/c++/11/bits/locale_facets.h \
+  /usr/include/c++/11/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/system_error \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
+  /usr/include/c++/11/stdexcept \
+  /usr/include/c++/11/exception \
+  /usr/include/c++/11/bits/exception_ptr.h \
+  /usr/include/c++/11/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11/typeinfo \
+  /usr/include/c++/11/bits/nested_exception.h \
+  /usr/include/c++/11/streambuf \
+  /usr/include/c++/11/bits/streambuf.tcc \
+  /usr/include/c++/11/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
+  /usr/include/c++/11/bits/locale_facets.tcc \
+  /usr/include/c++/11/bits/locale_facets_nonio.h \
+  /usr/include/c++/11/ctime \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/11/bits/locale_conv.h \
+  /usr/include/c++/11/bits/unique_ptr.h \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h
+
 CMakeFiles/encryptor.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/stdc-predef.h \
   include/encryption.hpp \
@@ -1393,7 +2027,6 @@ CMakeFiles/encryptor.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/unctrl.h \
   /usr/include/curses.h \
-  include/file_utils.hpp \
   /usr/include/c++/11/string \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/bits/char_traits.h \
@@ -1423,6 +2056,7 @@ CMakeFiles/encryptor.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/c++/11/cerrno \
   /usr/include/c++/11/bits/charconv.h \
   /usr/include/c++/11/bits/basic_string.tcc \
+  include/file_utils.hpp \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -1608,6 +2242,7 @@ CMakeFiles/encryptor.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/x86_64-linux-gnu/bits/termios-misc.h \
   /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
   include/key_derivation.hpp \
+  include/keys/key_menu.hpp \
   /usr/include/openssl/aes.h \
   /usr/include/c++/11/cstring \
   /usr/include/string.h \
@@ -1814,15 +2449,7 @@ CMakeFiles/encryptor.dir/src/menu.cpp.o: src/menu.cpp \
 
 CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o: src/mysql_utils.cpp \
   /usr/include/stdc-predef.h \
-  include/mysql_utils.hpp \
-  /usr/include/mysql_driver.h \
-  /usr/include/boost/scoped_ptr.hpp \
-  /usr/include/boost/smart_ptr/scoped_ptr.hpp \
-  /usr/include/boost/config.hpp \
-  /usr/include/boost/config/user.hpp \
-  /usr/include/boost/config/detail/select_compiler_config.hpp \
-  /usr/include/boost/config/compiler/gcc.hpp \
-  /usr/include/c++/11/cstddef \
+  /usr/include/c++/11/cstdlib \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
   /usr/include/features.h \
@@ -1834,26 +2461,9 @@ CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o: src/mysql_utils.cpp \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
-  /usr/include/boost/config/detail/select_stdlib_config.hpp \
-  /usr/include/c++/11/version \
-  /usr/include/boost/config/stdlib/libstdcpp3.hpp \
-  /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/include/boost/config/detail/select_platform_config.hpp \
-  /usr/include/boost/config/platform/linux.hpp \
-  /usr/include/c++/11/cstdlib \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
@@ -1861,6 +2471,9 @@ CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o: src/mysql_utils.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
   /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
@@ -1886,18 +2499,10 @@ CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o: src/mysql_utils.cpp \
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/11/bits/std_abs.h \
-  /usr/include/boost/config/detail/posix_features.hpp \
-  /usr/include/boost/config/detail/suffix.hpp \
-  /usr/include/boost/config/helper_macros.hpp \
-  /usr/include/boost/assert.hpp \
-  /usr/include/assert.h \
-  /usr/include/boost/checked_delete.hpp \
-  /usr/include/boost/core/checked_delete.hpp \
-  /usr/include/boost/smart_ptr/detail/sp_nullptr_t.hpp \
-  /usr/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
-  /usr/include/boost/smart_ptr/detail/sp_noexcept.hpp \
-  /usr/include/boost/config/workaround.hpp \
-  /usr/include/c++/11/memory \
+  /usr/include/c++/11/string \
+  /usr/include/c++/11/bits/stringfwd.h \
+  /usr/include/c++/11/bits/memoryfwd.h \
+  /usr/include/c++/11/bits/char_traits.h \
   /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/c++/11/bits/functexcept.h \
   /usr/include/c++/11/bits/exception_defines.h \
@@ -1915,54 +2520,40 @@ CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o: src/mysql_utils.cpp \
   /usr/include/c++/11/bits/ptr_traits.h \
   /usr/include/c++/11/debug/debug.h \
   /usr/include/c++/11/bits/predefined_ops.h \
-  /usr/include/c++/11/bits/allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
-  /usr/include/c++/11/ext/new_allocator.h \
-  /usr/include/c++/11/new \
-  /usr/include/c++/11/bits/exception.h \
-  /usr/include/c++/11/bits/memoryfwd.h \
-  /usr/include/c++/11/bits/stl_construct.h \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
-  /usr/include/c++/11/ext/alloc_traits.h \
-  /usr/include/c++/11/bits/alloc_traits.h \
-  /usr/include/c++/11/bits/stl_tempbuf.h \
-  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
-  /usr/include/c++/11/bits/align.h \
-  /usr/include/c++/11/bit \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
-  /usr/include/stdint.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/c++/11/bits/uses_allocator.h \
-  /usr/include/c++/11/bits/unique_ptr.h \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
-  /usr/include/c++/11/initializer_list \
-  /usr/include/c++/11/tuple \
-  /usr/include/c++/11/array \
-  /usr/include/c++/11/bits/range_access.h \
-  /usr/include/c++/11/bits/invoke.h \
-  /usr/include/c++/11/bits/stl_function.h \
-  /usr/include/c++/11/backward/binders.h \
-  /usr/include/c++/11/bits/functional_hash.h \
-  /usr/include/c++/11/bits/hash_bytes.h \
-  /usr/include/c++/11/bits/shared_ptr.h \
-  /usr/include/c++/11/iosfwd \
-  /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/bits/postypes.h \
   /usr/include/c++/11/cwchar \
   /usr/include/wchar.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/c++/11/bits/shared_ptr_base.h \
-  /usr/include/c++/11/typeinfo \
-  /usr/include/c++/11/bits/allocated_ptr.h \
-  /usr/include/c++/11/bits/refwrap.h \
-  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/cstdint \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/11/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+  /usr/include/c++/11/ext/new_allocator.h \
+  /usr/include/c++/11/new \
+  /usr/include/c++/11/bits/exception.h \
+  /usr/include/c++/11/bits/localefwd.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
+  /usr/include/c++/11/clocale \
+  /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/11/iosfwd \
+  /usr/include/c++/11/cctype \
+  /usr/include/ctype.h \
+  /usr/include/c++/11/bits/ostream_insert.h \
+  /usr/include/c++/11/bits/cxxabi_forced.h \
+  /usr/include/c++/11/bits/stl_function.h \
+  /usr/include/c++/11/backward/binders.h \
+  /usr/include/c++/11/bits/range_access.h \
+  /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/bits/basic_string.h \
   /usr/include/c++/11/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h \
@@ -1981,6 +2572,80 @@ CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o: src/mysql_utils.cpp \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/c++/11/ext/alloc_traits.h \
+  /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/ext/string_conversions.h \
+  /usr/include/c++/11/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/c++/11/cerrno \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/c++/11/bits/charconv.h \
+  /usr/include/c++/11/bits/functional_hash.h \
+  /usr/include/c++/11/bits/hash_bytes.h \
+  /usr/include/c++/11/bits/basic_string.tcc \
+  /usr/include/mysql_driver.h \
+  /usr/include/boost/scoped_ptr.hpp \
+  /usr/include/boost/smart_ptr/scoped_ptr.hpp \
+  /usr/include/boost/config.hpp \
+  /usr/include/boost/config/user.hpp \
+  /usr/include/boost/config/detail/select_compiler_config.hpp \
+  /usr/include/boost/config/compiler/gcc.hpp \
+  /usr/include/c++/11/cstddef \
+  /usr/include/boost/config/detail/select_stdlib_config.hpp \
+  /usr/include/c++/11/version \
+  /usr/include/boost/config/stdlib/libstdcpp3.hpp \
+  /usr/include/unistd.h \
+  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+  /usr/include/x86_64-linux-gnu/bits/environments.h \
+  /usr/include/x86_64-linux-gnu/bits/confname.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h \
+  /usr/include/boost/config/detail/select_platform_config.hpp \
+  /usr/include/boost/config/platform/linux.hpp \
+  /usr/include/boost/config/detail/posix_features.hpp \
+  /usr/include/boost/config/detail/suffix.hpp \
+  /usr/include/boost/config/helper_macros.hpp \
+  /usr/include/boost/assert.hpp \
+  /usr/include/assert.h \
+  /usr/include/boost/checked_delete.hpp \
+  /usr/include/boost/core/checked_delete.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_nullptr_t.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_noexcept.hpp \
+  /usr/include/boost/config/workaround.hpp \
+  /usr/include/c++/11/memory \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/11/bits/align.h \
+  /usr/include/c++/11/bit \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/unique_ptr.h \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/typeinfo \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/bits/refwrap.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/ext/concurrence.h \
   /usr/include/c++/11/exception \
   /usr/include/c++/11/bits/exception_ptr.h \
@@ -2001,37 +2666,6 @@ CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o: src/mysql_utils.cpp \
   /usr/include/cppconn/build_config.h \
   /usr/include/cppconn/warning.h \
   /usr/include/c++/11/stdexcept \
-  /usr/include/c++/11/string \
-  /usr/include/c++/11/bits/char_traits.h \
-  /usr/include/c++/11/cstdint \
-  /usr/include/c++/11/bits/localefwd.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
-  /usr/include/c++/11/clocale \
-  /usr/include/locale.h \
-  /usr/include/x86_64-linux-gnu/bits/locale.h \
-  /usr/include/c++/11/cctype \
-  /usr/include/ctype.h \
-  /usr/include/c++/11/bits/ostream_insert.h \
-  /usr/include/c++/11/bits/cxxabi_forced.h \
-  /usr/include/c++/11/bits/basic_string.h \
-  /usr/include/c++/11/ext/string_conversions.h \
-  /usr/include/c++/11/cstdio \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/c++/11/cerrno \
-  /usr/include/errno.h \
-  /usr/include/x86_64-linux-gnu/bits/errno.h \
-  /usr/include/linux/errno.h \
-  /usr/include/x86_64-linux-gnu/asm/errno.h \
-  /usr/include/asm-generic/errno.h \
-  /usr/include/asm-generic/errno-base.h \
-  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
-  /usr/include/c++/11/bits/charconv.h \
-  /usr/include/c++/11/bits/basic_string.tcc \
   /usr/include/cppconn/sqlstring.h \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/bits/stl_algo.h \
@@ -2066,44 +2700,18 @@ CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o: src/mysql_utils.cpp \
   /usr/include/c++/11/bits/stl_list.h \
   /usr/include/c++/11/bits/list.tcc \
   /usr/include/cppconn/exception.h \
-  /usr/include/mysql_connection.h \
   /usr/include/cppconn/connection.h \
-  /usr/include/boost/shared_ptr.hpp \
-  /usr/include/boost/smart_ptr/shared_ptr.hpp \
-  /usr/include/boost/smart_ptr/detail/shared_count.hpp \
-  /usr/include/boost/smart_ptr/bad_weak_ptr.hpp \
-  /usr/include/boost/smart_ptr/detail/sp_counted_base.hpp \
-  /usr/include/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp \
-  /usr/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp \
-  /usr/include/boost/smart_ptr/detail/sp_counted_base_gcc_atomic.hpp \
-  /usr/include/boost/smart_ptr/detail/sp_typeinfo_.hpp \
-  /usr/include/boost/cstdint.hpp \
-  /usr/include/boost/smart_ptr/detail/sp_counted_impl.hpp \
-  /usr/include/boost/core/addressof.hpp \
-  /usr/include/boost/throw_exception.hpp \
-  /usr/include/boost/assert/source_location.hpp \
-  /usr/include/boost/current_function.hpp \
-  /usr/include/boost/exception/exception.hpp \
-  /usr/include/c++/11/functional \
-  /usr/include/c++/11/bits/std_function.h \
-  /usr/include/boost/smart_ptr/detail/sp_convertible.hpp \
-  /usr/include/boost/smart_ptr/detail/spinlock_pool.hpp \
-  /usr/include/boost/smart_ptr/detail/spinlock.hpp \
-  /usr/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp \
-  /usr/include/boost/smart_ptr/detail/yield_k.hpp \
-  /usr/include/boost/smart_ptr/detail/sp_thread_pause.hpp \
-  /usr/include/boost/smart_ptr/detail/sp_thread_sleep.hpp \
-  /usr/include/boost/config/pragma_message.hpp \
-  /usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
-  /usr/include/boost/smart_ptr/detail/local_counted_base.hpp \
+  /usr/include/cppconn/prepared_statement.h \
   /usr/include/cppconn/statement.h \
   /usr/include/cppconn/config.h \
   /usr/include/inttypes.h \
   /usr/include/cppconn/resultset.h \
   /usr/include/cppconn/resultset_metadata.h \
   /usr/include/cppconn/datatype.h \
-  /usr/include/cppconn/prepared_statement.h \
+  /usr/include/cppconn/resultset.h \
   /usr/include/cppconn/statement.h \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/vector \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
@@ -2111,10 +2719,7 @@ CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o: src/mysql_utils.cpp \
   /usr/include/curses.h \
   /usr/include/ncurses_dll.h \
   /usr/include/unctrl.h \
-  /usr/include/curses.h \
-  /usr/include/cppconn/resultset.h \
-  /usr/include/c++/11/sstream \
-  /usr/include/c++/11/bits/sstream.tcc
+  /usr/include/curses.h
 
 CMakeFiles/encryptor.dir/src/openssl_utils.cpp.o: src/openssl_utils.cpp \
   /usr/include/stdc-predef.h \
@@ -2237,32 +2842,19 @@ CMakeFiles/encryptor.dir/src/openssl_utils.cpp.o: src/openssl_utils.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/unctrl.h \
   /usr/include/curses.h \
-  /usr/include/c++/11/iostream \
-  /usr/include/c++/11/ostream \
-  /usr/include/c++/11/ios \
-  /usr/include/c++/11/iosfwd \
+  /usr/include/c++/11/string \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/bits/memoryfwd.h \
-  /usr/include/c++/11/bits/postypes.h \
-  /usr/include/c++/11/cwchar \
-  /usr/include/c++/11/exception \
-  /usr/include/c++/11/bits/exception.h \
-  /usr/include/c++/11/bits/exception_ptr.h \
-  /usr/include/c++/11/bits/exception_defines.h \
-  /usr/include/c++/11/bits/cxxabi_init_exception.h \
-  /usr/include/c++/11/typeinfo \
-  /usr/include/c++/11/bits/hash_bytes.h \
-  /usr/include/c++/11/new \
-  /usr/include/c++/11/bits/move.h \
-  /usr/include/c++/11/type_traits \
-  /usr/include/c++/11/bits/nested_exception.h \
   /usr/include/c++/11/bits/char_traits.h \
   /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/c++/11/bits/functexcept.h \
+  /usr/include/c++/11/bits/exception_defines.h \
   /usr/include/c++/11/bits/cpp_type_traits.h \
   /usr/include/c++/11/ext/type_traits.h \
   /usr/include/c++/11/ext/numeric_traits.h \
   /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/move.h \
+  /usr/include/c++/11/type_traits \
   /usr/include/c++/11/bits/stl_iterator_base_types.h \
   /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/11/bits/concept_check.h \
@@ -2271,25 +2863,22 @@ CMakeFiles/encryptor.dir/src/openssl_utils.cpp.o: src/openssl_utils.cpp \
   /usr/include/c++/11/bits/ptr_traits.h \
   /usr/include/c++/11/debug/debug.h \
   /usr/include/c++/11/bits/predefined_ops.h \
+  /usr/include/c++/11/bits/postypes.h \
+  /usr/include/c++/11/cwchar \
   /usr/include/c++/11/cstdint \
+  /usr/include/c++/11/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+  /usr/include/c++/11/ext/new_allocator.h \
+  /usr/include/c++/11/new \
+  /usr/include/c++/11/bits/exception.h \
   /usr/include/c++/11/bits/localefwd.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
   /usr/include/c++/11/clocale \
   /usr/include/locale.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/11/iosfwd \
   /usr/include/c++/11/cctype \
   /usr/include/ctype.h \
-  /usr/include/c++/11/bits/ios_base.h \
-  /usr/include/c++/11/ext/atomicity.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
-  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
-  /usr/include/c++/11/bits/locale_classes.h \
-  /usr/include/c++/11/string \
-  /usr/include/c++/11/bits/allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
-  /usr/include/c++/11/ext/new_allocator.h \
   /usr/include/c++/11/bits/ostream_insert.h \
   /usr/include/c++/11/bits/cxxabi_forced.h \
   /usr/include/c++/11/bits/stl_function.h \
@@ -2297,6 +2886,11 @@ CMakeFiles/encryptor.dir/src/openssl_utils.cpp.o: src/openssl_utils.cpp \
   /usr/include/c++/11/bits/range_access.h \
   /usr/include/c++/11/initializer_list \
   /usr/include/c++/11/bits/basic_string.h \
+  /usr/include/c++/11/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/c++/11/ext/alloc_traits.h \
   /usr/include/c++/11/bits/alloc_traits.h \
   /usr/include/c++/11/bits/stl_construct.h \
@@ -2305,7 +2899,18 @@ CMakeFiles/encryptor.dir/src/openssl_utils.cpp.o: src/openssl_utils.cpp \
   /usr/include/c++/11/cerrno \
   /usr/include/c++/11/bits/charconv.h \
   /usr/include/c++/11/bits/functional_hash.h \
+  /usr/include/c++/11/bits/hash_bytes.h \
   /usr/include/c++/11/bits/basic_string.tcc \
+  /usr/include/c++/11/iostream \
+  /usr/include/c++/11/ostream \
+  /usr/include/c++/11/ios \
+  /usr/include/c++/11/exception \
+  /usr/include/c++/11/bits/exception_ptr.h \
+  /usr/include/c++/11/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11/typeinfo \
+  /usr/include/c++/11/bits/nested_exception.h \
+  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/bits/locale_classes.h \
   /usr/include/c++/11/bits/locale_classes.tcc \
   /usr/include/c++/11/system_error \
   /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
@@ -2700,6 +3305,12 @@ CMakeFiles/encryptor.dir/src/time_utils.cpp.o: src/time_utils.cpp \
   /usr/include/c++/11/bits/istream.tcc \
   /usr/include/c++/11/bits/sstream.tcc
 
+CMakeFiles/encryptor.dir/src/urls/url_encryption.cpp.o: src/urls/url_encryption.cpp \
+  /usr/include/stdc-predef.h
+
+CMakeFiles/encryptor.dir/src/urls/url_menu.cpp.o: src/urls/url_menu.cpp \
+  /usr/include/stdc-predef.h
+
 
 src/time_utils.cpp:
 
@@ -2735,91 +3346,13 @@ src/openssl_utils.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/signum-generic.h:
 
-/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-misc.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-tcflow.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-baud.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-c_cc.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-struct.h:
-
-/usr/include/termios.h:
-
-/usr/include/c++/11/sstream:
-
-/usr/include/cppconn/datatype.h:
-
-/usr/include/cppconn/config.h:
-
-/usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp:
-
-/usr/include/boost/smart_ptr/detail/sp_thread_sleep.hpp:
-
-/usr/include/boost/smart_ptr/detail/yield_k.hpp:
-
-/usr/include/boost/smart_ptr/detail/spinlock_pool.hpp:
-
-/usr/include/boost/current_function.hpp:
-
-/usr/include/boost/assert/source_location.hpp:
-
-/usr/include/boost/throw_exception.hpp:
-
-/usr/include/boost/smart_ptr/detail/sp_counted_impl.hpp:
-
-/usr/include/boost/smart_ptr/detail/sp_typeinfo_.hpp:
-
-/usr/include/boost/smart_ptr/detail/sp_counted_base_gcc_atomic.hpp:
-
-/usr/include/boost/smart_ptr/detail/sp_counted_base.hpp:
-
-/usr/include/boost/smart_ptr/bad_weak_ptr.hpp:
-
-/usr/include/boost/smart_ptr/detail/shared_count.hpp:
-
-include/menu.hpp:
-
-/usr/include/boost/smart_ptr/shared_ptr.hpp:
-
-/usr/include/c++/11/iomanip:
-
-/usr/include/boost/shared_ptr.hpp:
-
-/usr/include/x86_64-linux-gnu/sys/ucontext.h:
-
-/usr/include/mysql_connection.h:
-
-/usr/include/cppconn/exception.h:
-
-/usr/include/cppconn/variant.h:
-
-/usr/include/cppconn/warning.h:
-
-/usr/include/cppconn/build_config.h:
-
-/usr/include/cppconn/connection.h:
-
-/usr/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp:
-
-/usr/include/boost/core/checked_delete.hpp:
-
-/usr/include/boost/checked_delete.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/sigaction.h:
-
-/usr/include/boost/scoped_ptr.hpp:
-
-/usr/include/mysql_driver.h:
-
 src/main.cpp:
+
+include/keys/key_menu.hpp:
+
+src/keys/key_menu.cpp:
+
+/usr/include/c++/11/numeric:
 
 /usr/include/boost/filesystem/fstream.hpp:
 
@@ -2831,23 +3364,9 @@ src/main.cpp:
 
 /usr/include/boost/smart_ptr/detail/atomic_count_gcc_atomic.hpp:
 
-/usr/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp:
-
 /usr/include/boost/config/no_tr1/functional.hpp:
 
-/usr/include/boost/smart_ptr/detail/sp_noexcept.hpp:
-
-/usr/include/boost/smart_ptr/detail/sp_nullptr_t.hpp:
-
 /usr/include/boost/smart_ptr/intrusive_ptr.hpp:
-
-/usr/include/c++/11/bits/uniform_int_dist.h:
-
-/usr/include/c++/11/bits/stl_heap.h:
-
-/usr/include/c++/11/bits/stl_algo.h:
-
-/usr/include/c++/11/algorithm:
 
 /usr/include/boost/functional/hash_fwd.hpp:
 
@@ -2859,25 +3378,111 @@ src/main.cpp:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp:
 
-/usr/include/boost/config/stdlib/libstdcpp3.hpp:
+src/urls/url_encryption.cpp:
 
-/usr/include/boost/type_traits/is_void.hpp:
+/usr/include/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp:
 
-include/time_utils.hpp:
+/usr/include/boost/mpl/aux_/config/bcc.hpp:
 
-/usr/include/boost/mpl/aux_/config/eti.hpp:
+/usr/include/boost/mpl/void.hpp:
 
-include/openssl_utils.hpp:
+/usr/include/boost/mpl/aux_/full_lambda.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/bind.hpp:
 
-/usr/include/c++/11/bits/fstream.tcc:
+/usr/include/boost/mpl/aux_/common_name_wknd.hpp:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
+/usr/include/boost/mpl/next_prior.hpp:
 
-/usr/include/c++/11/ostream:
+/usr/include/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp:
 
-/usr/include/c++/11/bits/codecvt.h:
+/usr/include/boost/mpl/bind_fwd.hpp:
+
+/usr/include/boost/mpl/bind.hpp:
+
+/usr/include/boost/mpl/lambda.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp:
+
+/usr/include/boost/mpl/aux_/msvc_never_true.hpp:
+
+/usr/include/boost/preprocessor/repetition/enum_params.hpp:
+
+/usr/include/boost/preprocessor/array/size.hpp:
+
+/usr/include/boost/mpl/has_xxx.hpp:
+
+/usr/include/c++/11/bits/random.h:
+
+/usr/include/boost/mpl/aux_/has_apply.hpp:
+
+/usr/include/boost/mpl/apply_wrap.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp:
+
+/usr/include/boost/mpl/apply_fwd.hpp:
+
+/usr/include/boost/io/detail/ostream_guard.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessor/default_params.hpp:
+
+/usr/include/boost/type_traits/is_enum.hpp:
+
+/usr/include/boost/type_traits/add_const.hpp:
+
+/usr/include/boost/type_traits/is_member_pointer.hpp:
+
+/usr/include/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp:
+
+/usr/include/boost/type_traits/is_volatile.hpp:
+
+/usr/include/boost/type_traits/is_pointer.hpp:
+
+/usr/include/boost/detail/indirect_traits.hpp:
+
+/usr/include/boost/type_traits/is_const.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
+
+/usr/include/boost/iterator/detail/facade_iterator_category.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:
+
+/usr/include/boost/mpl/aux_/arity_spec.hpp:
+
+/usr/include/boost/mpl/aux_/config/gpu.hpp:
+
+/usr/include/boost/mpl/not.hpp:
+
+/usr/include/boost/mpl/aux_/na_assert.hpp:
+
+/usr/include/boost/mpl/arg_fwd.hpp:
+
+/usr/include/boost/mpl/arg.hpp:
+
+/usr/include/boost/mpl/placeholders.hpp:
+
+/usr/include/c++/11/bits/uniform_int_dist.h:
+
+/usr/include/c++/11/istream:
+
+/usr/include/c++/11/sstream:
+
+/usr/include/boost/mpl/aux_/config/gcc.hpp:
+
+/usr/include/unctrl.h:
+
+/usr/include/c++/11/bits/unique_lock.h:
+
+/usr/include/c++/11/array:
+
+/usr/include/boost/mpl/aux_/nested_type_wknd.hpp:
+
+/usr/include/c++/11/bits/unique_ptr.h:
+
+/usr/include/c++/11/bits/locale_conv.h:
+
+/usr/include/c++/11/bits/locale_facets_nonio.h:
 
 /usr/include/c++/11/bits/locale_facets.tcc:
 
@@ -2885,29 +3490,19 @@ include/openssl_utils.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
+/usr/include/string.h:
+
 /usr/include/c++/11/cwctype:
 
 /usr/include/c++/11/bits/locale_facets.h:
 
 /usr/include/c++/11/bits/exception.h:
 
-/usr/include/boost/config/user.hpp:
-
-/usr/include/wctype.h:
-
-/usr/include/sched.h:
-
-/usr/include/string.h:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
-
-/usr/include/c++/11/ios:
 
 /usr/include/c++/11/utility:
 
-/usr/include/boost/mpl/aux_/has_apply.hpp:
-
-/usr/include/c++/11/istream:
+/usr/include/c++/11/ios:
 
 /usr/include/c++/11/bits/stl_list.h:
 
@@ -2915,9 +3510,7 @@ include/openssl_utils.hpp:
 
 /usr/include/c++/11/bits/postypes.h:
 
-/usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h:
-
-/usr/include/boost/type_traits/is_abstract.hpp:
+/usr/include/boost/checked_delete.hpp:
 
 /usr/include/boost/config/detail/suffix.hpp:
 
@@ -2926,8 +3519,6 @@ include/openssl_utils.hpp:
 /usr/include/boost/filesystem/operations.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
-
-/usr/include/boost/mpl/aux_/config/gpu.hpp:
 
 /usr/include/c++/11/bits/ios_base.h:
 
@@ -2939,33 +3530,27 @@ include/openssl_utils.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
-/usr/include/boost/smart_ptr/detail/local_counted_base.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+/usr/include/x86_64-linux-gnu/sys/ttydefaults.h:
 
 /usr/include/c++/11/cstring:
 
 /usr/include/boost/mpl/aux_/config/ctps.hpp:
 
-/usr/include/boost/mpl/void.hpp:
-
 /usr/include/c++/11/exception:
 
 /usr/include/c++/11/stdexcept:
 
-/usr/include/unctrl.h:
-
-/usr/include/c++/11/bits/unique_lock.h:
+/usr/include/boost/smart_ptr/detail/sp_counted_base.hpp:
 
 /usr/include/openssl/err.h:
 
 include/encryption.hpp:
 
-include/password_prompt.hpp:
-
-/usr/include/c++/11/bits/stl_vector.h:
-
 /usr/include/c++/11/cstddef:
+
+/usr/include/boost/config/platform/linux.hpp:
+
+/usr/include/boost/smart_ptr/detail/sp_convertible.hpp:
 
 /usr/include/openssl/objectserr.h:
 
@@ -2981,8 +3566,6 @@ include/password_prompt.hpp:
 
 /usr/include/c++/11/vector:
 
-/usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
-
 /usr/include/openssl/core.h:
 
 /usr/include/openssl/stack.h:
@@ -2993,19 +3576,33 @@ src/colors.cpp:
 
 /usr/include/openssl/safestack.h:
 
+/usr/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp:
+
+/usr/include/boost/mpl/aux_/arg_typedef.hpp:
+
+/usr/include/boost/preprocessor/comma_if.hpp:
+
 /usr/include/boost/type_traits/is_pod.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/c++/11/string:
 
-/usr/include/c++/11/bits/istream.tcc:
+/usr/include/boost/mpl/aux_/config/has_apply.hpp:
+
+/usr/include/limits.h:
 
 /usr/include/c++/11/bits/stl_relops.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
 
 /usr/include/c++/11/debug/debug.h:
+
+/usr/include/boost/smart_ptr/detail/spinlock_pool.hpp:
+
+/usr/include/boost/mpl/assert.hpp:
+
+/usr/include/boost/preprocessor/list/fold_right.hpp:
 
 /usr/include/openssl/types.h:
 
@@ -3017,9 +3614,9 @@ src/colors.cpp:
 
 /usr/include/c++/11/bits/stl_bvector.h:
 
-/usr/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp:
+/usr/include/boost/iterator/detail/enable_if.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
@@ -3031,9 +3628,9 @@ src/mysql_utils.cpp:
 
 src/directories.cpp:
 
-/usr/include/limits.h:
+/usr/include/boost/type_traits/is_abstract.hpp:
 
-/usr/include/boost/mpl/aux_/config/has_apply.hpp:
+/usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h:
 
 /usr/include/c++/11/bits/basic_string.tcc:
 
@@ -3059,6 +3656,12 @@ src/directories.cpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
 
+/usr/include/wctype.h:
+
+/usr/include/sched.h:
+
+/usr/include/boost/config/user.hpp:
+
 /usr/include/x86_64-linux-gnu/openssl/opensslconf.h:
 
 /usr/include/boost/type_traits/is_floating_point.hpp:
@@ -3068,12 +3671,6 @@ src/directories.cpp:
 /usr/include/c++/11/cerrno:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-/usr/include/stdio.h:
-
-/usr/include/openssl/bnerr.h:
-
-/usr/include/boost/mpl/int_fwd.hpp:
 
 /usr/include/openssl/cryptoerr.h:
 
@@ -3085,6 +3682,8 @@ src/directories.cpp:
 
 /usr/include/c++/11/bits/std_abs.h:
 
+/usr/include/c++/11/bits/stl_heap.h:
+
 /usr/include/openssl/core_dispatch.h:
 
 /usr/include/c++/11/bits/vector.tcc:
@@ -3093,15 +3692,103 @@ src/directories.cpp:
 
 /usr/include/alloca.h:
 
-/usr/include/c++/11/cctype:
+/usr/include/boost/mpl/aux_/config/arrays.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+/usr/include/openssl/opensslv.h:
 
-/usr/include/c++/11/bits/predefined_ops.h:
+/usr/include/c++/11/iostream:
 
-/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/openssl/aes.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/boost/config/detail/select_stdlib_config.hpp:
+
+/usr/include/openssl/evp.h:
+
+/usr/include/stdint.h:
+
+/usr/include/c++/11/bits/ptr_traits.h:
+
+/usr/include/c++/11/bits/erase_if.h:
+
+src/file_utils.cpp:
+
+/usr/include/openssl/params.h:
+
+/usr/include/boost/preprocessor/config/config.hpp:
+
+/usr/include/cppconn/prepared_statement.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/c++/11/bits/locale_classes.tcc:
+
+/usr/include/c++/11/ext/aligned_buffer.h:
+
+/usr/include/endian.h:
+
+/usr/include/c++/11/bits/cpp_type_traits.h:
+
+/usr/include/ctype.h:
+
+/usr/include/c++/11/locale:
+
+/usr/include/boost/mpl/aux_/yes_no.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/c++/11/bits/exception_defines.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
+
+/usr/include/openssl/symhacks.h:
+
+/usr/include/boost/preprocessor/list/detail/fold_left.hpp:
+
+/usr/include/c++/11/streambuf:
+
+include/mysql_utils.hpp:
+
+/usr/include/boost/mpl/int.hpp:
+
+/usr/include/c++/11/bits/concept_check.h:
+
+/usr/include/boost/preprocessor/arithmetic/dec.hpp:
+
+/usr/include/c++/11/ext/type_traits.h:
+
+/usr/include/cppconn/warning.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/include/boost/throw_exception.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/termios-struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+
+/usr/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp:
+
+/usr/include/boost/smart_ptr/detail/yield_k.hpp:
+
+/usr/include/c++/11/bits/cxxabi_init_exception.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/wchar.h:
+
+/usr/include/boost/filesystem/path_traits.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
+/usr/include/c++/11/bits/ostream_insert.h:
 
 /usr/include/signal.h:
 
@@ -3111,87 +3798,9 @@ src/directories.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
-/usr/include/c++/11/bits/cxxabi_init_exception.h:
-
-/usr/include/boost/filesystem/path_traits.hpp:
-
-/usr/include/openssl/e_os2.h:
-
-/usr/include/c++/11/bits/ostream.tcc:
-
-/usr/include/boost/mpl/aux_/template_arity_fwd.hpp:
-
-/usr/include/c++/11/clocale:
-
-/usr/include/c++/11/new:
-
-/usr/include/c++/11/bits/ptr_traits.h:
-
-/usr/include/openssl/evp.h:
-
-/usr/include/stdint.h:
-
-/usr/include/c++/11/bits/erase_if.h:
-
-/usr/include/boost/type_traits/add_rvalue_reference.hpp:
-
-/usr/include/c++/11/bits/concept_check.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp:
-
-/usr/include/c++/11/bits/basic_string.h:
-
-/usr/include/c++/11/bits/shared_ptr_base.h:
-
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/usr/include/openssl/aes.h:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/boost/config/detail/select_stdlib_config.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-/usr/include/boost/mpl/aux_/yes_no.hpp:
-
-/usr/include/c++/11/debug/assertions.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-/usr/include/boost/type_traits/is_volatile.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
-/usr/include/boost/smart_ptr/detail/spinlock.hpp:
-
-/usr/include/boost/preprocessor/tuple/detail/is_single_return.hpp:
-
-/usr/include/openssl/objects.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/usr/include/boost/type_traits/is_pointer.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
-
-/usr/include/boost/mpl/has_xxx.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-/usr/include/x86_64-linux-gnu/bits/timex.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
-/usr/include/boost/mpl/aux_/na_assert.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
-
-/usr/include/c++/11/ext/string_conversions.h:
 
 /usr/include/c++/11/functional:
 
@@ -3207,27 +3816,81 @@ src/directories.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
-/usr/include/boost/filesystem/config.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
-
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
-/usr/include/c++/11/bits/range_access.h:
+/usr/include/x86_64-linux-gnu/bits/sigthread.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+/usr/include/boost/mpl/protect.hpp:
+
+/usr/include/c++/11/chrono:
+
+/usr/include/c++/11/bits/stl_function.h:
+
+/usr/include/c++/11/bits/memoryfwd.h:
+
+/usr/include/cppconn/sqlstring.h:
+
+/usr/include/c++/11/bits/list.tcc:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
+
+/usr/include/boost/mpl/aux_/config/use_preprocessed.hpp:
+
+/usr/include/features.h:
+
+/usr/include/boost/config/abi_suffix.hpp:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/errno.h:
+
+/usr/include/c++/11/bits/alloc_traits.h:
+
+/usr/include/boost/mpl/aux_/template_arity.hpp:
+
+/usr/include/boost/mpl/identity.hpp:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/boost/type_traits/add_lvalue_reference.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/openssl/objects.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/boost/mpl/aux_/arity.hpp:
+
+/usr/include/pthread.h:
+
+/usr/include/boost/preprocessor/punctuation/comma.hpp:
+
+/usr/include/boost/mpl/integral_c_tag.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/c++/11/bits/predefined_ops.h:
 
 /usr/include/x86_64-linux-gnu/bits/signal_ext.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+/usr/include/cppconn/datatype.h:
 
-/usr/include/cppconn/resultset.h:
+/usr/include/c++/11/cctype:
 
-/usr/include/boost/type_traits/is_complete.hpp:
+/usr/include/boost/shared_ptr.hpp:
 
-/usr/include/boost/preprocessor/detail/auto_rec.hpp:
+/usr/include/c++/11/iomanip:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/include/c++/11/bits/range_access.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
@@ -3235,15 +3898,101 @@ src/directories.cpp:
 
 /usr/include/boost/mpl/aux_/lambda_arity_param.hpp:
 
-/usr/include/c++/11/bits/ostream_insert.h:
+/usr/include/x86_64-linux-gnu/sys/select.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
-/usr/include/features.h:
+/usr/include/stdio.h:
 
-/usr/include/boost/config/abi_suffix.hpp:
+/usr/include/openssl/bnerr.h:
+
+/usr/include/boost/mpl/int_fwd.hpp:
+
+include/openssl_utils.hpp:
+
+/usr/include/boost/mpl/apply.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+/usr/include/boost/config/detail/select_compiler_config.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/usr/include/boost/core/use_default.hpp:
+
+/usr/include/boost/config.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
+
+/usr/include/c++/11/tuple:
+
+/usr/include/c++/11/type_traits:
+
+/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
+
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+
+/usr/include/boost/core/scoped_enum.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/quote.hpp:
+
+/usr/include/linux/errno.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
+
+/usr/include/openssl/bn.h:
+
+/usr/include/boost/smart_ptr/detail/sp_counted_base_gcc_atomic.hpp:
+
+/usr/include/c++/11/initializer_list:
+
+/usr/include/c++/11/iosfwd:
+
+/usr/include/boost/type_traits/add_rvalue_reference.hpp:
+
+/usr/include/c++/11/bits/codecvt.h:
+
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/boost/mpl/always.hpp:
+
+/usr/include/linux/limits.h:
+
+/usr/include/c++/11/bits/basic_string.h:
+
+/usr/include/c++/11/bits/shared_ptr_base.h:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
+
+/usr/include/c++/11/debug/assertions.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/usr/include/c++/11/cstdlib:
+
+/usr/include/curses.h:
+
+/usr/include/c++/11/bits/basic_ios.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h:
 
 /usr/include/asm-generic/errno-base.h:
+
+/usr/include/boost/mpl/aux_/config/bind.hpp:
+
+/usr/include/boost/type_traits/remove_bounds.hpp:
 
 /usr/include/c++/11/bits/allocator.h:
 
@@ -3253,117 +4002,47 @@ src/key_derivation.cpp:
 
 include/file_utils.hpp:
 
-/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
-/usr/include/c++/11/type_traits:
+/usr/include/x86_64-linux-gnu/bits/timex.h:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
+/usr/include/boost/mpl/aux_/has_type.hpp:
 
-/usr/include/c++/11/bits/exception_defines.h:
+/usr/include/boost/type_traits/remove_const.hpp:
 
-/usr/include/c++/11/ext/type_traits.h:
+/usr/include/c++/11/bits/stringfwd.h:
 
-/usr/include/boost/mpl/aux_/arity.hpp:
-
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-/usr/include/boost/smart_ptr/detail/operator_bool.hpp:
-
-/usr/include/boost/preprocessor/repetition/enum_trailing_params.hpp:
-
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/usr/include/boost/type_traits/add_lvalue_reference.hpp:
-
-/usr/include/endian.h:
-
-/usr/include/c++/11/bits/cpp_type_traits.h:
-
-/usr/include/pthread.h:
-
-/usr/include/boost/preprocessor/punctuation/comma.hpp:
-
-/usr/include/boost/mpl/integral_c_tag.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/usr/include/c++/11/bits/memoryfwd.h:
-
-/usr/include/c++/11/bits/stl_function.h:
-
-/usr/include/c++/11/bits/sstream.tcc:
+/usr/include/c++/11/new:
 
 /usr/include/boost/mpl/aux_/value_wknd.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/time64.h:
+/usr/include/c++/11/bits/sstream.tcc:
 
-/usr/include/c++/11/iosfwd:
+/usr/include/x86_64-linux-gnu/bits/termios-tcflow.h:
 
-/usr/include/c++/11/initializer_list:
+/usr/include/c++/11/clocale:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
-
-/usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h:
-
-/usr/include/c++/11/cwchar:
-
-/usr/include/c++/11/bits/stl_algobase.h:
-
-/usr/include/boost/exception/exception.hpp:
-
-/usr/include/unistd.h:
-
-/usr/include/boost/core/scoped_enum.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
-
-/usr/include/openssl/bn.h:
-
-/usr/include/c++/11/streambuf:
-
-include/mysql_utils.hpp:
-
-/usr/include/boost/mpl/int.hpp:
-
-/usr/include/boost/preprocessor/arithmetic/dec.hpp:
-
-/usr/include/cppconn/sqlstring.h:
-
-/usr/include/c++/11/bits/list.tcc:
-
-/usr/include/boost/mpl/aux_/config/use_preprocessed.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
+/usr/include/boost/smart_ptr/detail/sp_noexcept.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+/usr/include/boost/mpl/aux_/config/pp_counter.hpp:
 
-/usr/include/openssl/symhacks.h:
+/usr/include/c++/11/cstdint:
 
-/usr/include/boost/preprocessor/list/detail/fold_left.hpp:
+/usr/include/c++/11/bits/invoke.h:
 
-/usr/include/cppconn/statement.h:
+/usr/include/c++/11/bits/basic_ios.tcc:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
+/usr/include/boost/preprocessor/facilities/empty.hpp:
 
-/usr/include/boost/mpl/aux_/config/arrays.hpp:
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
-/usr/include/openssl/opensslv.h:
+/usr/include/c++/11/ext/string_conversions.h:
 
-/usr/include/wchar.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/boost/mpl/arg_fwd.hpp:
-
-/usr/include/stdc-predef.h:
-
-/usr/include/errno.h:
-
-/usr/include/c++/11/bits/alloc_traits.h:
+/usr/include/c++/11/bits/stl_algobase.h:
 
 /usr/include/c++/11/typeinfo:
 
@@ -3373,25 +4052,17 @@ include/mysql_utils.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
+src/urls/url_menu.cpp:
+
 /usr/include/c++/11/ext/alloc_traits.h:
 
 /usr/include/boost/static_assert.hpp:
 
+src/keys/key_encryption.cpp:
+
 /usr/include/c++/11/bits/nested_exception.h:
 
 /usr/include/openssl/macros.h:
-
-/usr/include/ctype.h:
-
-/usr/include/c++/11/locale:
-
-/usr/include/boost/mpl/aux_/config/bcc.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp:
-
-/usr/include/c++/11/iostream:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/math.h:
 
@@ -3419,12 +4090,6 @@ include/mysql_utils.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp:
-
 /usr/include/boost/mpl/aux_/config/msvc_typename.hpp:
 
 /usr/include/openssl/cryptoerr_legacy.h:
@@ -3435,25 +4100,19 @@ include/mysql_utils.hpp:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
-/usr/include/linux/limits.h:
-
-/usr/include/boost/mpl/always.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_cc.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/boost/iterator/detail/config_def.hpp:
 
-/usr/include/curses.h:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
-/usr/include/boost/mpl/not.hpp:
 
 /usr/include/time.h:
 
@@ -3465,67 +4124,65 @@ include/mysql_utils.hpp:
 
 /usr/include/boost/mpl/limits/arity.hpp:
 
+/usr/include/c++/11/bits/locale_facets_nonio.tcc:
+
 /usr/include/openssl/asn1.h:
 
+/usr/include/boost/mpl/aux_/config/has_xxx.hpp:
+
+/usr/include/c++/11/bits/stl_pair.h:
+
 /usr/include/c++/11/ext/atomicity.h:
-
-/usr/include/boost/io/detail/ostream_guard.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessor/default_params.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/c++/11/ext/new_allocator.h:
 
-/usr/include/boost/type_traits/is_member_pointer.hpp:
+/usr/include/c++/11/bits/char_traits.h:
 
-/usr/include/boost/mpl/lambda.hpp:
+/usr/include/libintl.h:
 
-/usr/include/c++/11/cstdlib:
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
-/usr/include/c++/11/fstream:
-
-/usr/include/c++/11/bits/algorithmfwd.h:
-
-/usr/include/c++/11/bits/cxxabi_forced.h:
-
-/usr/include/c++/11/version:
-
 /usr/include/c++/11/bits/shared_ptr.h:
+
+/usr/include/boost/type_traits/remove_pointer.hpp:
+
+/usr/include/stdlib.h:
 
 /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
 
 /usr/include/boost/preprocessor/cat.hpp:
 
-/usr/include/c++/11/bits/stl_pair.h:
+/usr/include/c++/11/ostream:
 
-/usr/include/boost/mpl/aux_/config/has_xxx.hpp:
+/usr/include/openssl/e_os2.h:
 
-src/file_utils.cpp:
+/usr/include/c++/11/bits/ostream.tcc:
 
-/usr/include/openssl/params.h:
+/usr/include/boost/mpl/aux_/template_arity_fwd.hpp:
 
-/usr/include/boost/preprocessor/config/config.hpp:
+/usr/include/c++/11/bits/istream.tcc:
 
-/usr/include/c++/11/bits/stl_tempbuf.h:
-
-/usr/include/cppconn/prepared_statement.h:
-
-/usr/include/x86_64-linux-gnu/sys/types.h:
-
-/usr/include/c++/11/bits/locale_classes.tcc:
-
-/usr/include/c++/11/ext/aligned_buffer.h:
-
-/usr/include/boost/preprocessor/variadic/elem.hpp:
-
-/usr/include/boost/filesystem.hpp:
-
-/usr/include/x86_64-linux-gnu/sys/select.h:
+/usr/include/mysql_driver.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigaction.h:
+
+/usr/include/boost/scoped_ptr.hpp:
+
+include/time_utils.hpp:
+
+/usr/include/boost/mpl/aux_/config/eti.hpp:
+
+/usr/include/c++/11/version:
+
+/usr/include/boost/config/stdlib/libstdcpp3.hpp:
+
+/usr/include/boost/type_traits/is_void.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/confname.h:
 
@@ -3535,37 +4192,239 @@ src/file_utils.cpp:
 
 /usr/include/boost/mpl/aux_/config/nttp.hpp:
 
-/usr/include/cppconn/driver.h:
-
-/usr/include/openssl/crypto.h:
-
-/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+/usr/include/c++/11/bits/stl_numeric.h:
 
 /usr/include/linux/close_range.h:
 
 /usr/include/boost/config/detail/select_platform_config.hpp:
 
-/usr/include/boost/smart_ptr/detail/sp_convertible.hpp:
+/usr/include/boost/preprocessor/detail/auto_rec.hpp:
 
-/usr/include/boost/config/platform/linux.hpp:
+/usr/include/boost/type_traits/is_complete.hpp:
 
-/usr/include/c++/11/bits/locale_conv.h:
+/usr/include/cppconn/resultset.h:
 
-/usr/include/boost/config/abi_prefix.hpp:
+/usr/include/c++/11/ctime:
 
-/usr/include/boost/type_traits/is_class.hpp:
+/usr/include/boost/system/system_error.hpp:
 
 /usr/include/boost/smart_ptr/scoped_ptr.hpp:
 
 /usr/include/c++/11/mutex:
 
-/usr/include/linux/errno.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/quote.hpp:
-
 /usr/include/boost/config/helper_macros.hpp:
+
+/usr/include/boost/preprocessor/arithmetic/sub.hpp:
+
+/usr/include/boost/iterator/detail/config_undef.hpp:
+
+/usr/include/boost/core/checked_delete.hpp:
+
+/usr/include/boost/type_traits/is_same.hpp:
+
+/usr/include/boost/mpl/aux_/config/lambda.hpp:
+
+/usr/include/c++/11/ext/concurrence.h:
+
+/usr/include/boost/preprocessor/punctuation/comma_if.hpp:
+
+/usr/include/boost/smart_ptr/detail/sp_nullptr_t.hpp:
+
+/usr/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp:
+
+/usr/include/c++/11/memory:
+
+/usr/include/c++/11/bits/stl_tempbuf.h:
+
+include/key_derivation.hpp:
+
+/usr/include/c++/11/bits/stl_raw_storage_iter.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/boost/preprocessor/detail/is_binary.hpp:
+
+/usr/include/c++/11/bits/align.h:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/or.hpp:
+
+/usr/include/c++/11/bit:
+
+/usr/include/assert.h:
+
+/usr/include/c++/11/bits/allocated_ptr.h:
+
+/usr/include/c++/11/bits/refwrap.h:
+
+/usr/include/c++/11/bits/shared_ptr_atomic.h:
+
+/usr/include/c++/11/bits/random.tcc:
+
+/usr/include/c++/11/bits/atomic_base.h:
+
+/usr/include/c++/11/bits/atomic_lockfree_defines.h:
+
+/usr/include/boost/preprocessor/logical/and.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/boost/assert.hpp:
+
+/usr/include/c++/11/backward/auto_ptr.h:
+
+/usr/include/boost/preprocessor/repetition/enum_trailing_params.hpp:
+
+/usr/include/boost/smart_ptr/detail/operator_bool.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/boost/smart_ptr/detail/local_counted_base.hpp:
+
+/usr/include/openssl/crypto.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
+/usr/include/cppconn/driver.h:
+
+/usr/include/cppconn/connection.h:
+
+/usr/include/c++/11/map:
+
+/usr/include/c++/11/bits/stl_tree.h:
+
+/usr/include/boost/config/compiler/gcc.hpp:
+
+/usr/include/boost/iterator/interoperable.hpp:
+
+/usr/include/c++/11/bits/stl_map.h:
+
+/usr/include/boost/filesystem/convenience.hpp:
+
+/usr/include/boost/system/detail/std_interoperability.hpp:
+
+/usr/include/boost/mpl/aux_/na_fwd.hpp:
+
+/usr/include/c++/11/bits/stl_multimap.h:
+
+/usr/include/cppconn/build_config.h:
+
+/usr/include/boost/cstdint.hpp:
+
+/usr/include/boost/smart_ptr/shared_ptr.hpp:
+
+include/menu.hpp:
+
+/usr/include/c++/11/algorithm:
+
+/usr/include/c++/11/bits/stl_algo.h:
+
+/usr/include/boost/preprocessor/debug/error.hpp:
+
+/usr/include/c++/11/bits/cxxabi_forced.h:
+
+/usr/include/c++/11/bits/algorithmfwd.h:
+
+/usr/include/cppconn/variant.h:
+
+/usr/include/boost/preprocessor/array/elem.hpp:
+
+/usr/include/ncurses_dll.h:
+
+/usr/include/c++/11/list:
+
+/usr/include/cppconn/exception.h:
+
+/usr/include/c++/11/cwchar:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h:
+
+/usr/include/x86_64-linux-gnu/sys/ucontext.h:
+
+/usr/include/mysql_connection.h:
+
+/usr/include/boost/smart_ptr/detail/shared_count.hpp:
+
+/usr/include/boost/smart_ptr/bad_weak_ptr.hpp:
+
+/usr/include/boost/mpl/aux_/config/ttp.hpp:
+
+/usr/include/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp:
+
+/usr/include/boost/smart_ptr/detail/sp_has_sync_intrinsics.hpp:
+
+/usr/include/boost/smart_ptr/detail/sp_typeinfo_.hpp:
+
+/usr/include/boost/mpl/aux_/config/msvc.hpp:
+
+/usr/include/boost/smart_ptr/detail/sp_counted_impl.hpp:
+
+/usr/include/boost/core/addressof.hpp:
+
+/usr/include/c++/11/bits/uses_allocator.h:
+
+/usr/include/boost/mpl/aux_/config/workaround.hpp:
+
+/usr/include/boost/assert/source_location.hpp:
+
+/usr/include/boost/current_function.hpp:
+
+/usr/include/unistd.h:
+
+/usr/include/boost/exception/exception.hpp:
+
+/usr/include/boost/preprocessor/tuple/detail/is_single_return.hpp:
+
+/usr/include/boost/smart_ptr/detail/spinlock.hpp:
+
+/usr/include/boost/smart_ptr/detail/sp_thread_sleep.hpp:
+
+/usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
+
+/usr/include/cppconn/statement.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
+
+/usr/include/cppconn/config.h:
+
+/usr/include/c++/11/bits/stl_vector.h:
+
+include/password_prompt.hpp:
+
+/usr/include/termios.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-baud.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios-misc.h:
+
+/usr/include/boost/filesystem/path.hpp:
+
+/usr/include/c++/11/fstream:
+
+/usr/include/c++/11/bits/fstream.tcc:
+
+/usr/include/boost/mpl/quote.hpp:
+
+/usr/include/boost/preprocessor/identity.hpp:
+
+/usr/include/boost/preprocessor/variadic/elem.hpp:
+
+/usr/include/boost/filesystem.hpp:
+
+/usr/include/boost/filesystem/config.hpp:
+
+/usr/include/boost/type_traits/is_class.hpp:
+
+/usr/include/boost/config/abi_prefix.hpp:
+
+/usr/include/boost/mpl/and.hpp:
+
+/usr/include/boost/mpl/aux_/config/overload_resolution.hpp:
 
 /usr/include/boost/core/enable_if.hpp:
 
@@ -3573,15 +4432,9 @@ src/file_utils.cpp:
 
 /usr/include/boost/detail/workaround.hpp:
 
-/usr/include/boost/filesystem/path.hpp:
-
-/usr/include/boost/preprocessor/arithmetic/sub.hpp:
-
-/usr/include/boost/iterator/detail/config_undef.hpp:
-
-/usr/include/boost/mpl/placeholders.hpp:
-
 /usr/include/boost/type_traits/is_array.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h:
 
 /usr/include/x86_64-linux-gnu/bits/environments.h:
 
@@ -3627,131 +4480,21 @@ src/file_utils.cpp:
 
 /usr/include/boost/system/detail/config.hpp:
 
-/usr/include/boost/cstdint.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
-
-/usr/include/c++/11/tuple:
-
-/usr/include/c++/11/array:
-
-/usr/include/boost/mpl/aux_/nested_type_wknd.hpp:
-
-/usr/include/c++/11/bits/invoke.h:
-
-/usr/include/c++/11/bits/basic_ios.tcc:
-
-/usr/include/boost/preprocessor/facilities/empty.hpp:
-
-/usr/include/c++/11/bits/refwrap.h:
-
 /usr/include/strings.h:
 
 /usr/include/boost/cerrno.hpp:
-
-/usr/include/boost/mpl/next_prior.hpp:
 
 /usr/include/boost/config/workaround.hpp:
 
 /usr/include/boost/system/detail/generic_category.hpp:
 
-/usr/include/boost/filesystem/convenience.hpp:
-
-/usr/include/boost/system/detail/std_interoperability.hpp:
-
-/usr/include/c++/11/bits/stl_map.h:
-
-/usr/include/boost/mpl/aux_/na_fwd.hpp:
-
-/usr/include/c++/11/map:
-
-/usr/include/c++/11/bits/stl_tree.h:
-
-/usr/include/boost/config/compiler/gcc.hpp:
-
-/usr/include/boost/iterator/interoperable.hpp:
-
-/usr/include/c++/11/bits/stl_multimap.h:
-
-/usr/include/c++/11/memory:
-
-include/key_derivation.hpp:
-
-/usr/include/c++/11/bits/stl_raw_storage_iter.h:
-
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/include/boost/preprocessor/detail/is_binary.hpp:
-
-/usr/include/c++/11/bits/align.h:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/or.hpp:
-
-/usr/include/boost/preprocessor/comma_if.hpp:
-
-/usr/include/boost/mpl/aux_/arg_typedef.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp:
-
-/usr/include/c++/11/bit:
-
-/usr/include/c++/11/bits/unique_ptr.h:
-
-/usr/include/assert.h:
-
-/usr/include/c++/11/bits/allocated_ptr.h:
-
-/usr/include/boost/preprocessor/punctuation/comma_if.hpp:
-
-/usr/include/c++/11/bits/shared_ptr_atomic.h:
-
-/usr/include/c++/11/bits/atomic_base.h:
-
-/usr/include/c++/11/bits/atomic_lockfree_defines.h:
-
-/usr/include/boost/preprocessor/logical/and.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
-/usr/include/boost/assert.hpp:
-
-/usr/include/c++/11/backward/auto_ptr.h:
-
 /usr/include/c++/11/ratio:
 
 /usr/include/c++/11/limits:
 
-/usr/include/boost/system/system_error.hpp:
-
-/usr/include/c++/11/ctime:
-
 /usr/include/c++/11/bits/std_mutex.h:
 
 /usr/include/c++/11/bits/stream_iterator.h:
-
-/usr/include/boost/type_traits/remove_bounds.hpp:
-
-/usr/include/boost/mpl/aux_/config/bind.hpp:
-
-/usr/include/c++/11/bits/locale_facets_nonio.h:
-
-/usr/include/boost/mpl/assert.hpp:
-
-/usr/include/boost/preprocessor/list/fold_right.hpp:
-
-/usr/include/c++/11/bits/basic_ios.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h:
-
-/usr/include/c++/11/bits/char_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
-/usr/include/libintl.h:
-
-/usr/include/c++/11/bits/locale_facets_nonio.tcc:
-
-/usr/include/boost/mpl/aux_/arity_spec.hpp:
 
 /usr/include/c++/11/cassert:
 
@@ -3767,25 +4510,11 @@ include/key_derivation.hpp:
 
 /usr/include/boost/mpl/aux_/config/adl.hpp:
 
-/usr/include/boost/mpl/aux_/config/msvc.hpp:
+include/keys/key_encryption.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessor/enum.hpp:
 
 /usr/include/boost/mpl/aux_/config/intel.hpp:
-
-/usr/include/boost/mpl/aux_/config/gcc.hpp:
-
-/usr/include/boost/smart_ptr/detail/sp_has_gcc_intrinsics.hpp:
-
-/usr/include/boost/mpl/aux_/config/ttp.hpp:
-
-/usr/include/c++/11/bits/uses_allocator.h:
-
-/usr/include/boost/mpl/aux_/config/workaround.hpp:
-
-/usr/include/boost/core/addressof.hpp:
-
-/usr/include/boost/mpl/aux_/common_name_wknd.hpp:
 
 /usr/include/boost/mpl/aux_/config/static_constant.hpp:
 
@@ -3811,9 +4540,9 @@ include/colors.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/sigstack.h:
 
-/usr/include/boost/type_traits/is_convertible.hpp:
-
 /usr/include/c++/11/ext/numeric_traits.h:
+
+/usr/include/boost/type_traits/is_convertible.hpp:
 
 /usr/include/boost/preprocessor/list/detail/fold_right.hpp:
 
@@ -3833,15 +4562,13 @@ include/colors.hpp:
 
 /usr/include/boost/preprocessor/repetition/repeat.hpp:
 
-/usr/include/boost/preprocessor/debug/error.hpp:
-
 /usr/include/boost/preprocessor/tuple/eat.hpp:
 
 /usr/include/boost/preprocessor/inc.hpp:
 
-/usr/include/c++/11/bits/stl_iterator.h:
-
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+/usr/include/c++/11/bits/stl_iterator.h:
 
 /usr/include/boost/preprocessor/arithmetic/inc.hpp:
 
@@ -3855,12 +4582,6 @@ include/colors.hpp:
 
 /usr/include/boost/preprocessor/facilities/identity.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/sigthread.h:
-
-/usr/include/c++/11/chrono:
-
-/usr/include/boost/mpl/protect.hpp:
-
 /usr/include/boost/preprocessor/empty.hpp:
 
 /usr/include/c++/11/iterator:
@@ -3869,9 +4590,9 @@ include/colors.hpp:
 
 /usr/include/boost/preprocessor/arithmetic/add.hpp:
 
-/usr/include/boost/config/pragma_message.hpp:
-
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
+
+/usr/include/boost/config/pragma_message.hpp:
 
 /usr/include/boost/mpl/void_fwd.hpp:
 
@@ -3887,8 +4608,6 @@ include/colors.hpp:
 
 /usr/include/boost/preprocessor/list/adt.hpp:
 
-/usr/include/boost/type_traits/is_const.hpp:
-
 /usr/include/boost/preprocessor/logical/compl.hpp:
 
 /usr/include/boost/preprocessor/list/reverse.hpp:
@@ -3903,9 +4622,7 @@ include/colors.hpp:
 
 /usr/include/boost/preprocessor/variadic/size.hpp:
 
-/usr/include/boost/mpl/identity.hpp:
-
-/usr/include/boost/mpl/aux_/template_arity.hpp:
+/usr/include/c++/11/random:
 
 /usr/include/boost/preprocessor/tuple/rem.hpp:
 
@@ -3935,9 +4652,9 @@ src/menu.cpp:
 
 /usr/include/boost/type_traits/is_rvalue_reference.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/termios.h:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
+
+/usr/include/x86_64-linux-gnu/bits/termios.h:
 
 /usr/include/boost/type_traits/detail/yes_no_type.hpp:
 
@@ -3947,88 +4664,6 @@ src/menu.cpp:
 
 /usr/include/boost/mpl/if.hpp:
 
-/usr/include/boost/mpl/aux_/has_type.hpp:
-
-/usr/include/c++/11/bits/stringfwd.h:
-
-/usr/include/boost/type_traits/remove_const.hpp:
-
 /usr/include/boost/smart_ptr/detail/sp_thread_pause.hpp:
 
 /usr/include/boost/mpl/aux_/config/integral.hpp:
-
-/usr/include/boost/mpl/arg.hpp:
-
-/usr/include/c++/11/cstdint:
-
-/usr/include/boost/mpl/aux_/config/pp_counter.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:
-
-/usr/include/boost/iterator/detail/facade_iterator_category.hpp:
-
-/usr/include/boost/config.hpp:
-
-/usr/include/boost/core/use_default.hpp:
-
-/usr/include/boost/mpl/aux_/config/overload_resolution.hpp:
-
-/usr/include/boost/mpl/and.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp:
-
-/usr/include/boost/mpl/aux_/config/lambda.hpp:
-
-/usr/include/c++/11/ext/concurrence.h:
-
-/usr/include/boost/type_traits/is_same.hpp:
-
-/usr/include/boost/detail/indirect_traits.hpp:
-
-/usr/include/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp:
-
-/usr/include/stdlib.h:
-
-/usr/include/boost/type_traits/remove_pointer.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/usr/include/boost/iterator/detail/enable_if.hpp:
-
-/usr/include/boost/type_traits/add_const.hpp:
-
-/usr/include/boost/type_traits/is_enum.hpp:
-
-/usr/include/boost/config/detail/select_compiler_config.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
-/usr/include/boost/mpl/apply.hpp:
-
-/usr/include/boost/mpl/apply_fwd.hpp:
-
-/usr/include/boost/mpl/apply_wrap.hpp:
-
-/usr/include/ncurses_dll.h:
-
-/usr/include/c++/11/list:
-
-/usr/include/boost/preprocessor/array/elem.hpp:
-
-/usr/include/boost/preprocessor/array/size.hpp:
-
-/usr/include/boost/preprocessor/repetition/enum_params.hpp:
-
-/usr/include/boost/mpl/aux_/msvc_never_true.hpp:
-
-/usr/include/boost/mpl/bind.hpp:
-
-/usr/include/boost/mpl/bind_fwd.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp:
-
-/usr/include/boost/mpl/aux_/full_lambda.hpp:
-
-/usr/include/boost/preprocessor/identity.hpp:
-
-/usr/include/boost/mpl/quote.hpp:

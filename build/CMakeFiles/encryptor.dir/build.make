@@ -153,6 +153,76 @@ CMakeFiles/encryptor.dir/src/mysql_utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/encryptor.dir/src/mysql_utils.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/mysql_utils.cpp -o CMakeFiles/encryptor.dir/src/mysql_utils.cpp.s
 
+CMakeFiles/encryptor.dir/src/colors.cpp.o: CMakeFiles/encryptor.dir/flags.make
+CMakeFiles/encryptor.dir/src/colors.cpp.o: ../src/colors.cpp
+CMakeFiles/encryptor.dir/src/colors.cpp.o: CMakeFiles/encryptor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/encryptor.dir/src/colors.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encryptor.dir/src/colors.cpp.o -MF CMakeFiles/encryptor.dir/src/colors.cpp.o.d -o CMakeFiles/encryptor.dir/src/colors.cpp.o -c /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/colors.cpp
+
+CMakeFiles/encryptor.dir/src/colors.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/encryptor.dir/src/colors.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/colors.cpp > CMakeFiles/encryptor.dir/src/colors.cpp.i
+
+CMakeFiles/encryptor.dir/src/colors.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/encryptor.dir/src/colors.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/colors.cpp -o CMakeFiles/encryptor.dir/src/colors.cpp.s
+
+CMakeFiles/encryptor.dir/src/directories.cpp.o: CMakeFiles/encryptor.dir/flags.make
+CMakeFiles/encryptor.dir/src/directories.cpp.o: ../src/directories.cpp
+CMakeFiles/encryptor.dir/src/directories.cpp.o: CMakeFiles/encryptor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/encryptor.dir/src/directories.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encryptor.dir/src/directories.cpp.o -MF CMakeFiles/encryptor.dir/src/directories.cpp.o.d -o CMakeFiles/encryptor.dir/src/directories.cpp.o -c /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/directories.cpp
+
+CMakeFiles/encryptor.dir/src/directories.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/encryptor.dir/src/directories.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/directories.cpp > CMakeFiles/encryptor.dir/src/directories.cpp.i
+
+CMakeFiles/encryptor.dir/src/directories.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/encryptor.dir/src/directories.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/directories.cpp -o CMakeFiles/encryptor.dir/src/directories.cpp.s
+
+CMakeFiles/encryptor.dir/src/password_prompt.cpp.o: CMakeFiles/encryptor.dir/flags.make
+CMakeFiles/encryptor.dir/src/password_prompt.cpp.o: ../src/password_prompt.cpp
+CMakeFiles/encryptor.dir/src/password_prompt.cpp.o: CMakeFiles/encryptor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/encryptor.dir/src/password_prompt.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encryptor.dir/src/password_prompt.cpp.o -MF CMakeFiles/encryptor.dir/src/password_prompt.cpp.o.d -o CMakeFiles/encryptor.dir/src/password_prompt.cpp.o -c /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/password_prompt.cpp
+
+CMakeFiles/encryptor.dir/src/password_prompt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/encryptor.dir/src/password_prompt.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/password_prompt.cpp > CMakeFiles/encryptor.dir/src/password_prompt.cpp.i
+
+CMakeFiles/encryptor.dir/src/password_prompt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/encryptor.dir/src/password_prompt.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/password_prompt.cpp -o CMakeFiles/encryptor.dir/src/password_prompt.cpp.s
+
+CMakeFiles/encryptor.dir/src/time_utils.cpp.o: CMakeFiles/encryptor.dir/flags.make
+CMakeFiles/encryptor.dir/src/time_utils.cpp.o: ../src/time_utils.cpp
+CMakeFiles/encryptor.dir/src/time_utils.cpp.o: CMakeFiles/encryptor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/encryptor.dir/src/time_utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encryptor.dir/src/time_utils.cpp.o -MF CMakeFiles/encryptor.dir/src/time_utils.cpp.o.d -o CMakeFiles/encryptor.dir/src/time_utils.cpp.o -c /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/time_utils.cpp
+
+CMakeFiles/encryptor.dir/src/time_utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/encryptor.dir/src/time_utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/time_utils.cpp > CMakeFiles/encryptor.dir/src/time_utils.cpp.i
+
+CMakeFiles/encryptor.dir/src/time_utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/encryptor.dir/src/time_utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/time_utils.cpp -o CMakeFiles/encryptor.dir/src/time_utils.cpp.s
+
+CMakeFiles/encryptor.dir/src/menu.cpp.o: CMakeFiles/encryptor.dir/flags.make
+CMakeFiles/encryptor.dir/src/menu.cpp.o: ../src/menu.cpp
+CMakeFiles/encryptor.dir/src/menu.cpp.o: CMakeFiles/encryptor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/encryptor.dir/src/menu.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/encryptor.dir/src/menu.cpp.o -MF CMakeFiles/encryptor.dir/src/menu.cpp.o.d -o CMakeFiles/encryptor.dir/src/menu.cpp.o -c /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/menu.cpp
+
+CMakeFiles/encryptor.dir/src/menu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/encryptor.dir/src/menu.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/menu.cpp > CMakeFiles/encryptor.dir/src/menu.cpp.i
+
+CMakeFiles/encryptor.dir/src/menu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/encryptor.dir/src/menu.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maverick/Documents/Proyecto/C++/EncryptorProyect/src/menu.cpp -o CMakeFiles/encryptor.dir/src/menu.cpp.s
+
 # Object files for target encryptor
 encryptor_OBJECTS = \
 "CMakeFiles/encryptor.dir/src/main.cpp.o" \
@@ -160,7 +230,12 @@ encryptor_OBJECTS = \
 "CMakeFiles/encryptor.dir/src/file_utils.cpp.o" \
 "CMakeFiles/encryptor.dir/src/key_derivation.cpp.o" \
 "CMakeFiles/encryptor.dir/src/openssl_utils.cpp.o" \
-"CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o"
+"CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o" \
+"CMakeFiles/encryptor.dir/src/colors.cpp.o" \
+"CMakeFiles/encryptor.dir/src/directories.cpp.o" \
+"CMakeFiles/encryptor.dir/src/password_prompt.cpp.o" \
+"CMakeFiles/encryptor.dir/src/time_utils.cpp.o" \
+"CMakeFiles/encryptor.dir/src/menu.cpp.o"
 
 # External object files for target encryptor
 encryptor_EXTERNAL_OBJECTS =
@@ -171,6 +246,11 @@ encryptor: CMakeFiles/encryptor.dir/src/file_utils.cpp.o
 encryptor: CMakeFiles/encryptor.dir/src/key_derivation.cpp.o
 encryptor: CMakeFiles/encryptor.dir/src/openssl_utils.cpp.o
 encryptor: CMakeFiles/encryptor.dir/src/mysql_utils.cpp.o
+encryptor: CMakeFiles/encryptor.dir/src/colors.cpp.o
+encryptor: CMakeFiles/encryptor.dir/src/directories.cpp.o
+encryptor: CMakeFiles/encryptor.dir/src/password_prompt.cpp.o
+encryptor: CMakeFiles/encryptor.dir/src/time_utils.cpp.o
+encryptor: CMakeFiles/encryptor.dir/src/menu.cpp.o
 encryptor: CMakeFiles/encryptor.dir/build.make
 encryptor: /usr/lib/x86_64-linux-gnu/libssl.so
 encryptor: /usr/lib/x86_64-linux-gnu/libcrypto.so
@@ -178,7 +258,7 @@ encryptor: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.74.0
 encryptor: /usr/lib/x86_64-linux-gnu/libcurses.so
 encryptor: /usr/lib/x86_64-linux-gnu/libform.so
 encryptor: CMakeFiles/encryptor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable encryptor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maverick/Documents/Proyecto/C++/EncryptorProyect/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable encryptor"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/encryptor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

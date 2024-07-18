@@ -129,6 +129,67 @@ encryptor/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/build
 .PHONY : encryptor/fast
 
+#=============================================================================
+# Target rules for targets named format
+
+# Build rule for target.
+format: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 format
+.PHONY : format
+
+# fast build rule for target.
+format/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/format.dir/build.make CMakeFiles/format.dir/build
+.PHONY : format/fast
+
+src/colors.o: src/colors.cpp.o
+.PHONY : src/colors.o
+
+# target to build an object file
+src/colors.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/colors.cpp.o
+.PHONY : src/colors.cpp.o
+
+src/colors.i: src/colors.cpp.i
+.PHONY : src/colors.i
+
+# target to preprocess a source file
+src/colors.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/colors.cpp.i
+.PHONY : src/colors.cpp.i
+
+src/colors.s: src/colors.cpp.s
+.PHONY : src/colors.s
+
+# target to generate assembly for a file
+src/colors.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/colors.cpp.s
+.PHONY : src/colors.cpp.s
+
+src/directories.o: src/directories.cpp.o
+.PHONY : src/directories.o
+
+# target to build an object file
+src/directories.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/directories.cpp.o
+.PHONY : src/directories.cpp.o
+
+src/directories.i: src/directories.cpp.i
+.PHONY : src/directories.i
+
+# target to preprocess a source file
+src/directories.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/directories.cpp.i
+.PHONY : src/directories.cpp.i
+
+src/directories.s: src/directories.cpp.s
+.PHONY : src/directories.s
+
+# target to generate assembly for a file
+src/directories.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/directories.cpp.s
+.PHONY : src/directories.cpp.s
+
 src/encryption.o: src/encryption.cpp.o
 .PHONY : src/encryption.o
 
@@ -225,6 +286,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/menu.o: src/menu.cpp.o
+.PHONY : src/menu.o
+
+# target to build an object file
+src/menu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/menu.cpp.o
+.PHONY : src/menu.cpp.o
+
+src/menu.i: src/menu.cpp.i
+.PHONY : src/menu.i
+
+# target to preprocess a source file
+src/menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/menu.cpp.i
+.PHONY : src/menu.cpp.i
+
+src/menu.s: src/menu.cpp.s
+.PHONY : src/menu.s
+
+# target to generate assembly for a file
+src/menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/menu.cpp.s
+.PHONY : src/menu.cpp.s
+
 src/mysql_utils.o: src/mysql_utils.cpp.o
 .PHONY : src/mysql_utils.o
 
@@ -273,6 +358,54 @@ src/openssl_utils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/openssl_utils.cpp.s
 .PHONY : src/openssl_utils.cpp.s
 
+src/password_prompt.o: src/password_prompt.cpp.o
+.PHONY : src/password_prompt.o
+
+# target to build an object file
+src/password_prompt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/password_prompt.cpp.o
+.PHONY : src/password_prompt.cpp.o
+
+src/password_prompt.i: src/password_prompt.cpp.i
+.PHONY : src/password_prompt.i
+
+# target to preprocess a source file
+src/password_prompt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/password_prompt.cpp.i
+.PHONY : src/password_prompt.cpp.i
+
+src/password_prompt.s: src/password_prompt.cpp.s
+.PHONY : src/password_prompt.s
+
+# target to generate assembly for a file
+src/password_prompt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/password_prompt.cpp.s
+.PHONY : src/password_prompt.cpp.s
+
+src/time_utils.o: src/time_utils.cpp.o
+.PHONY : src/time_utils.o
+
+# target to build an object file
+src/time_utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/time_utils.cpp.o
+.PHONY : src/time_utils.cpp.o
+
+src/time_utils.i: src/time_utils.cpp.i
+.PHONY : src/time_utils.i
+
+# target to preprocess a source file
+src/time_utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/time_utils.cpp.i
+.PHONY : src/time_utils.cpp.i
+
+src/time_utils.s: src/time_utils.cpp.s
+.PHONY : src/time_utils.s
+
+# target to generate assembly for a file
+src/time_utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/time_utils.cpp.s
+.PHONY : src/time_utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -281,7 +414,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... format"
 	@echo "... encryptor"
+	@echo "... src/colors.o"
+	@echo "... src/colors.i"
+	@echo "... src/colors.s"
+	@echo "... src/directories.o"
+	@echo "... src/directories.i"
+	@echo "... src/directories.s"
 	@echo "... src/encryption.o"
 	@echo "... src/encryption.i"
 	@echo "... src/encryption.s"
@@ -294,12 +434,21 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/menu.o"
+	@echo "... src/menu.i"
+	@echo "... src/menu.s"
 	@echo "... src/mysql_utils.o"
 	@echo "... src/mysql_utils.i"
 	@echo "... src/mysql_utils.s"
 	@echo "... src/openssl_utils.o"
 	@echo "... src/openssl_utils.i"
 	@echo "... src/openssl_utils.s"
+	@echo "... src/password_prompt.o"
+	@echo "... src/password_prompt.i"
+	@echo "... src/password_prompt.s"
+	@echo "... src/time_utils.o"
+	@echo "... src/time_utils.i"
+	@echo "... src/time_utils.s"
 .PHONY : help
 
 
