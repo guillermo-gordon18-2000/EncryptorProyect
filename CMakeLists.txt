@@ -39,9 +39,19 @@ add_executable(encryptor
     src/password_prompt.cpp
     src/time_utils.cpp
     src/menu.cpp
-
+    src/keys/key_encryption.cpp
+    src/keys/key_menu.cpp
+    src/urls/url_encryption.cpp
+    src/urls/url_menu.cpp
 
 )
 
 # Vincula con OpenSSL, Boost, MySQL y ncurses
 target_link_libraries(encryptor ${OPENSSL_LIBRARIES} ${Boost_LIBRARIES} ${EXTRA_LIBS} ${CURSES_LIBRARIES})
+
+# Añadir un objetivo para formatear el código con Prettier
+add_custom_target(format
+  COMMAND prettier --write "**/*.{js,jsx,ts,tsx,css,scss,md,json,html,yaml}"
+  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+  COMMENT "Formateando el código con Prettier"
+)

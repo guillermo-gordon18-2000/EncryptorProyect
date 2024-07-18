@@ -129,6 +129,19 @@ encryptor/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/build
 .PHONY : encryptor/fast
 
+#=============================================================================
+# Target rules for targets named format
+
+# Build rule for target.
+format: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 format
+.PHONY : format
+
+# fast build rule for target.
+format/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/format.dir/build.make CMakeFiles/format.dir/build
+.PHONY : format/fast
+
 src/colors.o: src/colors.cpp.o
 .PHONY : src/colors.o
 
@@ -248,6 +261,54 @@ src/key_derivation.s: src/key_derivation.cpp.s
 src/key_derivation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/key_derivation.cpp.s
 .PHONY : src/key_derivation.cpp.s
+
+src/keys/key_encryption.o: src/keys/key_encryption.cpp.o
+.PHONY : src/keys/key_encryption.o
+
+# target to build an object file
+src/keys/key_encryption.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/keys/key_encryption.cpp.o
+.PHONY : src/keys/key_encryption.cpp.o
+
+src/keys/key_encryption.i: src/keys/key_encryption.cpp.i
+.PHONY : src/keys/key_encryption.i
+
+# target to preprocess a source file
+src/keys/key_encryption.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/keys/key_encryption.cpp.i
+.PHONY : src/keys/key_encryption.cpp.i
+
+src/keys/key_encryption.s: src/keys/key_encryption.cpp.s
+.PHONY : src/keys/key_encryption.s
+
+# target to generate assembly for a file
+src/keys/key_encryption.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/keys/key_encryption.cpp.s
+.PHONY : src/keys/key_encryption.cpp.s
+
+src/keys/key_menu.o: src/keys/key_menu.cpp.o
+.PHONY : src/keys/key_menu.o
+
+# target to build an object file
+src/keys/key_menu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/keys/key_menu.cpp.o
+.PHONY : src/keys/key_menu.cpp.o
+
+src/keys/key_menu.i: src/keys/key_menu.cpp.i
+.PHONY : src/keys/key_menu.i
+
+# target to preprocess a source file
+src/keys/key_menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/keys/key_menu.cpp.i
+.PHONY : src/keys/key_menu.cpp.i
+
+src/keys/key_menu.s: src/keys/key_menu.cpp.s
+.PHONY : src/keys/key_menu.s
+
+# target to generate assembly for a file
+src/keys/key_menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/keys/key_menu.cpp.s
+.PHONY : src/keys/key_menu.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -393,6 +454,54 @@ src/time_utils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/time_utils.cpp.s
 .PHONY : src/time_utils.cpp.s
 
+src/urls/url_encryption.o: src/urls/url_encryption.cpp.o
+.PHONY : src/urls/url_encryption.o
+
+# target to build an object file
+src/urls/url_encryption.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/urls/url_encryption.cpp.o
+.PHONY : src/urls/url_encryption.cpp.o
+
+src/urls/url_encryption.i: src/urls/url_encryption.cpp.i
+.PHONY : src/urls/url_encryption.i
+
+# target to preprocess a source file
+src/urls/url_encryption.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/urls/url_encryption.cpp.i
+.PHONY : src/urls/url_encryption.cpp.i
+
+src/urls/url_encryption.s: src/urls/url_encryption.cpp.s
+.PHONY : src/urls/url_encryption.s
+
+# target to generate assembly for a file
+src/urls/url_encryption.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/urls/url_encryption.cpp.s
+.PHONY : src/urls/url_encryption.cpp.s
+
+src/urls/url_menu.o: src/urls/url_menu.cpp.o
+.PHONY : src/urls/url_menu.o
+
+# target to build an object file
+src/urls/url_menu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/urls/url_menu.cpp.o
+.PHONY : src/urls/url_menu.cpp.o
+
+src/urls/url_menu.i: src/urls/url_menu.cpp.i
+.PHONY : src/urls/url_menu.i
+
+# target to preprocess a source file
+src/urls/url_menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/urls/url_menu.cpp.i
+.PHONY : src/urls/url_menu.cpp.i
+
+src/urls/url_menu.s: src/urls/url_menu.cpp.s
+.PHONY : src/urls/url_menu.s
+
+# target to generate assembly for a file
+src/urls/url_menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/encryptor.dir/build.make CMakeFiles/encryptor.dir/src/urls/url_menu.cpp.s
+.PHONY : src/urls/url_menu.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -401,6 +510,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... format"
 	@echo "... encryptor"
 	@echo "... src/colors.o"
 	@echo "... src/colors.i"
@@ -417,6 +527,12 @@ help:
 	@echo "... src/key_derivation.o"
 	@echo "... src/key_derivation.i"
 	@echo "... src/key_derivation.s"
+	@echo "... src/keys/key_encryption.o"
+	@echo "... src/keys/key_encryption.i"
+	@echo "... src/keys/key_encryption.s"
+	@echo "... src/keys/key_menu.o"
+	@echo "... src/keys/key_menu.i"
+	@echo "... src/keys/key_menu.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -435,6 +551,12 @@ help:
 	@echo "... src/time_utils.o"
 	@echo "... src/time_utils.i"
 	@echo "... src/time_utils.s"
+	@echo "... src/urls/url_encryption.o"
+	@echo "... src/urls/url_encryption.i"
+	@echo "... src/urls/url_encryption.s"
+	@echo "... src/urls/url_menu.o"
+	@echo "... src/urls/url_menu.i"
+	@echo "... src/urls/url_menu.s"
 .PHONY : help
 
 
